@@ -2,7 +2,7 @@
   "name": "site-daytraderskill",
   "version": "0.1.0",
   "private": true,
-  "description": "Independent English guide to the open-source Claude Day Trader Skill pack (install, safety, comparisons). Not affiliated with the upstream authors. Not financial advice.",
+  "description": "Independent, paper-first day trading education and tools hub. Includes an independent guide to the third-party Claude Day Trader Skill pack. Not financial advice.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

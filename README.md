@@ -1,6 +1,6 @@
 # daytraderskill-site
 
-Independent English static guide for the open-source **Claude Day Trader Skill** pack.
+Independent, paper-first English education hub for retail day trading: learn, paper practice, risk, and tool guides. The open-source **Claude Day Trader Skill** pack is covered as one third-party tool, not the site's whole identity.
 
 - Site origin: https://daytraderskill.com
 - Upstream (MIT, not affiliated): https://github.com/Jakeschincariol/day-trader-skill

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Related } from '@/components/Related';
+import { ToolsNav } from '@/components/ToolsNav';
 import { UPSTREAM_REPO, UPSTREAM_V1 } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function VsPage() {
   return (
     <>
+      <ToolsNav current="/vs/" />
       <h1>Claude trading skills compared: Day Trader Skill vs other packs</h1>
       <div className="tldr">
         <strong>TL;DR.</strong> Looking for <strong>Claude trading skills</strong> side-by-side?

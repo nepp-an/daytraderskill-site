@@ -1,12 +1,21 @@
-import { DISCLAIMER_SHORT } from '@/lib/site';
+import Link from 'next/link';
 
 export function DisclaimerBar() {
   return (
     <aside className="disclaimer-bar" role="note" aria-label="Compliance disclaimer">
-      <strong>Not financial advice.</strong> {DISCLAIMER_SHORT.replace(/^Not financial advice\.\s*/, '')}{' '}
-      <a href="/safety/">Safety checklist</a>
-      {' · '}
-      <a href="/paper-trading/">Paper trading</a>
+      <span className="disclaimer-inner">
+        <strong>Not financial advice.</strong> Independent, paper-first education. Most people who
+        day trade lose money.{' '}
+        <Link href="/safety/">Safety</Link>{' '}
+        <span className="disclaimer-sep" aria-hidden="true">
+          ·
+        </span>{' '}
+        <Link href="/paper-trading/">Paper</Link>{' '}
+        <span className="disclaimer-sep" aria-hidden="true">
+          ·
+        </span>{' '}
+        <span>AI order tools: Needs approval</span>
+      </span>
     </aside>
   );
 }

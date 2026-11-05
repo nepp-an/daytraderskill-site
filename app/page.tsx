@@ -1,192 +1,285 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Related } from '@/components/Related';
-import { SKILLS } from '@/lib/skills';
-import { BRAND, UPSTREAM_REPO } from '@/lib/site';
+import { UPSTREAM_REPO } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Day Trader Skill — Claude Pack Guide',
+  title: { absolute: 'Day Trading Guide & Paper-First Practice Hub' },
   description:
-    'What is day trader skill / Claude day trader skill? Independent guide to the 11-skill pack (not an auto-trading bot), day trading skills Claude workflows, install, paper default, NFA.',
+    'A paper-first day trading guide for beginners: learn the basics, practice in a simulator, study risk, and explore AI and agent tools. Not financial advice.',
   alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Day Trading Guide & Paper-First Practice Hub',
+    description:
+      'Learn day trading, practice on paper, understand risk, and choose tools carefully. An independent, paper-first education hub. Not financial advice.',
+    url: '/',
+  },
 };
 
 export default function HomePage() {
   return (
-    <>
-      <h1>Day Trader Skill: Claude day trader skill pack — 11 skills, not an auto-trading bot</h1>
-
-      <div className="tldr">
-        <strong>TL;DR.</strong> <strong>Day trader skill</strong> (also searched as{' '}
-        <strong>Claude day trader skill</strong> / day trading skills Claude) is a free MIT pack of{' '}
-        <strong>11 Claude skills</strong> plus plain-Python helpers that read public market data. It
-        helps you scan, research, plan, simulate, size, and — only after you type yes — send a
-        ticket. <strong>It is not a set-and-forget trading bot.</strong> Paper trading is the
-        default. This site ({BRAND}) is an <strong>independent</strong> install / safety /
-        comparison guide — <strong>not</strong> the official project homepage. Not financial advice.
-      </div>
-
-      <div className="callout danger">
-        <p>
-          <strong>Not financial advice.</strong> Most people who day trade lose money. You can lose
-          money. Nothing on this site promises profits, win rates, signals, or trade-on-your-behalf
-          service. Decide for yourself; talk to a licensed professional if you need advice.
+    <div className="hub-page">
+      <section className="hero" aria-labelledby="hero-heading">
+        <p className="eyebrow">Independent · Paper-first · Not financial advice</p>
+        <h1 id="hero-heading">
+          Learn day trading on paper. <span className="accent">Build skill before risk.</span>
+        </h1>
+        <p className="hero-lead">
+          DayTraderSkill is a plain-English learning and tools hub for retail day traders. Start with
+          market mechanics, rehearse a repeatable process in a simulator, and treat AI trading tools
+          as software that still needs a human decision — never as a signal service.
         </p>
-      </div>
 
-      <div className="cta-row">
-        <Link className="btn primary" href="/install/">
-          Install guide (4 paths)
-        </Link>
-        <Link className="btn" href="/safety/">
-          Safety checklist
-        </Link>
-        <a className="btn" href={UPSTREAM_REPO} rel="noopener noreferrer" target="_blank">
-          Upstream GitHub (source)
-        </a>
-      </div>
+        <div className="cta-row">
+          <Link className="btn primary" href="/learn/day-trading-for-beginners/">
+            Start with the basics
+          </Link>
+          <Link className="btn" href="/paper-trading/">
+            What is paper trading?
+          </Link>
+          <Link className="btn ghost" href="/tools/">
+            Browse tools
+          </Link>
+        </div>
 
-      <h2>What this pack actually is</h2>
-      <ul>
-        <li>
-          <strong>Eleven named Claude skills</strong> (for example <code className="inline">/trader-scanner</code>,{' '}
-          <code className="inline">/trader-broker</code>) that share a <code className="inline">trader/</code> workspace.
-        </li>
-        <li>
-          <strong>Standard-library Python tools</strong> that read free public data (Yahoo Finance charts,
-          Nasdaq Trader lists, SEC EDGAR, House Clerk disclosures) — no paid market-data API key required
-          for the core flow described upstream.
-        </li>
-        <li>
-          A <strong>human-in-the-loop order path</strong>: risk checks first; broker skill shows a ticket;
-          you must type <em>yes</em>; Claude’s connector still asks Allow once / Deny. Paper is default.
-        </li>
-      </ul>
-      <p>
-        What it is <strong>not</strong>: a hosted auto-trader, a signal group, a broker, a prop firm, or
-        an official Anthropic / Claude product page. Skills run where you already use Claude or Claude
-        Code, on your machine and accounts.
-      </p>
+        <ul className="hero-points">
+          <li>No trade ideas or profit promises</li>
+          <li>Paper trading is the default</li>
+          <li>AI order tools need approval</li>
+        </ul>
 
-      <h2>Upstream source &amp; freshness risk</h2>
-      <p>
-        Canonical source:{' '}
-        <a href={UPSTREAM_REPO} rel="noopener noreferrer" target="_blank">
-          github.com/Jakeschincariol/day-trader-skill
-        </a>{' '}
-        (MIT). This website is <strong>not affiliated</strong> with that repository’s authors and is{' '}
-        <strong>not</strong> the official site.
-      </p>
-      <div className="callout warn">
-        <p>
-          As of early November 2026 Asia/Shanghai checks, the upstream repo was created and last{' '}
-          <em>code-pushed</em> on the same day (2026-10-20) despite rapid star/fork growth. That means{' '}
-          <strong>stale-maintainer risk is real</strong>: issues may pile up, and behavior can diverge
-          across forks. Prefer the official GitHub URL above, read commits yourself, and track changes
-          on our <Link href="/changelog-watch/">changelog watch</Link> page.
+        <p className="compliance-note">
+          <strong>Risk note.</strong> Most people who day trade lose money. This site explains the
+          workflow and the software; it does not tell you what to buy, sell, or hold.
         </p>
-      </div>
+      </section>
 
-      <h2>The eleven skills (overview)</h2>
-      <table className="data">
-        <thead>
-          <tr>
-            <th>Command</th>
-            <th>Job</th>
-            <th>One-line role</th>
-          </tr>
-        </thead>
-        <tbody>
-          {SKILLS.map((s) => (
-            <tr key={s.slug}>
-              <td>
-                <Link href={`/skills/${s.slug}/`}>
-                  <code>{s.command}</code>
-                </Link>
-              </td>
-              <td>{s.name}</td>
-              <td>{s.job}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <p>
-        Typical single-trade chain:{' '}
-        <strong>
-          scanner → news → entry → exit → timemachine → budget → risk → broker
-        </strong>
-        . Alerts run while a position is open. News / analyst / pelosi can also run on a schedule.
-        Full index: <Link href="/skills/">Skills hub</Link>.
-      </p>
+      <section className="hub-section" aria-labelledby="paths-heading">
+        <div className="section-head">
+          <p className="eyebrow">Start here</p>
+          <h2 id="paths-heading">Four paths through the hub</h2>
+          <p>
+            Learn the vocabulary, practice the workflow, understand the downside, and only then look
+            at tools. That order matters more than any indicator.
+          </p>
+        </div>
 
-      <h2>How this guide differs from copying the README</h2>
-      <ul>
-        <li>
-          <Link href="/install/">Four install paths</Link> with when-to-use notes (Claude paste, Claude
-          Code marketplace, copy folders, SKILL.md-only).
-        </li>
-        <li>
-          A dedicated <Link href="/install/troubleshoot/">troubleshoot matrix</Link> for namespaces,
-          Python, SEC user-agent, sandbox networking, and approval cards.
-        </li>
-        <li>
-          A hard <Link href="/safety/">safety checklist</Link>: paper default, Needs approval, no Always
-          allow, keys out of chat, stop ≠ guarantee.
-        </li>
-        <li>
-          Honest <Link href="/vs/">comparisons</Link> vs trader-skill v1 and other Claude trading skill
-          packs — no smear pieces, no “guaranteed edge” claims.
-        </li>
-      </ul>
+        <div className="hub-grid">
+          <article className="hub-card learn">
+            <p className="card-kicker">01 · Learn</p>
+            <h3>Learn the language</h3>
+            <p>
+              What day trading is, how orders and spreads work, and what a beginner should study
+              before opening a live account.
+            </p>
+            <ul className="card-links">
+              <li>
+                <Link href="/learn/day-trading-for-beginners/">Day trading for beginners</Link>
+              </li>
+              <li>
+                <Link href="/learn/what-is-day-trading/">What is day trading?</Link>
+              </li>
+              <li>
+                <Link href="/learn/how-to-start-day-trading/">How to start day trading</Link>
+              </li>
+            </ul>
+          </article>
 
-      <h2>Link hub</h2>
-      <div className="card-grid">
-        <div className="card">
-          <h3>
-            <Link href="/install/">Install</Link>
-          </h3>
-          <p className="muted">Claude.ai, Claude Code plugin, folder copy, SKILL.md paste.</p>
-        </div>
-        <div className="card">
-          <h3>
-            <Link href="/install/troubleshoot/">Troubleshoot</Link>
-          </h3>
-          <p className="muted">Commands missing, SEC UA, Python, network, permissions.</p>
-        </div>
-        <div className="card">
-          <h3>
-            <Link href="/safety/">Safety</Link>
-          </h3>
-          <p className="muted">Paper first, dual approval, what we refuse to promote.</p>
-        </div>
-        <div className="card">
-          <h3>
-            <Link href="/vs/">VS other packs</Link>
-          </h3>
-          <p className="muted">When day-trader-skill fits — and when it does not.</p>
-        </div>
-        <div className="card">
-          <h3>
-            <Link href="/paper-trading/">Paper trading</Link>
-          </h3>
-          <p className="muted">Rehearse the full chain without live capital.</p>
-        </div>
-        <div className="card">
-          <h3>
-            <Link href="/faq/">FAQ</Link>
-          </h3>
-          <p className="muted">Auto-trade myths, Pro plans, PDT notes, taxes.</p>
-        </div>
-      </div>
+          <article className="hub-card practice">
+            <p className="card-kicker">02 · Practice</p>
+            <h3>Practice on paper</h3>
+            <p>
+              Use simulated orders to learn the platform, test your rules, and make cheap mistakes
+              before real capital is involved.
+            </p>
+            <ul className="card-links">
+              <li>
+                <Link href="/paper-trading/">What is paper trading?</Link>
+              </li>
+              <li>
+                <Link href="/safety/">Build a safety checklist</Link>
+              </li>
+              <li>
+                <Link href="/faq/">Read the common questions</Link>
+              </li>
+            </ul>
+          </article>
 
-      <Related
-        links={[
-          { href: '/install/', label: 'Day trader skill install (Claude Code)' },
-          { href: '/safety/', label: 'Claude day trader skill safety & paper trading' },
-          { href: '/vs/', label: 'Claude trading skills comparison' },
-          { href: '/install/troubleshoot/', label: 'Day trader skill not working' },
-        ]}
-      />
-    </>
+          <article className="hub-card risk">
+            <p className="card-kicker">03 · Risk</p>
+            <h3>Put risk first</h3>
+            <p>
+              Position size, stop placement, slippage, and the possibility of being wrong belong in
+              the plan before the entry.
+            </p>
+            <ul className="card-links">
+              <li>
+                <Link href="/safety/#risk">Risk basics and hard rules</Link>
+              </li>
+              <li>
+                <Link href="/safety/">Paper-first safety posture</Link>
+              </li>
+              <li>
+                <Link href="/paper-trading/#limits">What paper cannot teach</Link>
+              </li>
+            </ul>
+          </article>
+
+          <article className="hub-card tools">
+            <p className="card-kicker">04 · Tools</p>
+            <h3>Choose tools carefully</h3>
+            <p>
+              Simulators, scanners, Claude skills, and agent workflows are only as useful as the
+              process around them. Verify the source before you install.
+            </p>
+            <ul className="card-links">
+              <li>
+                <Link href="/tools/install-claude-skills/">How to install Claude skills</Link>
+              </li>
+              <li>
+                <Link href="/tools/">Tools hub</Link>
+              </li>
+              <li>
+                <Link href="/vs/">Compare tool packs</Link>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section className="hub-section" aria-labelledby="journey-heading">
+        <div className="section-head">
+          <p className="eyebrow">A sensible sequence</p>
+          <h2 id="journey-heading">Learn → rehearse → review</h2>
+          <p>
+            A beginner does not need a live account on day one. This sequence keeps the feedback loop
+            cheap and makes the decision to risk money a separate, deliberate step.
+          </p>
+        </div>
+
+        <div className="journey-grid">
+          <article className="journey-card">
+            <h3>Understand the game</h3>
+            <p>
+              Learn what a day trade is, what a spread costs, and why speed and leverage change the
+              difficulty. Start with the definition, not a strategy list.
+            </p>
+            <p>
+              <Link href="/learn/what-is-day-trading/">Read the definition →</Link>
+            </p>
+          </article>
+          <article className="journey-card">
+            <h3>Rehearse the process</h3>
+            <p>
+              Run the same checklist on a simulator: idea, entry, exit, size, risk check, ticket,
+              journal. Repeat until the workflow is boring.
+            </p>
+            <p>
+              <Link href="/paper-trading/">Open the paper trading guide →</Link>
+            </p>
+          </article>
+          <article className="journey-card">
+            <h3>Review before scaling</h3>
+            <p>
+              Journal the decisions, not just the result. If the process is unclear on paper, adding
+              live money will make it harder, not easier.
+            </p>
+            <p>
+              <Link href="/learn/how-to-start-day-trading/">Follow the start roadmap →</Link>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="split-panel" aria-labelledby="practice-heading">
+        <div>
+          <p className="eyebrow">Practice first</p>
+          <h2 id="practice-heading">Paper trading is a rehearsal, not a scoreboard.</h2>
+          <p>
+            A simulator lets you learn order types, platform quirks, and your own habits without
+            risking real money. It is useful precisely because mistakes are cheap. It is not proof
+            that a strategy will work live.
+          </p>
+          <p>
+            Use paper mode to test whether you can follow a written process, not to chase a streak.
+            When simulated fills look easy, check the spread, liquidity, and assumptions behind them.
+          </p>
+          <div className="cta-row">
+            <Link className="btn primary" href="/paper-trading/">
+              How paper trading works
+            </Link>
+            <Link className="btn" href="/learn/day-trading-for-beginners/">
+              Beginner roadmap
+            </Link>
+          </div>
+        </div>
+        <div>
+          <ul className="checklist">
+            <li>Write the entry, exit, and invalidation before the session.</li>
+            <li>Size the position so one mistake is survivable.</li>
+            <li>Log the reason for every simulated order.</li>
+            <li>Review the journal weekly, not after every tick.</li>
+            <li>Keep AI order tools on Needs approval.</li>
+          </ul>
+          <div className="callout warn">
+            <p>
+              <strong>Paper is not live.</strong> Fills, slippage, halts, and the feeling of losing
+              real money can all differ. Do not treat a good paper week as a guarantee.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="featured-tool" aria-labelledby="featured-heading">
+        <div>
+          <span className="featured-badge">Featured tool · Third party</span>
+          <h2 id="featured-heading">Day Trader Skill (Claude skills pack)</h2>
+          <p>
+            An open-source pack of Claude skills and Python helpers for scanning, planning,
+            simulating, sizing, and risk-checking a trade workflow. It is one tool in the Tools
+            section — not the definition of this site. The upstream project keeps paper trading as
+            the default and expects a human confirmation before an order path.
+          </p>
+          <div className="cta-row">
+            <Link className="btn" href="/install/">
+              Read the install guide
+            </Link>
+            <Link className="btn ghost" href="/skills/">
+              See the 11 modules
+            </Link>
+            <a
+              className="btn ghost"
+              href={UPSTREAM_REPO}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Canonical GitHub
+            </a>
+          </div>
+          <p className="muted">
+            Independent guide. This is <strong>not the official project site</strong> and we are not
+            affiliated with its authors. Verify the repository and read the code before installing.
+          </p>
+        </div>
+        <aside className="featured-note" aria-label="Day Trader Skill quick facts">
+          <h3>Quick facts</h3>
+          <ul>
+            <li>Third-party, MIT-licensed GitHub project.</li>
+            <li>Paper trading default; no profit promise.</li>
+            <li>Broker actions require explicit approval.</li>
+            <li>Public data can lag or fail; verify elsewhere.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section className="compliance-strip" aria-label="Editorial policy">
+        <p>
+          <strong>What this hub will not do:</strong> sell signals, promise returns, rank stocks, or
+          trade on your behalf. Day trading is risky; most people who try it lose money.
+        </p>
+        <Link className="btn small ghost" href="/safety/">
+          Read the safety policy
+        </Link>
+      </section>
+    </div>
   );
 }

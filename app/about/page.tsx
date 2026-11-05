@@ -4,7 +4,7 @@ import { Related } from '@/components/Related';
 import { BRAND, UPSTREAM_REPO, UPSTREAM_LICENSE } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'About This Independent Day Trader Skill Guide',
+  title: { absolute: 'About This Independent Day Trader Guide' },
   description:
     'DayTraderSkill.com is an independent English tutorial site about the open-source Claude Day Trader Skill pack. Not official. Not financial advice. MIT upstream on GitHub.',
   alternates: { canonical: '/about/' },

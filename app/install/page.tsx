@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Related } from '@/components/Related';
+import { ToolsNav } from '@/components/ToolsNav';
 import { UPSTREAM_REPO } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function InstallPage() {
   return (
     <>
+      <ToolsNav current="/install/" />
       <h1>Day Trader Skill install: Claude Code trading skill & four paths</h1>
       <div className="tldr">
         <strong>TL;DR.</strong> This is the <strong>day trader skill install</strong> guide —

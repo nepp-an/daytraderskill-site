@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Related } from '@/components/Related';
+import { ToolsNav } from '@/components/ToolsNav';
 import { FaqList, faqJsonLd } from '@/components/Faq';
 import { JsonLd } from '@/components/JsonLd';
 
@@ -34,6 +35,7 @@ export default function TroubleshootPage() {
   return (
     <>
       <JsonLd data={faqJsonLd(faqs)} />
+      <ToolsNav current="/install/troubleshoot/" />
       <h1>Day Trader Skill not working: namespace, sandbox &amp; permissions</h1>
       <div className="tldr">
         <strong>TL;DR.</strong> When <strong>day trader skill</strong> looks installed but{' '}

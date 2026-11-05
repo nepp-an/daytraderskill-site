@@ -8,11 +8,21 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
   title: {
-    default: `Day Trader Skill — Claude Pack Guide | ${BRAND}`,
+    default: 'Day Trading Guide & Paper-First Practice Hub',
     template: `%s | ${BRAND}`,
   },
   description: DISCLAIMER_SHORT,
+  applicationName: BRAND,
+  category: 'education',
   robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    siteName: BRAND,
+    locale: 'en_US',
+    title: 'Day Trading Guide & Paper-First Practice Hub',
+    description: DISCLAIMER_SHORT,
+    url: SITE_ORIGIN,
+  },
   icons: {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
     shortcut: '/favicon.svg',

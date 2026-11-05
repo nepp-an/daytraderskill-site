@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Related } from '@/components/Related';
+import { ToolsNav } from '@/components/ToolsNav';
 import { SKILLS } from '@/lib/skills';
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function SkillsIndexPage() {
   return (
     <>
+      <ToolsNav current="/skills/" />
       <h1>Day Trader Skill modules: 11 trader-* commands</h1>
       <div className="tldr">
         <strong>TL;DR.</strong> Each skill is a Claude command plus optional Python helpers. Use them

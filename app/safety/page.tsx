@@ -48,7 +48,7 @@ export default function SafetyPage() {
         </p>
       </div>
 
-      <h2>Hard rules we will not soften</h2>
+      <h2 id="risk">Risk rules we will not soften</h2>
       <ul className="checklist">
         <li>
           <strong>Not financial advice</strong> — arithmetic and public data ≠ a plan for your life

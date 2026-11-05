@@ -14,7 +14,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const skill = getSkill(params.slug);
   if (!skill) return { title: 'Skill' };
   return {
-    title: `${skill.name} (${skill.command}) — Claude Day Trader Skill`,
+    title: { absolute: `Day Trader Skill: ${skill.name} (${skill.command})` },
     description: `${skill.summary} When to use, inputs/outputs, cautions. Not financial advice.`,
     alternates: { canonical: `/skills/${skill.slug}/` },
   };

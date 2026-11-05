@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { Related } from '@/components/Related';
 
 export const metadata: Metadata = {
-  title: 'Day Trader Skill FAQ (Advice & Auto-Trade)',
+  title: { absolute: 'Day Trader Skill FAQ: Advice & Auto-Trade' },
   description:
     'FAQ intents: is day trader skill financial advice? Does it auto trade? Free? Claude day trader skill worth it? Paper default, NFA — no signals or profit promises.',
   alternates: { canonical: '/faq/' },
