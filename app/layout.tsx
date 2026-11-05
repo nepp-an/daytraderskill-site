@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
     shortcut: '/favicon.svg',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-3175943774981621',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -48,6 +51,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        {/* Google AdSense — Auto ads; same pub as OCA/E7 */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3175943774981621"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
         <DisclaimerBar />

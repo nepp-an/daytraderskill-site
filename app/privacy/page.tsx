@@ -6,7 +6,7 @@ import { BRAND, SITE_ORIGIN } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'Privacy policy for DayTraderSkill.com: no accounts on this static guide; outbound links to GitHub and third parties; ads.txt reserved. Not financial advice.',
+    'Privacy policy for DayTraderSkill.com: no accounts on this static guide; outbound links to GitHub and third parties; Google AdSense Auto ads disclosure. Not financial advice.',
   alternates: { canonical: '/privacy/' },
 };
 
@@ -35,12 +35,18 @@ export default function PrivacyPage() {
         We link to GitHub repositories, documentation, and occasionally other guides. Those sites
         may set cookies or collect analytics under their own terms. Review them before signing in.
       </p>
-      <h2>Advertising / ads.txt</h2>
+      <h2>Advertising / AdSense</h2>
       <p>
-        We may reserve an <code className="inline">ads.txt</code> scaffold for a future publisher
-        setup. Until a real ads.txt line is published with a verified publisher ID, treat any ad
-        network claim with caution. We do not ask you to disable security tools for “exclusive
-        signals.”
+        We have enabled Google AdSense (publisher <code className="inline">ca-pub-3175943774981621</code>)
+        on this site. Auto ads may place ads on pages; there are no manual ad slots. Google and its
+        partners may use cookies or similar technologies to serve ads based on prior visits to this
+        and other sites. See{' '}
+        <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">
+          Google advertising policies
+        </a>
+        . Our <code className="inline">ads.txt</code> lists{' '}
+        <code className="inline">google.com, pub-3175943774981621, DIRECT, f08c47fec0942fa0</code>.
+        We do not ask you to disable security tools for “exclusive signals.”
       </p>
       <h2>Not financial advice</h2>
       <p>
