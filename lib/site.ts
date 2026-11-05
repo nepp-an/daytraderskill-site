@@ -1,4 +1,5 @@
 export const SITE_ORIGIN = 'https://daytraderskill.com';
+export const CONTACT_EMAIL = 'privacy@daytraderskill.com';
 export const BRAND = 'DayTraderSkill.com';
 export const BRAND_SHORT = 'Paper-first day trading guide';
 export const SITE_TAGLINE = 'Learn day trading. Practice on paper. Understand the risk.';
@@ -63,6 +64,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     title: 'Site',
     links: [
       { href: '/about/', label: 'About' },
+      { href: '/contact/', label: 'Contact' },
       { href: '/changelog-watch/', label: 'Update watch' },
       { href: '/privacy/', label: 'Privacy' },
     ],

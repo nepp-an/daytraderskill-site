@@ -58,9 +58,14 @@ export default function PrivacyPage() {
         We may update this page as hosting or measurement tooling changes. Continued use of the site
         after updates means you review the latest text here.
       </p>
+      <h2>Contact</h2>
+      <p>
+        Questions about this policy or the site: see <Link href="/contact/">Contact</Link>.
+      </p>
       <Related
         links={[
           { href: '/about/', label: 'About' },
+          { href: '/contact/', label: 'Contact' },
           { href: '/safety/', label: 'Safety' },
           { href: '/', label: 'Home' },
         ]}

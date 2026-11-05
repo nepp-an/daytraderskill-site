@@ -37,11 +37,14 @@ export default function AboutPage() {
       </ul>
       <h2>Contact / privacy</h2>
       <p>
-        See <Link href="/privacy/">Privacy</Link>. This static site does not offer user accounts.
+        See <Link href="/contact/">Contact</Link> for corrections and site feedback, and{' '}
+        <Link href="/privacy/">Privacy</Link> for how this static site handles data. We do not offer
+        user accounts.
       </p>
       <Related
         links={[
           { href: '/', label: 'Home' },
+          { href: '/contact/', label: 'Contact' },
           { href: '/privacy/', label: 'Privacy' },
           { href: '/changelog-watch/', label: 'Changelog watch' },
         ]}
