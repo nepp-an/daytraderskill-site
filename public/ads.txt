@@ -1,0 +1,4 @@
+# ads.txt scaffold for https://daytraderskill.com
+# No live AdSense publisher line yet — do not invent ca-pub IDs.
+# When ready, replace with a verified record, for example:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
