@@ -4,16 +4,16 @@ import { Related } from '@/components/Related';
 import { SKILLS } from '@/lib/skills';
 
 export const metadata: Metadata = {
-  title: '11 Claude Day Trader Skills Index',
+  title: 'Day Trader Skill: 11 Modules Index',
   description:
-    'Index of all 11 Claude Day Trader Skill commands: scanner, news, entry, exit, timemachine, budget, risk, broker, alerts, analyst, pelosi. Not financial advice.',
+    'Day trader skill modules index: trader-scanner, news, entry, exit, timemachine, budget, risk, broker, alerts, analyst, pelosi. Inputs/outputs — not trade ideas. NFA.',
   alternates: { canonical: '/skills/' },
 };
 
 export default function SkillsIndexPage() {
   return (
     <>
-      <h1>Eleven Claude Day Trader Skills — index</h1>
+      <h1>Day Trader Skill modules: 11 trader-* commands</h1>
       <div className="tldr">
         <strong>TL;DR.</strong> Each skill is a Claude command plus optional Python helpers. Use them
         as a checklist, not as autopilot. Typical chain: scanner → news → entry → exit →
@@ -53,9 +53,9 @@ export default function SkillsIndexPage() {
       </table>
       <Related
         links={[
-          { href: '/install/', label: 'Install' },
-          { href: '/safety/', label: 'Safety' },
-          { href: '/paper-trading/', label: 'Paper trading' },
+          { href: '/install/', label: 'Day trader skill install' },
+          { href: '/safety/', label: 'Safety & Needs approval' },
+          { href: '/paper-trading/', label: 'Day trader skill paper trading' },
         ]}
       />
     </>

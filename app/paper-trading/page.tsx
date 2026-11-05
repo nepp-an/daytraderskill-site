@@ -3,16 +3,16 @@ import Link from 'next/link';
 import { Related } from '@/components/Related';
 
 export const metadata: Metadata = {
-  title: 'Paper Trading with Claude Day Trader Skill',
+  title: 'Day Trader Skill Paper Trading Guide',
   description:
-    'How to rehearse the Claude Day Trader Skill flow on paper: scanner through broker ticket without live capital. Needs approval, paper account defaults. Not financial advice.',
+    'Day trader skill paper trading: rehearse scanner→broker on a paper account with Needs approval. Claude day trader paper broker defaults — not live capital. Not financial advice.',
   alternates: { canonical: '/paper-trading/' },
 };
 
 export default function PaperTradingPage() {
   return (
     <>
-      <h1>Paper trading with Claude Day Trader Skill</h1>
+      <h1>Day Trader Skill paper trading: rehearse before any live risk</h1>
       <div className="tldr">
         <strong>TL;DR.</strong> Run the full chain on a paper account until tickets, risk BLOCKs, and
         alerts feel boring. Do not “just try live once.” Most people who day trade lose money —
@@ -45,9 +45,9 @@ export default function PaperTradingPage() {
       </ul>
       <Related
         links={[
-          { href: '/safety/', label: 'Safety checklist' },
-          { href: '/skills/broker/', label: 'Broker skill notes' },
-          { href: '/install/', label: 'Install' },
+          { href: '/safety/', label: 'Claude day trader skill safety' },
+          { href: '/skills/broker/', label: 'trader-broker skill notes' },
+          { href: '/install/', label: 'Day trader skill install' },
         ]}
       />
     </>

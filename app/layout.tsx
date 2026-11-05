@@ -8,7 +8,7 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
   title: {
-    default: `Claude Day Trader Skill — Install & Safety Guide | ${BRAND}`,
+    default: `Day Trader Skill — Claude Pack Guide | ${BRAND}`,
     template: `%s | ${BRAND}`,
   },
   description: DISCLAIMER_SHORT,

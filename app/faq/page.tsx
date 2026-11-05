@@ -5,9 +5,9 @@ import { JsonLd } from '@/components/JsonLd';
 import { Related } from '@/components/Related';
 
 export const metadata: Metadata = {
-  title: 'Claude Day Trader Skill FAQ',
+  title: 'Day Trader Skill FAQ (Advice & Auto-Trade)',
   description:
-    'FAQ: Is Claude Day Trader Skill an auto-bot? Paper trading? Financial advice? Claude Pro? PDT? SEC_USER_AGENT? Stops? Taxes? Not financial advice.',
+    'FAQ intents: is day trader skill financial advice? Does it auto trade? Free? Claude day trader skill worth it? Paper default, NFA — no signals or profit promises.',
   alternates: { canonical: '/faq/' },
 };
 
@@ -66,7 +66,7 @@ export default function FaqPage() {
   return (
     <>
       <JsonLd data={faqJsonLd(faqs)} />
-      <h1>Claude Day Trader Skill — FAQ</h1>
+      <h1>Day Trader Skill FAQ: advice, auto-trade &amp; paper defaults</h1>
       <div className="tldr">
         <strong>TL;DR.</strong> Short answers for the questions install guides skip: bot myths,
         paper defaults, approvals, data limits, and “is this official?”
@@ -74,9 +74,9 @@ export default function FaqPage() {
       <FaqList items={faqs} />
       <Related
         links={[
-          { href: '/install/troubleshoot/', label: 'Troubleshoot matrix' },
-          { href: '/safety/', label: 'Safety checklist' },
-          { href: '/vs/', label: 'Comparisons' },
+          { href: '/install/troubleshoot/', label: 'Day trader skill not working' },
+          { href: '/safety/', label: 'Safety & paper trading' },
+          { href: '/vs/', label: 'Claude trading skills comparison' },
         ]}
       />
     </>

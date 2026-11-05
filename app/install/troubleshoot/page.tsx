@@ -5,9 +5,9 @@ import { FaqList, faqJsonLd } from '@/components/Faq';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Claude Day Trader Skill Install Troubleshooting',
+  title: 'Day Trader Skill Not Working — Fixes',
   description:
-    'Fix Claude Day Trader Skill install failures: plugin namespaces, missing /trader-* commands, Python 3.8+, SEC_USER_AGENT errors, sandbox networking, and approval-card confusion. Not financial advice.',
+    'Day trader skill not working? Fix namespace mismatches, sandbox/network blocks, permissions, Python, SEC_USER_AGENT, and Needs approval confusion. Intent guide — no fabricated search volume. NFA.',
   alternates: { canonical: '/install/troubleshoot/' },
 };
 
@@ -34,12 +34,13 @@ export default function TroubleshootPage() {
   return (
     <>
       <JsonLd data={faqJsonLd(faqs)} />
-      <h1>Claude Day Trader Skill: install troubleshooting matrix</h1>
+      <h1>Day Trader Skill not working: namespace, sandbox &amp; permissions</h1>
       <div className="tldr">
-        <strong>TL;DR.</strong> Most “it won’t install” reports are actually namespace mismatches,
-        missing Python, blocked public data/SEC calls, or confusion about approval cards — not a
-        broken git clone. Use the matrix below, then re-check the{' '}
-        <Link href="/install/">install paths</Link>.
+        <strong>TL;DR.</strong> When <strong>day trader skill</strong> looks installed but{' '}
+        <strong>not working</strong>, it is usually a namespace mismatch, sandbox without network,
+        missing permissions/Python, blocked SEC calls, or approval-card confusion — not a broken
+        clone. Use the matrix below, then re-check the <Link href="/install/">install paths</Link>.
+        Not financial advice.
       </div>
 
       <div className="callout danger">
@@ -184,10 +185,10 @@ export default function TroubleshootPage() {
 
       <Related
         links={[
-          { href: '/install/', label: 'Back to install (4 paths)' },
+          { href: '/install/', label: 'Day trader skill install (4 paths)' },
           { href: '/safety/', label: 'Safety & Needs approval' },
-          { href: '/paper-trading/', label: 'Paper trading rehearsal' },
-          { href: '/faq/', label: 'General FAQ' },
+          { href: '/paper-trading/', label: 'Day trader skill paper trading' },
+          { href: '/faq/', label: 'Day trader skill FAQ' },
         ]}
       />
     </>

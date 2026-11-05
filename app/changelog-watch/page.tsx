@@ -4,16 +4,16 @@ import { Related } from '@/components/Related';
 import { UPSTREAM_REPO } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Day Trader Skill Upstream Changelog Watch',
+  title: 'Day Trader Skill GitHub Update Watch',
   description:
-    'How to watch the Claude Day Trader Skill GitHub repo for commits, issues, and fork risk. Upstream may go stale — verify yourself. Not financial advice. Not the official site.',
+    'Day trader skill GitHub update watch: check Jakeschincariol/day-trader-skill commits, forks, and staleness yourself. Not a live feed; not the official site. NFA.',
   alternates: { canonical: '/changelog-watch/' },
 };
 
 export default function ChangelogWatchPage() {
   return (
     <>
-      <h1>Upstream changelog watch (day-trader-skill)</h1>
+      <h1>Day Trader Skill GitHub update watch</h1>
       <div className="tldr">
         <strong>TL;DR.</strong> Star counts can rise while <em>code pushes</em> stay frozen. As of
         2026-11-05 Asia/Shanghai research for this site, upstream{' '}
@@ -52,9 +52,9 @@ export default function ChangelogWatchPage() {
       </p>
       <Related
         links={[
-          { href: '/vs/', label: 'Comparisons' },
-          { href: '/about/', label: 'About this site' },
-          { href: '/install/', label: 'Install' },
+          { href: '/vs/', label: 'Claude trading skills comparison' },
+          { href: '/about/', label: 'About this independent site' },
+          { href: '/install/', label: 'Day trader skill install' },
         ]}
       />
     </>

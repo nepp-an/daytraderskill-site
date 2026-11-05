@@ -5,9 +5,9 @@ import { FaqList, faqJsonLd } from '@/components/Faq';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Claude Day Trader Skill Safety Checklist',
+  title: 'Day Trader Skill Safety & Paper Trading',
   description:
-    'Safety checklist for Claude Day Trader Skill: paper trading default, typed yes before orders, Needs approval (never Always allow), keys in env vars, stop slippage, unofficial data limits. Not financial advice.',
+    'Claude day trader skill safety: paper trading default, Needs approval (never Always allow), typed yes before orders, keys in env. Checklist for Claude trading skills security. Not financial advice.',
   alternates: { canonical: '/safety/' },
 };
 
@@ -30,13 +30,14 @@ export default function SafetyPage() {
   return (
     <>
       <JsonLd data={faqJsonLd(faqs)} />
-      <h1>Claude Day Trader Skill safety checklist</h1>
+      <h1>Claude Day Trader Skill safety: paper trading &amp; Needs approval</h1>
       <div className="tldr">
-        <strong>TL;DR.</strong> Treat the pack as <strong>assisted workflow software</strong>, not a
-        profit engine. Keep <strong>paper trading on</strong>, require a typed <strong>yes</strong>{' '}
-        per ticket, set connectors to <strong>Needs approval</strong>, keep API keys out of chat, and
-        remember: simulations and stops are not guarantees. This page is compliance-first on
-        purpose.
+        <strong>TL;DR.</strong> <strong>Claude day trader skill safety</strong> means treating the
+        pack as <strong>assisted workflow software</strong>, not a profit engine. Keep{' '}
+        <strong>paper trading</strong> on, require a typed <strong>yes</strong> per ticket, set
+        connectors to <strong>Needs approval</strong> (never Always allow), keep API keys out of
+        chat, and remember: simulations and stops are not guarantees. Compliance-first on purpose.
+        Not financial advice.
       </div>
 
       <div className="callout danger">
@@ -193,10 +194,10 @@ export default function SafetyPage() {
 
       <Related
         links={[
-          { href: '/paper-trading/', label: 'Paper trading rehearsal flow' },
-          { href: '/install/', label: 'Install paths' },
-          { href: '/vs/', label: 'Compare packs honestly' },
-          { href: '/faq/', label: 'More FAQ' },
+          { href: '/paper-trading/', label: 'Day trader skill paper trading' },
+          { href: '/install/', label: 'Day trader skill install' },
+          { href: '/vs/', label: 'Claude trading skills comparison' },
+          { href: '/faq/', label: 'Is day trader skill financial advice?' },
         ]}
       />
     </>

@@ -4,22 +4,23 @@ import { Related } from '@/components/Related';
 import { UPSTREAM_REPO, UPSTREAM_V1 } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Claude Day Trader Skill vs Other Trading Skills',
+  title: 'Claude Trading Skills Comparison',
   description:
-    'Honest comparison: Claude Day Trader Skill vs trader-skill v1 and other Claude trading / agent skill packs — skill count, broker reach, API keys, update risk. Not financial advice. No smear pieces.',
+    'Claude trading skills compared: Day Trader Skill vs trader-skill v1 and other packs — workflow fit, broker reach, update risk. Not a Claude agent skills / Superpowers homepage. NFA; no smear.',
   alternates: { canonical: '/vs/' },
 };
 
 export default function VsPage() {
   return (
     <>
-      <h1>Claude Day Trader Skill vs other Claude trading skills</h1>
+      <h1>Claude trading skills compared: Day Trader Skill vs other packs</h1>
       <div className="tldr">
-        <strong>TL;DR.</strong> Day Trader Skill is the day-trading sequel to the earlier
-        investor-oriented trader-skill pack: eleven skills, public-data Python helpers, paper
-        default, human yes before orders. Other repos emphasize prompts, different brokers, or
-        regional workflows. Choose based on <em>workflow fit and maintenance risk</em>, not star
-        count theater — and never on profit claims.
+        <strong>TL;DR.</strong> Looking for <strong>Claude trading skills</strong> side-by-side?
+        Day Trader Skill is the day-trading sequel to trader-skill v1: eleven skills, public-data
+        Python helpers, paper default, human yes before orders. Other repos emphasize prompts,
+        different brokers, or regional workflows. Choose by <em>workflow fit and maintenance
+        risk</em>, not star-count theater — and never on profit claims. This page is not trying to
+        rank broad Claude agent skills or Superpowers directories.
       </div>
 
       <div className="callout danger">
@@ -139,10 +140,11 @@ export default function VsPage() {
           </tr>
         </tbody>
       </table>
-      <p className="muted">
+      <p className="muted" id="ecosystem">
         Category examples people compare in articles include investor-oriented packs, third-party
-        “Claude day trader” write-ups, and regional forks (for example India-focused setup notes).
-        We link the canonical MIT repos above rather than ranking unaudited mirrors.
+        “Claude day trader” write-ups, and regional forks. Broad terms like Claude agent skills or
+        Superpowers Claude are adjacent ecosystem searches — useful context, not this site’s home
+        intent. We link the canonical MIT repos above rather than ranking unaudited mirrors.
       </p>
 
       <h2>When day-trader-skill is a reasonable fit</h2>
@@ -178,10 +180,10 @@ export default function VsPage() {
 
       <Related
         links={[
-          { href: '/install/', label: 'Install guide' },
-          { href: '/safety/', label: 'Safety checklist' },
-          { href: '/skills/', label: 'Eleven skills' },
-          { href: '/changelog-watch/', label: 'Upstream freshness watch' },
+          { href: '/install/', label: 'Day trader skill install' },
+          { href: '/safety/', label: 'Claude day trader skill safety' },
+          { href: '/skills/', label: '11 trader-* skill modules' },
+          { href: '/changelog-watch/', label: 'Day trader skill GitHub update watch' },
         ]}
       />
     </>

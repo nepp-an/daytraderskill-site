@@ -4,18 +4,19 @@ import { Related } from '@/components/Related';
 import { UPSTREAM_REPO } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Install Claude Day Trader Skill (4 Paths)',
+  title: 'Day Trader Skill Install (Claude Code)',
   description:
-    'Install the Claude Day Trader Skill pack four ways: paste repo URL in Claude, Claude Code plugin marketplace, copy trader-* folders, or paste a single SKILL.md. Python 3.8+, SEC_USER_AGENT, and next steps. Not financial advice.',
+    'Day trader skill install: Claude Code trading skill plugin, paste GitHub URL, copy trader-* folders, or SKILL.md-only. Python 3.8+, SEC_USER_AGENT, paper default. Not financial advice.',
   alternates: { canonical: '/install/' },
 };
 
 export default function InstallPage() {
   return (
     <>
-      <h1>Install Claude Day Trader Skill: four working paths</h1>
+      <h1>Day Trader Skill install: Claude Code trading skill & four paths</h1>
       <div className="tldr">
-        <strong>TL;DR.</strong> Pick one path that matches how you use Claude. Path A (paste URL) is
+        <strong>TL;DR.</strong> This is the <strong>day trader skill install</strong> guide —
+        including the <strong>Claude Code trading skill</strong> plugin path. Path A (paste URL) is
         fastest for Claude chat. Path B is for Claude Code plugins. Path C copies folders for plain{' '}
         <code className="inline">/trader-*</code> commands. Path D pastes a single{' '}
         <code className="inline">SKILL.md</code> when you cannot install tools. Always set paper
@@ -24,7 +25,7 @@ export default function InstallPage() {
         <a href={UPSTREAM_REPO} rel="noopener noreferrer" target="_blank">
           upstream GitHub
         </a>{' '}
-        — this page is not the official site.
+        — this page is not the official site. Not financial advice.
       </div>
 
       <div className="callout danger">
@@ -217,10 +218,10 @@ cp -r trader-* .claude/skills/`}</pre>
 
       <Related
         links={[
-          { href: '/install/troubleshoot/', label: 'Troubleshoot install failures' },
-          { href: '/safety/', label: 'Safety checklist before broker tools' },
-          { href: '/skills/', label: 'Eleven skills index' },
-          { href: '/vs/', label: 'Compare with other packs' },
+          { href: '/install/troubleshoot/', label: 'Day trader skill not working — fixes' },
+          { href: '/safety/', label: 'Safety, paper trading & Needs approval' },
+          { href: '/skills/', label: '11 day trader skill modules' },
+          { href: '/vs/', label: 'Claude trading skills vs this pack' },
         ]}
       />
     </>

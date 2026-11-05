@@ -5,24 +5,25 @@ import { SKILLS } from '@/lib/skills';
 import { BRAND, UPSTREAM_REPO } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Claude Day Trader Skill — What It Is, Install & Safety',
+  title: 'Day Trader Skill — Claude Pack Guide',
   description:
-    'Independent guide to the Claude Day Trader Skill pack: 11 open-source skills (not an auto-trading bot), install paths, paper-trading defaults, and safety checklist. Not financial advice.',
+    'What is day trader skill / Claude day trader skill? Independent guide to the 11-skill pack (not an auto-trading bot), day trading skills Claude workflows, install, paper default, NFA.',
   alternates: { canonical: '/' },
 };
 
 export default function HomePage() {
   return (
     <>
-      <h1>Claude Day Trader Skill: 11 skills, not an auto-trading bot</h1>
+      <h1>Day Trader Skill: Claude day trader skill pack — 11 skills, not an auto-trading bot</h1>
 
       <div className="tldr">
-        <strong>TL;DR.</strong> Day Trader Skill is a free MIT pack of{' '}
-        <strong>11 Claude Agent Skills</strong> plus plain-Python helpers that read public market
-        data. It helps you scan, research, plan, simulate, size, and — only after you type yes —
-        send a ticket. <strong>It is not a set-and-forget trading bot.</strong> Paper trading is
-        the default. This site ({BRAND}) is an <strong>independent</strong> install / safety /
-        comparison guide — <strong>not</strong> the official project homepage.
+        <strong>TL;DR.</strong> <strong>Day trader skill</strong> (also searched as{' '}
+        <strong>Claude day trader skill</strong> / day trading skills Claude) is a free MIT pack of{' '}
+        <strong>11 Claude skills</strong> plus plain-Python helpers that read public market data. It
+        helps you scan, research, plan, simulate, size, and — only after you type yes — send a
+        ticket. <strong>It is not a set-and-forget trading bot.</strong> Paper trading is the
+        default. This site ({BRAND}) is an <strong>independent</strong> install / safety /
+        comparison guide — <strong>not</strong> the official project homepage. Not financial advice.
       </div>
 
       <div className="callout danger">
@@ -180,10 +181,10 @@ export default function HomePage() {
 
       <Related
         links={[
-          { href: '/install/', label: 'Install Claude Day Trader Skill' },
-          { href: '/safety/', label: 'Safety & approval checklist' },
-          { href: '/vs/', label: 'Compare trading skill packs' },
-          { href: '/about/', label: 'About this independent site' },
+          { href: '/install/', label: 'Day trader skill install (Claude Code)' },
+          { href: '/safety/', label: 'Claude day trader skill safety & paper trading' },
+          { href: '/vs/', label: 'Claude trading skills comparison' },
+          { href: '/install/troubleshoot/', label: 'Day trader skill not working' },
         ]}
       />
     </>
