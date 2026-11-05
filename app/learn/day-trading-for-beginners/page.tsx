@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { FaqList, faqJsonLd } from '@/components/Faq';
 import { JsonLd } from '@/components/JsonLd';
+import { NextPath } from '@/components/NextPath';
 import { Related } from '@/components/Related';
+import { JournalIcon, ScaleIcon, ShieldIcon } from '@/components/icons';
 import { articleJsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -10,6 +12,26 @@ export const metadata: Metadata = {
   description:
     'Learn day trading for beginners the paper-first way: concepts, a practice sequence, real costs, common mistakes, and what to study first. NFA.',
   alternates: { canonical: '/learn/day-trading-for-beginners/' },
+  openGraph: {
+    title: 'Day Trading for Beginners: Paper-First Starter Guide',
+    description:
+      'A beginner roadmap for learning day trading mechanics, costs, and risk on paper before considering live capital.',
+    url: '/learn/day-trading-for-beginners/',
+    images: [
+      {
+        url: '/og/beginners.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Day trading for beginners — a paper-first starter guide',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Day Trading for Beginners: Paper-First Starter Guide',
+    description: 'Mechanics, costs, a paper-first sequence, and common mistakes.',
+    images: ['/og/beginners.svg'],
+  },
 };
 
 const faqs = [
@@ -83,6 +105,43 @@ export default function DayTradingForBeginnersPage() {
         </p>
       </div>
 
+      <figure className="page-visual">
+        <img
+          src="/illustrations/beginner-path.svg"
+          alt="Four-stage beginner path: mechanics, one written process, paper repetitions, and journal review."
+          width={720}
+          height={320}
+          loading="lazy"
+        />
+        <figcaption>
+          A study sequence, not a performance promise. Each stage produces notes you can review.
+        </figcaption>
+      </figure>
+
+      <ul className="icon-row">
+        <li>
+          <ShieldIcon size={20} />
+          <span>
+            <strong>Risk budget first</strong>
+            Decide the maximum loss before the entry.
+          </span>
+        </li>
+        <li>
+          <ScaleIcon size={20} />
+          <span>
+            <strong>Size from the stop</strong>
+            Stop distance and risk percentage set the share count.
+          </span>
+        </li>
+        <li>
+          <JournalIcon size={20} />
+          <span>
+            <strong>Journal the decision</strong>
+            Record why you acted, not only the result.
+          </span>
+        </li>
+      </ul>
+
       <h2>What day trading actually is</h2>
       <p>
         A day trade is a position opened and closed within the same trading day. The trader is
@@ -134,11 +193,13 @@ export default function DayTradingForBeginnersPage() {
       </p>
       <p>
         Read the <Link href="/safety/#risk">risk basics</Link> before you think about live capital.
-        The <Link href="/paper-trading/">paper trading guide</Link> explains how to rehearse the
-        whole loop without risking money.
+        The <Link href="/tools/position-size-calculator/">position size calculator</Link> turns a
+        risk percentage and stop distance into a share count, and the{' '}
+        <Link href="/paper-trading/">paper trading guide</Link> explains how to rehearse the whole
+        loop without risking money.
       </p>
 
-      <h2>A paper-first path for your first month</h2>
+      <h2>A paper-first path for beginners in the first month</h2>
       <p>
         This is an educational sequence, not a performance plan. Move at the speed that lets you
         explain what you are doing. The goal is not to “graduate” to live trading on a schedule.
@@ -306,6 +367,26 @@ export default function DayTradingForBeginnersPage() {
             href: '/safety/',
             label: 'Risk and safety checklist',
             description: 'Hard rules for approvals, secrets, and paper defaults.',
+          },
+        ]}
+      />
+
+      <NextPath
+        links={[
+          {
+            href: '/learn/how-to-start-day-trading/',
+            label: 'Follow the how to start roadmap',
+            description: 'Turn the beginner concepts into a step-by-step plan.',
+          },
+          {
+            href: '/paper-trading/',
+            label: 'Rehearse the workflow on paper',
+            description: 'Use a simulator, the first-session checklist, and a journal.',
+          },
+          {
+            href: '/tools/position-size-calculator/',
+            label: 'Calculate a practice position size',
+            description: 'Account size, risk %, entry, and stop distance → shares.',
           },
         ]}
       />

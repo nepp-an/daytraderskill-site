@@ -1,6 +1,9 @@
 import Link from 'next/link';
 
 const LINKS = [
+  { href: '/tools/position-size-calculator/', label: 'Position size' },
+  { href: '/tools/risk-reward-calculator/', label: 'Risk / reward' },
+  { href: '/paper-trading/#paper-journal', label: 'Paper journal' },
   { href: '/tools/install-claude-skills/', label: 'Install Claude skills' },
   { href: '/install/', label: 'Day Trader Skill install' },
   { href: '/skills/', label: '11 modules' },

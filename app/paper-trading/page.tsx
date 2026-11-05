@@ -2,14 +2,37 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { FaqList, faqJsonLd } from '@/components/Faq';
 import { JsonLd } from '@/components/JsonLd';
+import { NextPath } from '@/components/NextPath';
+import { PaperJournal } from '@/components/PaperJournal';
 import { Related } from '@/components/Related';
+import { ChecklistIcon, ClockIcon, ShieldIcon } from '@/components/icons';
 import { articleJsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: { absolute: 'What Is Paper Trading? Definition & Practice Guide' },
   description:
-    'What is paper trading? How simulated orders work, why paper comes first, what it cannot teach, and how to run a realistic first session. Not financial advice.',
+    'What is paper trading? How simulated orders work, why paper comes first, what it cannot teach, and how to run a realistic first session. Includes a checklist and printable journal. Not financial advice.',
   alternates: { canonical: '/paper-trading/' },
+  openGraph: {
+    title: 'What Is Paper Trading? Definition & Practice Guide',
+    description:
+      'A paper-first explanation of simulated trading: how it works, why it is the default, what it cannot teach, and a first-session checklist.',
+    url: '/paper-trading/',
+    images: [
+      {
+        url: '/og/paper-trading.svg',
+        width: 1200,
+        height: 630,
+        alt: 'What is paper trading? A practice guide with a checklist and journal',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'What Is Paper Trading? Definition & Practice Guide',
+    description: 'Simulated orders, a first-session checklist, and a journal template.',
+    images: ['/og/paper-trading.svg'],
+  },
 };
 
 const faqs = [
@@ -87,7 +110,44 @@ export default function PaperTradingPage() {
         </p>
       </div>
 
-      <h2>Paper trading: a plain-English definition</h2>
+      <figure className="page-visual">
+        <img
+          src="/illustrations/paper-flow.svg"
+          alt="Simulation flow: open a paper account, write rules, place a simulated order, then review the journal."
+          width={720}
+          height={320}
+          loading="lazy"
+        />
+        <figcaption>
+          The loop for a first paper session. No real capital, no live order API, no signals.
+        </figcaption>
+      </figure>
+
+      <ul className="icon-row">
+        <li>
+          <ClockIcon size={20} />
+          <span>
+            <strong>Short first session</strong>
+            One instrument, one written rule, one reviewed decision.
+          </span>
+        </li>
+        <li>
+          <ChecklistIcon size={20} />
+          <span>
+            <strong>Checklist before the ticket</strong>
+            Confirm paper mode, data timestamp, spread, and size.
+          </span>
+        </li>
+        <li>
+          <ShieldIcon size={20} />
+          <span>
+            <strong>Keep the gate closed</strong>
+            Any order-capable tool stays on Needs approval.
+          </span>
+        </li>
+      </ul>
+
+      <h2 id="what-is-paper-trading">Paper trading: a plain-English definition</h2>
       <p>
         Paper trading is the practice of placing buy and sell orders in a simulated account. The
         platform records the orders and calculates a hypothetical profit or loss, but no real
@@ -200,6 +260,8 @@ export default function PaperTradingPage() {
         <li>Review whether the process or the outcome drove your decisions.</li>
       </ul>
 
+      <PaperJournal />
+
       <h2>Paper trading versus live trading</h2>
       <table className="data">
         <thead>
@@ -306,6 +368,26 @@ export default function PaperTradingPage() {
             href: '/tools/',
             label: 'Tools hub',
             description: 'Claude skills, simulators, and comparison guides.',
+          },
+        ]}
+      />
+
+      <NextPath
+        links={[
+          {
+            href: '/tools/position-size-calculator/',
+            label: 'Size the simulated order',
+            description: 'Account size, risk %, entry, and stop distance → shares.',
+          },
+          {
+            href: '/tools/risk-reward-calculator/',
+            label: 'Check the simulated payoff',
+            description: 'Compare entry, stop, and target before costs.',
+          },
+          {
+            href: '/safety/',
+            label: 'Review the safety gates',
+            description: 'Paper defaults, Needs approval, and secret handling.',
           },
         ]}
       />

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-labelledby="paperTitle paperDesc" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <title id="paperTitle">A simulated trading loop</title>
+  <desc id="paperDesc">Open a simulator, write rules, place a simulated order, then review the journal. No real money and no market connection.</desc>
+  <defs>
+    <linearGradient id="paperBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101f1b"/>
+      <stop offset="1" stop-color="#0a1219"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="320" rx="20" fill="url(#paperBg)"/>
+  <rect x=".5" y=".5" width="719" height="319" rx="19.5" fill="none" stroke="#263648"/>
+
+  <text x="32" y="42" fill="#59d39a" font-size="11" font-weight="700" letter-spacing="2.2">SIMULATION LOOP</text>
+  <text x="32" y="73" fill="#eef5fb" font-size="23" font-weight="750" letter-spacing="-.4">Open → rules → simulated order → review</text>
+
+  <g>
+    <rect x="32" y="108" width="142" height="108" rx="12" fill="#101c27" stroke="#2b4357"/>
+    <rect x="48" y="124" width="28" height="28" rx="7" fill="#16293a" stroke="#37607f"/>
+    <path d="M55 133h6l3-4 4 12 3-8h6" stroke="#8ab8ff" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+    <text x="48" y="178" fill="#e9f0f7" font-size="14" font-weight="700">Open simulator</text>
+    <text x="48" y="198" fill="#93a8bc" font-size="11">Paper account only</text>
+  </g>
+
+  <path d="M174 162H198" stroke="#59d39a" stroke-width="2" stroke-linecap="round"/>
+  <path d="m193 157 6 5-6 5" fill="none" stroke="#59d39a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="198" y="108" width="142" height="108" rx="12" fill="#10231c" stroke="#2f5c4a"/>
+    <path d="M214 126h14M214 133h22M214 140h18" stroke="#59d39a" stroke-width="2" stroke-linecap="round"/>
+    <text x="214" y="178" fill="#e9f0f7" font-size="14" font-weight="700">Write rules</text>
+    <text x="214" y="198" fill="#93a8bc" font-size="11">Entry, stop, max loss</text>
+  </g>
+
+  <path d="M340 162H364" stroke="#59d39a" stroke-width="2" stroke-linecap="round"/>
+  <path d="m359 157 6 5-6 5" fill="none" stroke="#59d39a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="364" y="108" width="142" height="108" rx="12" fill="#101c27" stroke="#2b4357"/>
+    <rect x="380" y="124" width="34" height="24" rx="5" fill="#16293a" stroke="#37607f"/>
+    <path d="M386 130h6M386 136h14M386 142h10" stroke="#8ab8ff" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="380" y="178" fill="#e9f0f7" font-size="14" font-weight="700">Simulated order</text>
+    <text x="380" y="198" fill="#93a8bc" font-size="11">Check the ticket</text>
+  </g>
+
+  <path d="M506 162H530" stroke="#59d39a" stroke-width="2" stroke-linecap="round"/>
+  <path d="m525 157 6 5-6 5" fill="none" stroke="#59d39a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="530" y="108" width="158" height="108" rx="12" fill="#191a2b" stroke="#473f6d"/>
+    <path d="M546 126h16v18h-16zM550 131h8M550 136h6M550 141h4" stroke="#b39af2" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <text x="546" y="178" fill="#e9f0f7" font-size="14" font-weight="700">Review journal</text>
+    <text x="546" y="198" fill="#93a8bc" font-size="11">Decisions, not luck</text>
+  </g>
+
+  <g>
+    <rect x="32" y="242" width="656" height="50" rx="10" fill="#0d1720" stroke="#2b4357"/>
+    <text x="48" y="264" fill="#dfe9f2" font-size="12" font-weight="650">No real capital · no live order API · no signals</text>
+    <text x="48" y="281" fill="#7e93a8" font-size="11">Fills are simulated and may be optimistic. Paper is a rehearsal, not proof of an edge.</text>
+  </g>
+</svg>

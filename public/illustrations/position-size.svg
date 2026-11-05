@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="posTitle posDesc" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <title id="posTitle">Position size formula</title>
+  <desc id="posDesc">Account size multiplied by risk percent gives the risk budget. Divide that by stop distance to estimate share count.</desc>
+  <defs>
+    <linearGradient id="posBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101d28"/>
+      <stop offset="1" stop-color="#0a1219"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="300" rx="20" fill="url(#posBg)"/>
+  <rect x=".5" y=".5" width="719" height="299" rx="19.5" fill="none" stroke="#263648"/>
+
+  <text x="32" y="42" fill="#59d39a" font-size="11" font-weight="700" letter-spacing="2.2">RISK-FIRST ARITHMETIC</text>
+  <text x="32" y="73" fill="#eef5fb" font-size="23" font-weight="750" letter-spacing="-.4">Size from the loss you accept — not from buying power</text>
+
+  <g>
+    <rect x="32" y="104" width="168" height="76" rx="11" fill="#101c27" stroke="#2b4357"/>
+    <text x="48" y="128" fill="#93a8bc" font-size="10" font-weight="700" letter-spacing="1.1">ACCOUNT SIZE</text>
+    <text x="48" y="158" fill="#e9f0f7" font-size="22" font-weight="750">$25,000</text>
+  </g>
+  <text x="212" y="149" fill="#59d39a" font-size="20" font-weight="700">×</text>
+  <g>
+    <rect x="232" y="104" width="140" height="76" rx="11" fill="#101c27" stroke="#2b4357"/>
+    <text x="248" y="128" fill="#93a8bc" font-size="10" font-weight="700" letter-spacing="1.1">RISK %</text>
+    <text x="248" y="158" fill="#e9f0f7" font-size="22" font-weight="750">1.0%</text>
+  </g>
+  <text x="384" y="149" fill="#59d39a" font-size="20" font-weight="700">=</text>
+  <g>
+    <rect x="404" y="104" width="140" height="76" rx="11" fill="#10231c" stroke="#2f5c4a"/>
+    <text x="420" y="128" fill="#9af0c7" font-size="10" font-weight="700" letter-spacing="1.1">RISK BUDGET</text>
+    <text x="420" y="158" fill="#e9f0f7" font-size="22" font-weight="750">$250</text>
+  </g>
+  <text x="556" y="149" fill="#59d39a" font-size="20" font-weight="700">÷</text>
+  <g>
+    <rect x="574" y="104" width="114" height="76" rx="11" fill="#191a2b" stroke="#473f6d"/>
+    <text x="590" y="128" fill="#ded3ff" font-size="10" font-weight="700" letter-spacing="1.1">STOP $</text>
+    <text x="590" y="158" fill="#e9f0f7" font-size="22" font-weight="750">$2.50</text>
+  </g>
+
+  <g>
+    <rect x="32" y="204" width="656" height="64" rx="11" fill="#0d1720" stroke="#2b4357"/>
+    <text x="48" y="228" fill="#dfe9f2" font-size="13" font-weight="650">Suggested shares = floor($250 ÷ $2.50) = 100 shares</text>
+    <text x="48" y="249" fill="#7e93a8" font-size="11">Example arithmetic only, not a trade recommendation. Fees, slippage, and gaps can raise real risk.</text>
+  </g>
+</svg>

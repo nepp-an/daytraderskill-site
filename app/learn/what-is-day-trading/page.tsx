@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { FaqList, faqJsonLd } from '@/components/Faq';
 import { JsonLd } from '@/components/JsonLd';
+import { NextPath } from '@/components/NextPath';
 import { Related } from '@/components/Related';
+import { ClockIcon, PaperIcon, ShieldIcon } from '@/components/icons';
 import { articleJsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -10,6 +12,26 @@ export const metadata: Metadata = {
   description:
     'What is day trading? A clear definition, how intraday trades work, how it differs from swing trading and investing, and the risks to understand. NFA.',
   alternates: { canonical: '/learn/what-is-day-trading/' },
+  openGraph: {
+    title: 'What Is Day Trading? Definition, Rules & Examples',
+    description:
+      'A plain-English definition of day trading, with an illustrative example and the key differences from swing trading and investing.',
+    url: '/learn/what-is-day-trading/',
+    images: [
+      {
+        url: '/og/what-is.svg',
+        width: 1200,
+        height: 630,
+        alt: 'What is day trading? A plain-English definition from DayTraderSkill.com',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'What Is Day Trading? Definition, Rules & Examples',
+    description: 'Day vs swing vs invest, with the risks in plain language.',
+    images: ['/og/what-is.svg'],
+  },
 };
 
 const faqs = [
@@ -86,6 +108,44 @@ export default function WhatIsDayTradingPage() {
           involved.
         </p>
       </div>
+
+      <figure className="page-visual">
+        <img
+          src="/illustrations/what-is-compare.svg"
+          alt="Comparison of day trading, swing trading, and investing by holding period and focus."
+          width={720}
+          height={320}
+          loading="lazy"
+        />
+        <figcaption>
+          The holding period is the defining difference. Each approach carries different costs and
+          risks.
+        </figcaption>
+      </figure>
+
+      <ul className="icon-row">
+        <li>
+          <ClockIcon size={20} />
+          <span>
+            <strong>Same session</strong>
+            A day trade is normally opened and closed before the close.
+          </span>
+        </li>
+        <li>
+          <PaperIcon size={20} />
+          <span>
+            <strong>Practice the mechanics</strong>
+            Simulated orders show how the workflow feels before real money.
+          </span>
+        </li>
+        <li>
+          <ShieldIcon size={20} />
+          <span>
+            <strong>Know the downside</strong>
+            Leverage and frequent trading can amplify losses.
+          </span>
+        </li>
+      </ul>
 
       <h2>The definition</h2>
       <p>
@@ -255,7 +315,9 @@ export default function WhatIsDayTradingPage() {
         <Link href="/learn/how-to-start-day-trading/">how to start day trading</Link> for the
         step-by-step version. Before any live decision, read{' '}
         <Link href="/safety/">the safety and risk checklist</Link> and practise in a{' '}
-        <Link href="/paper-trading/">paper account</Link>.
+        <Link href="/paper-trading/">paper account</Link>. If you are testing a written plan, the{' '}
+        <Link href="/tools/position-size-calculator/">position size calculator</Link> makes the
+        distance from entry to invalidation visible in dollars.
       </p>
 
       <div className="callout compliance">
@@ -290,6 +352,26 @@ export default function WhatIsDayTradingPage() {
             href: '/safety/',
             label: 'Risk and safety checklist',
             description: 'Hard rules for paper defaults and approvals.',
+          },
+        ]}
+      />
+
+      <NextPath
+        links={[
+          {
+            href: '/learn/day-trading-for-beginners/',
+            label: 'Day trading for beginners',
+            description: 'The skills, costs, and mistakes that follow the definition.',
+          },
+          {
+            href: '/paper-trading/',
+            label: 'What is paper trading?',
+            description: 'See how the definition becomes a simulated practice session.',
+          },
+          {
+            href: '/learn/how-to-start-day-trading/',
+            label: 'How to start day trading',
+            description: 'The step-by-step version, from mechanics to review.',
           },
         ]}
       />

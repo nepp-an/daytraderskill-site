@@ -22,6 +22,20 @@ export const metadata: Metadata = {
     title: 'Day Trading Guide & Paper-First Practice Hub',
     description: DISCLAIMER_SHORT,
     url: SITE_ORIGIN,
+    images: [
+      {
+        url: '/og/home.svg',
+        width: 1200,
+        height: 630,
+        alt: 'DayTraderSkill.com — a paper-first day trading guide',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Day Trading Guide & Paper-First Practice Hub',
+    description: DISCLAIMER_SHORT,
+    images: ['/og/home.svg'],
   },
   icons: {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],

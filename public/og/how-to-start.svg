@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="DayTraderSkill.com — How to start day trading" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12202c"/>
+      <stop offset=".55" stop-color="#0b141c"/>
+      <stop offset="1" stop-color="#080e14"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0v40" fill="none" stroke="#ffffff" stroke-opacity=".035"/>
+    </pattern>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#59d39a" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#59d39a" stop-opacity=".08"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="1080" cy="90" r="210" fill="#59d39a" fill-opacity=".07"/>
+  <circle cx="1040" cy="610" r="250" fill="#437fbe" fill-opacity=".07"/>
+
+  <g transform="translate(78 62)">
+    <rect width="34" height="34" rx="9" fill="#14241f" stroke="#59d39a" stroke-opacity=".55"/>
+    <path d="M9 23 15 15l6 4 7-8" fill="none" stroke="#59d39a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="126" y="77" fill="#e9f0f7" font-size="21" font-weight="750">DayTraderSkill</text>
+  <text x="126" y="98" fill="#8da2b7" font-size="13">Independent · paper-first · not financial advice</text>
+
+  <text x="78" y="196" fill="#59d39a" font-size="17" font-weight="750" letter-spacing="3">STEP-BY-STEP ROADMAP</text>
+  <text x="78" y="256" fill="#dfe9f2" font-size="27" font-weight="500">From the definition to a reviewed paper session</text>
+  <rect x="78" y="278" width="86" height="4" rx="2" fill="url(#line)"/>
+  <text x="78" y="318" fill="#f2f7fc" font-size="66" font-weight="800" letter-spacing="-2">How to start</text>
+  <text x="78" y="394" fill="#f2f7fc" font-size="66" font-weight="800" letter-spacing="-2">day trading</text>
+
+  <g><rect x="78" y="518" width="170" height="42" rx="21" fill="#0d1720" stroke="#2d465b"/><text x="163" y="545" text-anchor="middle" fill="#c4d4e3" font-size="17" font-weight="650">Roadmap</text></g>
+  <g><rect x="268" y="518" width="170" height="42" rx="21" fill="#0d1720" stroke="#2d465b"/><text x="353" y="545" text-anchor="middle" fill="#c4d4e3" font-size="17" font-weight="650">Paper</text></g>
+  <g><rect x="458" y="518" width="170" height="42" rx="21" fill="#0d1720" stroke="#2d465b"/><text x="543" y="545" text-anchor="middle" fill="#c4d4e3" font-size="17" font-weight="650">Review</text></g>
+
+  <text x="1122" y="590" text-anchor="end" fill="#7e93a8" font-size="15">daytraderskill.com</text>
+</svg>

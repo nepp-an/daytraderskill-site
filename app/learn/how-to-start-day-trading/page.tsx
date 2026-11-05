@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { FaqList, faqJsonLd } from '@/components/Faq';
 import { JsonLd } from '@/components/JsonLd';
+import { NextPath } from '@/components/NextPath';
 import { Related } from '@/components/Related';
+import { CalculatorIcon, PaperIcon, ScaleIcon } from '@/components/icons';
 import { articleJsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -10,6 +12,26 @@ export const metadata: Metadata = {
   description:
     'How to start day trading without rushing into live risk: learn mechanics, choose a market, practise on paper, write rules, and journal each session. NFA.',
   alternates: { canonical: '/learn/how-to-start-day-trading/' },
+  openGraph: {
+    title: 'How to Start Day Trading: A Paper-First Roadmap',
+    description:
+      'A step-by-step, paper-first roadmap for beginning day traders, from mechanics and rules to journaling and review.',
+    url: '/learn/how-to-start-day-trading/',
+    images: [
+      {
+        url: '/og/how-to-start.svg',
+        width: 1200,
+        height: 630,
+        alt: 'How to start day trading — a paper-first roadmap',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Start Day Trading: A Paper-First Roadmap',
+    description: 'From the definition to a reviewed paper session.',
+    images: ['/og/how-to-start.svg'],
+  },
 };
 
 const faqs = [
@@ -83,6 +105,44 @@ export default function HowToStartDayTradingPage() {
         </p>
       </div>
 
+      <figure className="page-visual">
+        <img
+          src="/illustrations/start-roadmap.svg"
+          alt="Five-stage roadmap: learn the definition, study mechanics, choose one market, write a one-page plan, then practise on paper and review."
+          width={720}
+          height={340}
+          loading="lazy"
+        />
+        <figcaption>
+          A paper-first roadmap. The human gate stays in place: simulator first, approvals before any
+          order path.
+        </figcaption>
+      </figure>
+
+      <ul className="icon-row">
+        <li>
+          <PaperIcon size={20} />
+          <span>
+            <strong>Simulator first</strong>
+            Learn the ticket and the routine without real capital.
+          </span>
+        </li>
+        <li>
+          <CalculatorIcon size={20} />
+          <span>
+            <strong>Size the risk</strong>
+            Convert a risk budget and stop distance into shares.
+          </span>
+        </li>
+        <li>
+          <ScaleIcon size={20} />
+          <span>
+            <strong>Compare the payoff</strong>
+            Check R:R before the trade, not after the outcome.
+          </span>
+        </li>
+      </ul>
+
       <h2>The short answer</h2>
       <p>
         If you are starting from zero, the useful order is: learn the vocabulary, pick a narrow
@@ -105,7 +165,7 @@ export default function HowToStartDayTradingPage() {
         <li>I will verify tax and regulatory rules with a qualified professional.</li>
       </ul>
 
-      <h2>The roadmap, step by step</h2>
+      <h2>How to start day trading: the roadmap, step by step</h2>
       <ol className="steps">
         <li>
           <strong>Step 1 — Learn what a day trade is.</strong>
@@ -137,7 +197,11 @@ export default function HowToStartDayTradingPage() {
           <p>
             Include the setup you are studying, the entry trigger, invalidation, position size,
             maximum loss, and a stop-trading rule. Add a rule for what you will do when the market
-            is unclear: usually, no trade. The plan should be short enough to follow under pressure.
+            is unclear: usually, no trade. Use the{' '}
+            <Link href="/tools/position-size-calculator/">position size calculator</Link> to turn the
+            risk budget into shares, and the{' '}
+            <Link href="/tools/risk-reward-calculator/">risk-reward calculator</Link> to record the
+            payoff you intend to test. The plan should be short enough to follow under pressure.
           </p>
         </li>
         <li>
@@ -299,6 +363,26 @@ export default function HowToStartDayTradingPage() {
             href: '/safety/',
             label: 'Safety and risk rules',
             description: 'The non-negotiables before any live decision.',
+          },
+        ]}
+      />
+
+      <NextPath
+        links={[
+          {
+            href: '/paper-trading/',
+            label: 'Run the first paper session',
+            description: 'Use the simulator flow, checklist, and printable journal.',
+          },
+          {
+            href: '/tools/position-size-calculator/',
+            label: 'Size the position from the stop',
+            description: 'Turn risk percentage and stop distance into shares.',
+          },
+          {
+            href: '/tools/risk-reward-calculator/',
+            label: 'Check the risk-reward ratio',
+            description: 'Compare entry, stop, and target before costs.',
           },
         ]}
       />

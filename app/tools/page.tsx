@@ -1,14 +1,36 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { NextPath } from '@/components/NextPath';
 import { Related } from '@/components/Related';
 import { ToolsNav } from '@/components/ToolsNav';
+import { CalculatorIcon, ScaleIcon } from '@/components/icons';
 import { UPSTREAM_REPO } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Day Trading Tools & Claude Skills Guides' },
+  title: { absolute: 'Day Trading Tools, Calculators & Claude Skills Guides' },
   description:
-    'A paper-first tools hub: install Claude skills safely, understand the Day Trader Skill pack, and compare trading software without signals or hype. Not financial advice.',
+    'A paper-first tools hub: free position-size and risk-reward calculators, a paper session journal, Claude skills install guides, and software comparisons without signals or hype. Not financial advice.',
   alternates: { canonical: '/tools/' },
+  openGraph: {
+    title: 'Day Trading Tools, Calculators & Claude Skills Guides',
+    description:
+      'Free paper-first calculators, a session journal, and independent guides to trading software. No signals or profit promises.',
+    url: '/tools/',
+    images: [
+      {
+        url: '/og/tools.svg',
+        width: 1200,
+        height: 630,
+        alt: 'DayTraderSkill.com tools hub — paper-first calculators and guides',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Day Trading Tools & Calculators',
+    description: 'Calculators, checklists, and independent software guides.',
+    images: ['/og/tools.svg'],
+  },
 };
 
 export default function ToolsHubPage() {
@@ -33,6 +55,76 @@ export default function ToolsHubPage() {
       </header>
 
       <ToolsNav current="/tools/" />
+
+      <section aria-labelledby="calculators-heading">
+        <div className="section-head">
+          <p className="eyebrow">Free · no login · no market data</p>
+          <h2 id="calculators-heading">Paper-first calculators</h2>
+          <p>
+            Two browser-only arithmetic tools for a written plan. Neither one connects to a broker,
+            reads a quote, or places an order.
+          </p>
+        </div>
+
+        <div className="index-grid">
+          <article className="index-card">
+            <span className="tool-teaser-icon" aria-hidden="true">
+              <CalculatorIcon size={22} />
+            </span>
+            <p className="card-kicker">Risk sizing</p>
+            <h2>
+              <Link href="/tools/position-size-calculator/">Position size calculator</Link>
+            </h2>
+            <p>
+              Account size, risk percentage, entry price, and stop distance become a suggested share
+              count and position value.
+            </p>
+            <ul className="card-links">
+              <li>
+                <Link href="/tools/position-size-calculator/">Open the position size calculator →</Link>
+              </li>
+            </ul>
+          </article>
+
+          <article className="index-card">
+            <span className="tool-teaser-icon" aria-hidden="true">
+              <ScaleIcon size={22} />
+            </span>
+            <p className="card-kicker">Payoff check</p>
+            <h2>
+              <Link href="/tools/risk-reward-calculator/">Risk-reward calculator</Link>
+            </h2>
+            <p>
+              Entry, stop, and target become an R:R ratio, potential profit and loss, and a
+              break-even hit rate before costs.
+            </p>
+            <ul className="card-links">
+              <li>
+                <Link href="/tools/risk-reward-calculator/">Open the risk-reward calculator →</Link>
+              </li>
+            </ul>
+          </article>
+
+          <article className="index-card">
+            <span className="tool-teaser-icon" aria-hidden="true">
+              <CalculatorIcon size={22} />
+            </span>
+            <p className="card-kicker">Practice record</p>
+            <h2>
+              <Link href="/paper-trading/#paper-journal">Paper checklist and journal</Link>
+            </h2>
+            <p>
+              A first-session checklist and a printable journal embedded in the paper trading guide.
+              No account is created.
+            </p>
+            <ul className="card-links">
+              <li>
+                <Link href="/paper-trading/#paper-journal">Open the paper journal →</Link>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
       <section aria-labelledby="tool-guides-heading">
         <div className="section-head">
@@ -176,6 +268,26 @@ export default function ToolsHubPage() {
             href: '/safety/',
             label: 'Safety checklist',
             description: 'The non-negotiables for trading tools.',
+          },
+        ]}
+      />
+
+      <NextPath
+        links={[
+          {
+            href: '/tools/position-size-calculator/',
+            label: 'Size a paper position',
+            description: 'Risk budget and stop distance → suggested shares.',
+          },
+          {
+            href: '/tools/risk-reward-calculator/',
+            label: 'Check the planned payoff',
+            description: 'Entry, stop, and target → R:R before costs.',
+          },
+          {
+            href: '/paper-trading/',
+            label: 'Rehearse the workflow',
+            description: 'Flow, checklist, and journal for a simulated session.',
           },
         ]}
       />

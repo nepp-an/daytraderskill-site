@@ -51,6 +51,8 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     title: 'Tools',
     links: [
       { href: '/tools/', label: 'Tools hub' },
+      { href: '/tools/position-size-calculator/', label: 'Position size calculator' },
+      { href: '/tools/risk-reward-calculator/', label: 'Risk/reward calculator' },
       { href: '/tools/install-claude-skills/', label: 'Install Claude skills' },
       { href: '/install/', label: 'Day Trader Skill install' },
       { href: '/skills/', label: '11 skill modules' },

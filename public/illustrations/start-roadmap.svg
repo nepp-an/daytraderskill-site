@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="startTitle startDesc" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <title id="startTitle">How to start day trading: a five-stage roadmap</title>
+  <desc id="startDesc">Learn the definition, study mechanics, choose one market and session, write a one-page process, then rehearse on paper and review weekly.</desc>
+  <defs>
+    <linearGradient id="startBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101d28"/>
+      <stop offset="1" stop-color="#0a1219"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="340" rx="20" fill="url(#startBg)"/>
+  <rect x=".5" y=".5" width="719" height="339" rx="19.5" fill="none" stroke="#263648"/>
+
+  <text x="32" y="42" fill="#59d39a" font-size="11" font-weight="700" letter-spacing="2.2">ROADMAP</text>
+  <text x="32" y="73" fill="#eef5fb" font-size="23" font-weight="750" letter-spacing="-.4">From definition to reviewed paper sessions</text>
+
+  <g>
+    <rect x="32" y="102" width="124" height="86" rx="11" fill="#101c27" stroke="#2b4357"/>
+    <text x="46" y="126" fill="#6fa8ee" font-size="10" font-weight="800" letter-spacing="1.2">STEP 01</text>
+    <text x="46" y="150" fill="#e9f0f7" font-size="13" font-weight="700">Learn the</text>
+    <text x="46" y="168" fill="#e9f0f7" font-size="13" font-weight="700">definition</text>
+  </g>
+
+  <g>
+    <rect x="170" y="102" width="124" height="86" rx="11" fill="#101c27" stroke="#2b4357"/>
+    <text x="184" y="126" fill="#6fa8ee" font-size="10" font-weight="800" letter-spacing="1.2">STEP 02</text>
+    <text x="184" y="150" fill="#e9f0f7" font-size="13" font-weight="700">Study</text>
+    <text x="184" y="168" fill="#e9f0f7" font-size="13" font-weight="700">mechanics</text>
+  </g>
+
+  <g>
+    <rect x="308" y="102" width="124" height="86" rx="11" fill="#10231c" stroke="#2f5c4a"/>
+    <text x="322" y="126" fill="#59d39a" font-size="10" font-weight="800" letter-spacing="1.2">STEP 03</text>
+    <text x="322" y="150" fill="#e9f0f7" font-size="13" font-weight="700">One market,</text>
+    <text x="322" y="168" fill="#e9f0f7" font-size="13" font-weight="700">one session</text>
+  </g>
+
+  <g>
+    <rect x="446" y="102" width="124" height="86" rx="11" fill="#10231c" stroke="#2f5c4a"/>
+    <text x="460" y="126" fill="#59d39a" font-size="10" font-weight="800" letter-spacing="1.2">STEP 04</text>
+    <text x="460" y="150" fill="#e9f0f7" font-size="13" font-weight="700">Write a</text>
+    <text x="460" y="168" fill="#e9f0f7" font-size="13" font-weight="700">one-page plan</text>
+  </g>
+
+  <g>
+    <rect x="584" y="102" width="104" height="86" rx="11" fill="#191a2b" stroke="#473f6d"/>
+    <text x="598" y="126" fill="#b39af2" font-size="10" font-weight="800" letter-spacing="1.2">STEP 05</text>
+    <text x="598" y="150" fill="#e9f0f7" font-size="13" font-weight="700">Paper +</text>
+    <text x="598" y="168" fill="#e9f0f7" font-size="13" font-weight="700">review</text>
+  </g>
+
+  <path d="M156 145H170M294 145H308M432 145H446M570 145H584" stroke="#59d39a" stroke-width="2" stroke-linecap="round"/>
+
+  <rect x="32" y="222" width="656" height="82" rx="12" fill="#0d1720" stroke="#2b4357"/>
+  <text x="50" y="248" fill="#9bafc4" font-size="11" font-weight="700" letter-spacing="1.2">HUMAN GATE</text>
+  <text x="50" y="272" fill="#dfe9f2" font-size="13">Simulator first. AI order tools stay on “Needs approval”. No live-order API on this site.</text>
+  <text x="50" y="291" fill="#7e93a8" font-size="11">Illustration only · no prices, signals, or profit promise</text>
+</svg>
