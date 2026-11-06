@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { DisclaimerBar } from '@/components/DisclaimerBar';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
-import { BRAND, DISCLAIMER_SHORT, SITE_ORIGIN } from '@/lib/site';
+import { BRAND, DISCLAIMER_SHORT, GA4_MEASUREMENT_ID, SITE_ORIGIN } from '@/lib/site';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -59,6 +60,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        {/* GA4: Day Trader Skill property only (G-CFQ8JV652G). Not OCA/E7. */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-dts" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA4_MEASUREMENT_ID}');
+        `}</Script>
         <DisclaimerBar />
         <SiteHeader />
         <main>{children}</main>

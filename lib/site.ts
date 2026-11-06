@@ -1,6 +1,12 @@
 export const SITE_ORIGIN = 'https://daytraderskill.com';
 export const CONTACT_EMAIL = 'privacy@daytraderskill.com';
 export const BRAND = 'DayTraderSkill.com';
+
+/**
+ * GA4 Measurement ID for THIS site only (daytraderskill.com — "Day Trader Skill",
+ * stream 16285240322). Never use OCA G-LVEKXCFCER or E7 G-QY1D1CDXDZ.
+ */
+export const GA4_MEASUREMENT_ID = 'G-CFQ8JV652G';
 export const BRAND_SHORT = 'Paper-first day trading guide';
 export const SITE_TAGLINE = 'Learn day trading. Practice on paper. Understand the risk.';
 export const REVIEWED = '2026-11-05';
