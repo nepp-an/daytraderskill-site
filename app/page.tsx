@@ -17,12 +17,12 @@ import {
 import { BRAND, SITE_ORIGIN, UPSTREAM_REPO } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Day Trading Guide & Paper-First Practice Hub' },
+  title: { absolute: 'Day Trader Skill — Paper-First Day Trading Guide & Practice Hub' },
   description:
     'A paper-first day trading guide for beginners: learn the basics, practice in a simulator, study risk, and use free position-size and risk-reward calculators. Not financial advice.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Day Trading Guide & Paper-First Practice Hub',
+    title: 'Day Trader Skill — Paper-First Day Trading Guide & Practice Hub',
     description:
       'Learn day trading, practice on paper, understand risk, and choose tools carefully. An independent, paper-first education hub. Not financial advice.',
     url: '/',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Day Trading Guide & Paper-First Practice Hub',
+    title: 'Day Trader Skill — Paper-First Day Trading Guide & Practice Hub',
     description: 'Learn day trading, practise on paper, and put risk before tools.',
     images: ['/og/home.svg'],
   },

@@ -7,7 +7,7 @@ import { UPSTREAM_REPO } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Day Trader Skill Install (Claude Code)',
   description:
-    'Day trader skill install: Claude Code trading skill plugin, paste GitHub URL, copy trader-* folders, or SKILL.md-only. Python 3.8+, SEC_USER_AGENT, paper default. Not financial advice.',
+    'Day trader skill install: set up the open-source Claude Code trading skill through four paths — paste the repo URL, add the plugin, copy trader-* folders, or paste SKILL.md. Keep paper trading as the default. Not financial advice.',
   alternates: { canonical: '/install/' },
 };
 
@@ -15,7 +15,14 @@ export default function InstallPage() {
   return (
     <>
       <ToolsNav current="/install/" />
-      <h1>Day Trader Skill install: Claude Code trading skill & four paths</h1>
+      <h1>Day Trader Skill install: Claude Code trading skill &amp; four paths</h1>
+      <p className="hero-lead">
+        Install the <strong>Day Trader Skill</strong> — the open-source{' '}
+        <strong>Claude Code trading skill</strong> — using whichever of the four paths matches your
+        setup. All four install the same upstream pack; the install itself does not connect a
+        broker or require a brokerage account. Start on paper, keep approvals on, and read the{' '}
+        <Link href="/safety/">safety checklist</Link> before enabling any order-capable tool.
+      </p>
       <div className="tldr">
         <strong>TL;DR.</strong> This is the <strong>day trader skill install</strong> guide —
         including the <strong>Claude Code trading skill</strong> plugin path. Path A (paste URL) is
