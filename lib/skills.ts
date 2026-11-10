@@ -59,12 +59,8 @@ export const SKILLS: Skill[] = [
       'SEC tools expect a polite SEC_USER_AGENT identity string.',
       'Earnings week changes day-trade risk even if a chart looks clean.',
     ],
-    faq: [
-      {
-        q: 'Is this insider information?',
-        a: 'No. It reads public headlines and public filings only.',
-      },
-    ],
+    // The fuller insider answer lives in lib/skillGuides.ts, so it is not repeated here.
+    faq: [],
   },
   {
     slug: 'entry',
@@ -82,12 +78,8 @@ export const SKILLS: Skill[] = [
       'A trigger is a rule firing, not a guarantee the move continues.',
       'If your feed lags, confirm against your broker chart before acting.',
     ],
-    faq: [
-      {
-        q: 'Can entry auto-submit orders?',
-        a: 'No. Entry only reports status. Orders stay behind risk checks and your yes in the broker skill.',
-      },
-    ],
+    // The fuller order-placement answer lives in lib/skillGuides.ts, so it is not repeated here.
+    faq: [],
   },
   {
     slug: 'exit',
@@ -105,12 +97,8 @@ export const SKILLS: Skill[] = [
       'A stop order is a plan, not a fill guarantee — gaps and fast markets can slip.',
       'Max loss figures assume a fill at the stop price.',
     ],
-    faq: [
-      {
-        q: 'Does exit guarantee my max loss?',
-        a: 'No. Stops can fill past the stop price. Treat stated max loss as the loss at the planned stop, not a hard cap.',
-      },
-    ],
+    // The fuller max-loss answer lives in lib/skillGuides.ts, so it is not repeated here.
+    faq: [],
   },
   {
     slug: 'timemachine',
@@ -175,12 +163,8 @@ export const SKILLS: Skill[] = [
       'A PASS is not investment advice; it only means the draft fits your configured rules.',
       'Broker PDT / day-trade policies still vary — verify with your broker.',
     ],
-    faq: [
-      {
-        q: 'Can I override a BLOCK in chat?',
-        a: 'You can change your own limits, but the point of the skill is to stop oversized or out-of-window tickets. Do not train yourself to bypass risk for FOMO.',
-      },
-    ],
+    // The fuller override answer lives in lib/skillGuides.ts, so it is not repeated here.
+    faq: [],
   },
   {
     slug: 'broker',
@@ -222,12 +206,8 @@ export const SKILLS: Skill[] = [
       'Alerts are not fills. You still need to act (or let a resting order work).',
       'Do not ignore flatten-by-close alerts if your rule is flat before the bell.',
     ],
-    faq: [
-      {
-        q: 'Can alerts place the exit for me?',
-        a: 'Alerts notify. Exit orders still follow your broker setup and approval rules.',
-      },
-    ],
+    // The fuller alert-vs-order answer lives in lib/skillGuides.ts, so it is not repeated here.
+    faq: [],
   },
   {
     slug: 'analyst',
@@ -245,12 +225,8 @@ export const SKILLS: Skill[] = [
       'Not tax advice, not a buy/sell rating.',
       'Identify yourself politely to SEC endpoints.',
     ],
-    faq: [
-      {
-        q: 'Does analyst predict the post-earnings move?',
-        a: 'No. It summarizes reported facts. Gap risk around earnings remains.',
-      },
-    ],
+    // The fuller prediction answer lives in lib/skillGuides.ts, so it is not repeated here.
+    faq: [],
   },
   {
     slug: 'pelosi',
@@ -269,12 +245,8 @@ export const SKILLS: Skill[] = [
       'Filings can lag the actual trade by up to the legal window (often discussed as up to ~45 days for covered trades).',
       'Copying a politician’s disclosed trade is still your own risk — and often too late to be a day-trade edge.',
     ],
-    faq: [
-      {
-        q: 'Why is it named Pelosi?',
-        a: 'The skill name follows popular search interest in one well-known filer’s disclosures. The tools read public STOCK Act filings more generally; the name is not an endorsement.',
-      },
-    ],
+    // The fuller naming answer lives in lib/skillGuides.ts, so it is not repeated here.
+    faq: [],
   },
 ];
 

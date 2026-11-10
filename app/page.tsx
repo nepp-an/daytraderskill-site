@@ -435,7 +435,7 @@ export default function HomePage() {
       <section className="hub-section" aria-labelledby="plan-heading">
         <div className="section-head">
           <p className="eyebrow">A study plan, not a target</p>
-          <h2 id="plan-heading">Your first four weeks on paper</h2>
+          <h2 id="plan-heading">Start with the four-week paper plan</h2>
           <p>
             The full Week 1–4 schedule now lives on the how-to-start roadmap, where it belongs. Use
             it to produce evidence of a process — notes, checklists, and a journal you can review —
