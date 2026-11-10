@@ -10,7 +10,7 @@ import { articleJsonLd } from '@/lib/seo';
 export const metadata: Metadata = {
   title: { absolute: 'How to Start Day Trading: A Paper-First Roadmap' },
   description:
-    'How to start day trading without rushing into live risk: learn mechanics, choose a market, practise on paper, write rules, and journal each session. NFA.',
+    'How to start day trading without rushing into live risk: learn mechanics, choose a market, practise on paper, write rules, and journal each session. Includes a four-week paper-first study plan. Not financial advice.',
   alternates: { canonical: '/learn/how-to-start-day-trading/' },
   openGraph: {
     title: 'How to Start Day Trading: A Paper-First Roadmap',
@@ -94,8 +94,15 @@ export default function HowToStartDayTradingPage() {
       <div className="tldr">
         <strong>TL;DR.</strong> Start with mechanics, then a written process, then paper practice,
         then review. Choose one market and one session. Keep a journal. Do not treat a live account
-        as the finish line — it is a separate decision with real financial consequences. Most people
-        who day trade lose money.
+        as the finish line — it is a separate decision with real financial consequences. The SEC’s{' '}
+        <a
+          href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          2005 day-trading bulletin
+        </a>{' '}
+        warns that traders often suffer severe losses in their first months.
       </div>
 
       <div className="callout danger">
@@ -158,7 +165,18 @@ export default function HowToStartDayTradingPage() {
 
       <h2>Before step one: a readiness check</h2>
       <ul className="checklist">
-        <li>I understand that most people who day trade lose money.</li>
+        <li>
+          I have read the{' '}
+          <a
+            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            SEC’s day-trading risk bulletin
+          </a>{' '}
+          (April 19, 2005; last reviewed April 20, 2005) and understand that many traders suffer
+          severe losses in their first months.
+        </li>
         <li>I can set aside regular time to study and review, not just watch screens.</li>
         <li>I am willing to practise on paper without pretending it is live.</li>
         <li>I know that leverage and frequent trading increase the consequences of mistakes.</li>
@@ -212,6 +230,20 @@ export default function HowToStartDayTradingPage() {
             Confirm the data is live or delayed and understand how fills are modelled. Read{' '}
             <Link href="/paper-trading/">what paper trading is</Link> before your first session.
           </p>
+          <p>
+            The CFTC’s{' '}
+            <a
+              href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/fraudadv_tradingsystem.html"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              fraud advisory on trading systems sold online
+            </a>{' '}
+            (the page shows no last-reviewed date; checked 10 November 2026) notes that simulated
+            results have inherent limits: they may omit consecutive losses, margin calls, slippage,
+            bid-ask spreads, and the effect of actual fills on prices. A simulated result is not a
+            live result, and no system can guarantee a profit.
+          </p>
         </li>
         <li>
           <strong>Step 6 — Run the same routine every session.</strong>
@@ -240,52 +272,48 @@ export default function HowToStartDayTradingPage() {
         </li>
       </ol>
 
-      <h2>A two-week starter schedule</h2>
+      <h2>Your first four weeks on paper</h2>
       <p>
-        This is a study schedule, not a profit target. The aim is to make the workflow familiar and
-        to produce a journal you can review.
+        This is the site’s four-week study plan, not a profit target. The aim is to make the workflow
+        familiar and to produce a journal you can review. There is no deadline for going live.
       </p>
       <table className="data">
         <thead>
           <tr>
-            <th>Days</th>
+            <th>Week</th>
             <th>Focus</th>
-            <th>Output</th>
+            <th>Output to keep</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1–3</td>
-            <td>Definitions, order types, spreads, and risk vocabulary.</td>
-            <td>A one-page glossary in your own words.</td>
+            <td>1</td>
+            <td>Definition, order types, spreads, liquidity, and risk vocabulary.</td>
+            <td>A one-page glossary written in your own words.</td>
           </tr>
           <tr>
-            <td>4–5</td>
-            <td>Platform tour and simulated order entry.</td>
+            <td>2</td>
+            <td>One market, one session, and a platform tour in a simulator.</td>
             <td>A checklist for opening and closing a paper trade.</td>
           </tr>
           <tr>
-            <td>6–8</td>
-            <td>One market, one session, one written setup.</td>
-            <td>A one-page process with invalidation and size.</td>
+            <td>3</td>
+            <td>A one-page process with entry, invalidation, size, and a stop-trading rule.</td>
+            <td>Three paper sessions using the same routine.</td>
           </tr>
           <tr>
-            <td>9–12</td>
-            <td>Paper sessions using the same routine.</td>
-            <td>Four journal entries with screenshots or notes.</td>
-          </tr>
-          <tr>
-            <td>13–14</td>
-            <td>Review and simplify.</td>
-            <td>A list of repeated mistakes and one change to test.</td>
+            <td>4</td>
+            <td>Review the journal and simplify. Change one variable at a time.</td>
+            <td>A list of repeated mistakes and one question to test next.</td>
           </tr>
         </tbody>
       </table>
       <p>
-        The hub also keeps a four-week version of this sequence:{' '}
-        <Link href="/#plan-heading">Your first four weeks on paper</Link>. Use this two-week schedule
-        for a quick start, or the four-week view when you want more time between review cycles. Both
-        produce the same kind of evidence — notes, checklists, and a journal.
+        This page is now the site’s four-week plan. The{' '}
+        <Link href="/">homepage hub</Link> links here and no longer carries a competing schedule; the{' '}
+        <Link href="/learn/day-trading-for-beginners/">beginner pillar</Link> explains the costs that
+        are easy to miss, and the <Link href="/paper-trading/">day trading simulator guide</Link>{' '}
+        covers the practice environment.
       </p>
 
       <h2>What starting does not require</h2>
@@ -342,7 +370,15 @@ export default function HowToStartDayTradingPage() {
       <div className="callout compliance">
         <p>
           <strong>Compliance note.</strong> No stock picks, signals, profit promises, or
-          trade-on-your-behalf service. Day trading is risky; most people who try it lose money.
+          trade-on-your-behalf service. Day trading is risky; the{' '}
+          <a
+            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            SEC’s 2005 investor bulletin
+          </a>{' '}
+          warns that many traders suffer severe losses in their first months.
         </p>
       </div>
 

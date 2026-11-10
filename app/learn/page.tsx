@@ -5,7 +5,7 @@ import { Related } from '@/components/Related';
 export const metadata: Metadata = {
   title: { absolute: 'Day Trading Learning Guides for Beginners' },
   description:
-    'Paper-first day trading lessons: what day trading is, how to start, and a beginner roadmap. Plain-English explanations without signals or profit promises. NFA.',
+    'Paper-first day trading lessons: what day trading is, how to start, and a beginner roadmap. Plain-English explanations without signals or profit promises. Not financial advice.',
   alternates: { canonical: '/learn/' },
 };
 
@@ -25,8 +25,12 @@ export default function LearnHubPage() {
           no promises.
         </p>
         <p className="compliance-note">
-          <strong>Not financial advice.</strong> Most people who day trade lose money. These lessons
-          are educational and do not tell you what to trade.
+          <strong>Not financial advice.</strong> The SEC’s{' '}
+          <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html" rel="noopener noreferrer" target="_blank">
+            2005 day-trading bulletin
+          </a>{' '}
+          warns that many traders suffer severe losses in their first months. These lessons are
+          educational and do not tell you what to trade.
         </p>
       </header>
 

@@ -50,7 +50,7 @@ export default function ContactPage() {
         <li>Feedback about this site ({SITE_ORIGIN}).</li>
         <li>Corrections to steps, definitions, or citations published here.</li>
         <li>Privacy questions about {BRAND}.</li>
-        <li>Partnership notes that fit our paper-first, NFA educational posture.</li>
+        <li>Partnership notes that fit our paper-first educational posture.</li>
       </ul>
 
       <h2>What not to send</h2>

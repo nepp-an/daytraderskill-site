@@ -7,7 +7,7 @@ import { Related } from '@/components/Related';
 export const metadata: Metadata = {
   title: { absolute: 'Day Trader Skill FAQ: Advice & Auto-Trade' },
   description:
-    'FAQ intents: is day trader skill financial advice? Does it auto trade? Free? Claude day trader skill worth it? Paper default, NFA — no signals or profit promises.',
+    'FAQ intents: is day trader skill financial advice? Does it auto trade? Free? Claude day trader skill worth it? Paper default — no signals or profit promises. Not financial advice.',
   alternates: { canonical: '/faq/' },
 };
 
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: 'Is this financial advice?',
-    a: 'No. Not financial advice. This independent site explains software install and safety. Most people who day trade lose money.',
+    a: 'No. Not financial advice. This independent site explains software install and safety, including paper defaults and approval gates.',
   },
   {
     q: 'Do I need Claude Pro?',

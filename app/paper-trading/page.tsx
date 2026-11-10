@@ -120,12 +120,40 @@ export default function PaperTradingPage() {
       <div className="callout danger">
         <p>
           <strong>Not financial advice.</strong> A paper profit is not evidence that a strategy will
-          work live. Most people who day trade lose money. Paper trading is a rehearsal, not a
-          guarantee.
+          work live. The SEC’s{' '}
+          <a
+            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Day Trading: Your Dollars at Risk
+          </a>{' '}
+          (April 19, 2005; last reviewed April 20, 2005) warns that day trading is risky and that
+          many traders suffer severe losses in their first months. Paper trading is a rehearsal, not
+          a guarantee.
         </p>
       </div>
 
       <PaperSimulator />
+
+      <div className="callout warn">
+        <p>
+          <strong>Synthetic, not a forecast.</strong> The CFTC’s{' '}
+          <a
+            href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/fraudadv_tradingsystem.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Fraud Advisory: Commodity Trading Systems Sold on the Internet
+          </a>{' '}
+          (the page shows no last-reviewed date; checked 10 November 2026) warns that simulated
+          results have inherent limits: they may not reflect consecutive losses, margin calls,
+          slippage, bid-ask spreads, or the effect of actual fills on market prices. It also warns
+          that simulated performance must not be presented as live performance, and that no system
+          can guarantee profit. The ledger above is a teaching scenario, not evidence of live
+          performance.
+        </p>
+      </div>
 
       <figure className="page-visual">
         <img
@@ -338,6 +366,22 @@ export default function PaperTradingPage() {
         </tbody>
       </table>
 
+      <p>
+        Investor.gov’s{' '}
+        <a
+          href="https://www.investor.gov/additional-resources/spotlight/formerdirectorlorischock-directors-take/thinking-day-trading-know-risks"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Thinking of Day Trading? Know the Risks.
+        </a>{' '}
+        by Lori Schock, former Director of the SEC’s Office of Investor Education and Advocacy, warns
+        that leverage — including margin and some options — can lead to losses larger than the
+        amount invested, that day trading is not something to do casually, and that you should not
+        put money into products you do not understand. The page states: “This document is no longer
+        being updated and may include information that is out-of-date.”
+      </p>
+
       <div className="callout warn">
         <p>
           <strong>Do not treat paper results as a forecast.</strong> A simulator can be a useful
@@ -376,6 +420,41 @@ export default function PaperTradingPage() {
           Safety checklist
         </Link>
       </div>
+
+      <h2>Sources and dates</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            SEC, Day Trading: Your Dollars at Risk
+          </a>{' '}
+          — published April 19, 2005; last reviewed or updated April 20, 2005.
+        </li>
+        <li>
+          <a
+            href="https://www.investor.gov/additional-resources/spotlight/formerdirectorlorischock-directors-take/thinking-day-trading-know-risks"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Investor.gov, Thinking of Day Trading? Know the Risks.
+          </a>{' '}
+          — Lori Schock; the page states it is no longer being updated and may be out-of-date; checked
+          10 November 2026.
+        </li>
+        <li>
+          <a
+            href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/fraudadv_tradingsystem.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            CFTC, Fraud Advisory: Commodity Trading Systems Sold on the Internet
+          </a>{' '}
+          — no last-reviewed date shown on the page; checked 10 November 2026.
+        </li>
+      </ul>
 
       <h2>Frequently asked questions</h2>
       <FaqList items={faqs} />

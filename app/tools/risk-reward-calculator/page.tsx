@@ -11,7 +11,7 @@ import { articleJsonLd } from '@/lib/seo';
 export const metadata: Metadata = {
   title: { absolute: 'Risk-Reward Calculator: R:R and Payoff Ratio' },
   description:
-    'Free risk-reward calculator: enter entry, stop, and target to see the R:R ratio, potential profit and loss, and break-even hit rate. No login, no signals. NFA.',
+    'Free risk-reward calculator: enter entry, stop, and target to see the R:R ratio, potential profit and loss, and break-even hit rate. No login, no signals. Not financial advice.',
   alternates: { canonical: '/tools/risk-reward-calculator/' },
   openGraph: {
     title: 'Risk-Reward Calculator: R:R and Payoff Ratio',
@@ -109,8 +109,12 @@ export default function RiskRewardCalculatorPage() {
       <div className="callout danger">
         <p>
           <strong>Not financial advice.</strong> This tool does not recommend a trade, a target, or a
-          position size. It has no broker connection, no market data feed, and no order path. Most
-          people who day trade lose money.
+          position size. It has no broker connection, no market data feed, and no order path. The
+          SEC’s{' '}
+          <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html" rel="noopener noreferrer" target="_blank">
+            2005 day-trading bulletin
+          </a>{' '}
+          warns that many traders suffer severe losses in their first months.
         </p>
       </div>
 

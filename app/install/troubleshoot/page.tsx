@@ -8,7 +8,7 @@ import { JsonLd } from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'Day Trader Skill Not Working — Fixes',
   description:
-    'Day trader skill not working? Fix namespace mismatches, sandbox/network blocks, permissions, Python, SEC_USER_AGENT, and Needs approval confusion. Intent guide — no fabricated search volume. NFA.',
+    'Day trader skill not working? Fix namespace mismatches, sandbox/network blocks, permissions, Python, SEC_USER_AGENT, and Needs approval confusion. Intent guide — no fabricated search volume. Not financial advice.',
   alternates: { canonical: '/install/troubleshoot/' },
 };
 

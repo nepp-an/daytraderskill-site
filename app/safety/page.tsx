@@ -5,9 +5,9 @@ import { FaqList, faqJsonLd } from '@/components/Faq';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Day Trader Skill Safety & Paper Trading',
+  title: 'Claude Day Trader Skill Safety: Permissions, Paper Defaults, Needs Approval',
   description:
-    'Claude day trader skill safety: paper trading default, Needs approval (never Always allow), typed yes before orders, keys in env. Checklist for Claude trading skills security. Not financial advice.',
+    'Claude day trader skill safety: paper trading default, Needs approval (never Always allow), typed yes before orders, keys in env. A skill-permission checklist with SEC, Investor.gov, and CFTC sources. Not financial advice.',
   alternates: { canonical: '/safety/' },
 };
 
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: 'Why do you keep saying paper trading?',
-    a: 'Because most day traders lose money, live mistakes are expensive, and paper is the upstream default. This independent guide treats live trading as something you might disable later at your own risk — not something we push.',
+    a: 'Because live mistakes are expensive and paper is the upstream default. The SEC’s 2005 investor bulletin on day trading warns that traders often suffer severe losses in their first months, so this independent guide treats live trading as something you might disable later at your own risk — not something we push.',
   },
   {
     q: 'Can I set brokerage tools to Always allow?',
@@ -30,7 +30,7 @@ export default function SafetyPage() {
   return (
     <>
       <JsonLd data={faqJsonLd(faqs)} />
-      <h1>Claude Day Trader Skill safety: paper trading &amp; Needs approval</h1>
+      <h1>Claude skill safety checklist: paper-trading defaults and the Needs approval gate</h1>
       <div className="tldr">
         <strong>TL;DR.</strong> <strong>Claude day trader skill safety</strong> means treating the
         pack as <strong>assisted workflow software</strong>, not a profit engine. Keep{' '}
@@ -42,9 +42,19 @@ export default function SafetyPage() {
 
       <div className="callout danger">
         <p>
-          <strong>Not financial advice.</strong> Most people who day trade lose money. You can lose
-          money. We do not promise returns, win rates, “alpha,” signal groups, or trading on your
-          behalf.
+          <strong>Not financial advice.</strong> The SEC’s{' '}
+          <a
+            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Day Trading: Your Dollars at Risk
+          </a>{' '}
+          (April 19, 2005; last reviewed April 20, 2005) warns that day trading is risky, that most
+          individual investors do not have the wealth, time, or temperament to profit from it and
+          withstand severe losses, and that traders often suffer severe losses in their first months;
+          many never become profitable. You can lose money. We do not promise returns, win rates,
+          “alpha,” signal groups, or trading on your behalf.
         </p>
       </div>
 
@@ -164,6 +174,40 @@ export default function SafetyPage() {
         </li>
       </ul>
 
+      <h2>Regulator notes on leverage and simulated results</h2>
+      <p>
+        Investor.gov’s{' '}
+        <a
+          href="https://www.investor.gov/additional-resources/spotlight/formerdirectorlorischock-directors-take/thinking-day-trading-know-risks"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Thinking of Day Trading? Know the Risks.
+        </a>{' '}
+        by Lori Schock, former Director of the SEC’s Office of Investor Education and Advocacy, warns
+        that leverage — including margin and some options — can lead to losses larger than the amount
+        invested, that day trading is not something to do casually, and that you should not put money
+        into products you do not understand. The page itself states: “This document is no longer
+        being updated and may include information that is out-of-date.”
+      </p>
+      <p>
+        The CFTC’s{' '}
+        <a
+          href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/fraudadv_tradingsystem.html"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Fraud Advisory: Commodity Trading Systems Sold on the Internet
+        </a>{' '}
+        (the page shows no last-reviewed date; checked 10 November 2026) explains that hypothetical
+        or simulated results — including “real time” computer trading — have inherent limitations.
+        They may not reflect consecutive losses, margin calls, slippage, bid-ask spreads, or the
+        effect of actual fills on market prices. The advisory warns that simulated performance must
+        not be presented as live performance, and that no system can guarantee profits. This is why
+        this site labels its simulator synthetic and treats a simulated result as practice, not a
+        live forecast.
+      </p>
+
       <h2>Language this site refuses</h2>
       <div className="callout warn">
         <p>
@@ -182,7 +226,17 @@ export default function SafetyPage() {
         <li>Brokerage tools set to Needs approval.</li>
         <li>Secrets only in environment variables.</li>
         <li>You understand stop slippage and data lag.</li>
-        <li>You accept that most day traders lose money.</li>
+        <li>
+          You have read the{' '}
+          <a
+            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            SEC’s day-trading risk bulletin
+          </a>{' '}
+          (2005) and accept that losses are possible.
+        </li>
         <li>
           You know how to <Link href="/install/troubleshoot/">troubleshoot</Link> without disabling
           risk gates.
@@ -197,6 +251,41 @@ export default function SafetyPage() {
           quotes.
         </p>
       </div>
+
+      <h2>Primary sources and dates</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            SEC, Day Trading: Your Dollars at Risk
+          </a>{' '}
+          — published April 19, 2005; last reviewed or updated April 20, 2005.
+        </li>
+        <li>
+          <a
+            href="https://www.investor.gov/additional-resources/spotlight/formerdirectorlorischock-directors-take/thinking-day-trading-know-risks"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Investor.gov, Thinking of Day Trading? Know the Risks.
+          </a>{' '}
+          — Lori Schock; the page states it is no longer being updated and may be out-of-date; checked
+          10 November 2026.
+        </li>
+        <li>
+          <a
+            href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/fraudadv_tradingsystem.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            CFTC, Fraud Advisory: Commodity Trading Systems Sold on the Internet
+          </a>{' '}
+          — no last-reviewed date shown on the page; checked 10 November 2026.
+        </li>
+      </ul>
 
       <h2>Short FAQ</h2>
       <FaqList items={faqs} />

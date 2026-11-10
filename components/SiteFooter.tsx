@@ -15,7 +15,7 @@ export function SiteFooter() {
             </p>
             <p className="footer-compliance">
               <strong>Not financial advice.</strong> Paper trading is the default. AI order tools
-              require <strong>Needs approval</strong>. Most people who day trade lose money.
+              require <strong>Needs approval</strong>.
             </p>
           </div>
           <nav className="footer-nav" aria-label="Footer">

@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     q: 'Is this day trading guide financial advice?',
-    a: 'No. DayTraderSkill.com is an independent education site. It does not provide investment advice, stock picks, signals, or trade execution. Most people who day trade lose money. Speak to a licensed professional in your jurisdiction if you need personal financial advice.',
+    a: 'No. DayTraderSkill.com is an independent education site. It does not provide investment advice, stock picks, signals, or trade execution. The SEC’s April 19, 2005 investor bulletin on day trading warns that many traders suffer severe losses in their first months. Speak to a licensed professional in your jurisdiction if you need personal financial advice.',
   },
   {
     q: 'How does AI fit into a paper-first workflow?',
@@ -126,8 +126,17 @@ export default function HomePage() {
             </ul>
 
             <p className="compliance-note">
-              <strong>Risk note.</strong> Most people who day trade lose money. This site explains the
-              workflow and the software; it does not tell you what to buy, sell, or hold.
+              <strong>Risk note.</strong> Day trading is risky. The SEC’s{' '}
+              <a
+                href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Day Trading: Your Dollars at Risk
+              </a>{' '}
+              (April 19, 2005; last reviewed April 20, 2005) warns that traders often suffer severe
+              losses in their first months and that many never become profitable. This site explains
+              the workflow and the software; it does not tell you what to buy, sell, or hold.
             </p>
           </div>
 
@@ -428,48 +437,30 @@ export default function HomePage() {
           <p className="eyebrow">A study plan, not a target</p>
           <h2 id="plan-heading">Your first four weeks on paper</h2>
           <p>
-            The goal is to produce evidence of a process: notes, checklists, and a journal you can
-            review. It is not a return target, and there is no deadline for going live.
+            The full Week 1–4 schedule now lives on the how-to-start roadmap, where it belongs. Use
+            it to produce evidence of a process — notes, checklists, and a journal you can review —
+            not a return target. There is no deadline for going live.
           </p>
         </div>
-        <table className="data">
-          <thead>
-            <tr>
-              <th>Week</th>
-              <th>Focus</th>
-              <th>Output to keep</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Definition, order types, spreads, liquidity, and risk vocabulary.</td>
-              <td>A one-page glossary written in your own words.</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>One market, one session, and a platform tour in a simulator.</td>
-              <td>A checklist for opening and closing a paper trade.</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>A one-page process with entry, invalidation, size, and a stop-trading rule.</td>
-              <td>Three paper sessions using the same routine.</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Review the journal and simplify. Change one variable at a time.</td>
-              <td>A list of repeated mistakes and one question to test next.</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          Keep this page as the four-week view. The{' '}
-          <Link href="/learn/how-to-start-day-trading/">how to start day trading roadmap</Link>{' '}
-          gives the step-by-step version, and the{' '}
-          <Link href="/learn/day-trading-for-beginners/">beginner pillar</Link> explains the costs
-          that are easy to miss.
-        </p>
+        <ul className="card-links">
+          <li>
+            <Link href="/learn/how-to-start-day-trading/">
+              Open the four-week plan on the how-to-start roadmap
+            </Link>
+          </li>
+          <li>
+            <Link href="/learn/day-trading-for-beginners/">Day trading for beginners</Link>
+          </li>
+          <li>
+            <Link href="/paper-trading/">Day trading simulator</Link>
+          </li>
+          <li>
+            <Link href="/tools/">Paper-first tools</Link>
+          </li>
+          <li>
+            <Link href="/safety/">Safety and approval checklist</Link>
+          </li>
+        </ul>
       </section>
 
       <section className="hub-section" id="calculators" aria-labelledby="calculators-heading">
@@ -581,7 +572,15 @@ export default function HomePage() {
       <section className="compliance-strip" aria-label="Editorial standards">
         <p>
           <strong>What this hub will not do:</strong> sell signals, promise returns, rank stocks, or
-          trade on your behalf. Day trading is risky; most people who try it lose money.
+          trade on your behalf. Day trading is risky; the{' '}
+          <a
+            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            SEC’s 2005 investor bulletin
+          </a>{' '}
+          describes the potential for severe losses, especially in the first months.
         </p>
         <Link className="btn small ghost" href="/safety/">
           Read the safety policy

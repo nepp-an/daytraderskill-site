@@ -79,7 +79,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
 ];
 
 export const DISCLAIMER_SHORT =
-  'Independent, paper-first day trading education and tool guides. Not financial advice. Most people who day trade lose money.';
+  'Independent, paper-first day trading education and tool guides. Not financial advice.';
 
 export const DISCLAIMER_LONG =
   'Not financial advice. DayTraderSkill.com is an independent education and tutorial site about retail day trading, paper practice, risk, and trading software. We are not a broker, an investment adviser, or the official site of any third-party project we discuss. Nothing here is an offer to trade on your behalf, a signal service, or a promise of profits. Paper trading is the default we teach. Software that can reach an order path should require a human confirmation and a Needs approval permission setting. You alone decide whether to install, configure, or use any software.';

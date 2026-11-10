@@ -40,7 +40,12 @@ export default function InstallPage() {
       <div className="callout danger">
         <p>
           <strong>Not financial advice.</strong> Installing skills does not make day trading safe.
-          Most people who day trade lose money. Keep <strong>paper trading</strong> as the default.
+          The SEC’s{' '}
+          <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html" rel="noopener noreferrer" target="_blank">
+            2005 day-trading bulletin
+          </a>{' '}
+          warns that many traders suffer severe losses in their first months. Keep{' '}
+          <strong>paper trading</strong> as the default.
         </p>
       </div>
 

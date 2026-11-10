@@ -6,7 +6,7 @@ import { UPSTREAM_REPO } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Day Trader Skill GitHub Update Watch',
   description:
-    'Day trader skill GitHub update watch: check Jakeschincariol/day-trader-skill commits, forks, and staleness yourself. Not a live feed; not the official site. NFA.',
+    'Day trader skill GitHub update watch: check Jakeschincariol/day-trader-skill commits, forks, and staleness yourself. Not a live feed; not the official site. Not financial advice.',
   alternates: { canonical: '/changelog-watch/' },
 };
 

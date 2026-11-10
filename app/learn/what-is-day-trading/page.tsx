@@ -10,7 +10,7 @@ import { articleJsonLd } from '@/lib/seo';
 export const metadata: Metadata = {
   title: { absolute: 'What Is Day Trading? Definition, Rules & Examples' },
   description:
-    'What is day trading? A clear definition, how intraday trades work, how it differs from swing trading and investing, and the risks to understand. NFA.',
+    'What is day trading? A clear definition, how intraday trades work, how it differs from swing trading and investing, and the risks to understand. Not financial advice.',
   alternates: { canonical: '/learn/what-is-day-trading/' },
   openGraph: {
     title: 'What Is Day Trading? Definition, Rules & Examples',
@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     q: 'Do day traders make money?',
-    a: 'Some do, and most retail day traders lose money after costs. A few winning trades do not prove skill, and no guide can promise a result. The risk of loss is real and can be rapid, especially with leverage.',
+    a: 'Some do, but the SEC’s 2005 investor bulletin warns that most individual investors do not have the wealth, time, or temperament to profit from day trading and withstand its severe losses. A few winning trades do not prove skill, and no guide can promise a result. The risk of loss is real and can be rapid, especially with leverage.',
   },
   {
     q: 'Is day trading legal?',
@@ -98,7 +98,15 @@ export default function WhatIsDayTradingPage() {
         <strong>TL;DR.</strong> Day trading is the practice of opening and closing a position within
         the same trading day. The trader is trying to capture intraday price movement and normally
         avoids overnight exposure. It is different from swing trading and long-term investing, and it
-        is risky: most people who day trade lose money.
+        is risky: the SEC’s{' '}
+        <a
+          href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          2005 day-trading bulletin
+        </a>{' '}
+        warns that many traders suffer severe losses in their first months.
       </div>
 
       <div className="callout danger">
@@ -286,6 +294,54 @@ export default function WhatIsDayTradingPage() {
         </li>
       </ul>
 
+      <h2>What official sources say about the risk</h2>
+      <p>
+        The SEC’s{' '}
+        <a
+          href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Day Trading: Your Dollars at Risk
+        </a>{' '}
+        (April 19, 2005; last reviewed April 20, 2005) warns that day trading is risky; that most
+        individual investors do not have the wealth, time, or temperament to profit from it and
+        withstand its severe losses; that traders often suffer severe losses in their first months
+        and many never become profitable; and that living expenses, retirement savings, a second
+        mortgage, or student loans should not be used for day trading. It also warns that margin
+        magnifies losses and that easy-profit claims should not be trusted.
+      </p>
+      <p>
+        Investor.gov’s{' '}
+        <a
+          href="https://www.investor.gov/additional-resources/spotlight/formerdirectorlorischock-directors-take/thinking-day-trading-know-risks"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Thinking of Day Trading? Know the Risks.
+        </a>{' '}
+        by Lori Schock, former Director of the SEC’s Office of Investor Education and Advocacy, warns
+        that leverage — including margin and some options — can lead to losses larger than the amount
+        invested, that day trading is not something to do casually, and that you should not put money
+        into products you do not understand. The page states: “This document is no longer being
+        updated and may include information that is out-of-date.”
+      </p>
+      <p>
+        The CFTC’s{' '}
+        <a
+          href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/fraudadv_tradingsystem.html"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Fraud Advisory: Commodity Trading Systems Sold on the Internet
+        </a>{' '}
+        (the page shows no last-reviewed date; checked 10 November 2026) warns that simulated or
+        hypothetical results have inherent limitations: they may not reflect consecutive losses,
+        margin calls, slippage, bid-ask spreads, or the effect of actual fills on prices. Simulated
+        performance should not be presented as live performance, and no system can guarantee a
+        profit. The $50.00/$50.02 arithmetic above is illustrative, not a backtest or a promise.
+      </p>
+
       <h2>Rules and account requirements</h2>
       <p>
         Day trading is regulated differently across jurisdictions, and brokers add their own
@@ -323,7 +379,15 @@ export default function WhatIsDayTradingPage() {
       <div className="callout compliance">
         <p>
           <strong>Compliance note.</strong> No stock picks, signals, profit promises, or
-          trade-on-your-behalf service. Most people who day trade lose money. Nothing here is
+          trade-on-your-behalf service. The{' '}
+          <a
+            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            SEC’s 2005 investor bulletin
+          </a>{' '}
+          warns that many traders suffer severe losses in their first months. Nothing here is
           financial, legal, or tax advice.
         </p>
       </div>

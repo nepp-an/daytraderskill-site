@@ -7,7 +7,7 @@ import { UPSTREAM_REPO, UPSTREAM_V1 } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Claude Trading Skills Comparison',
   description:
-    'Claude trading skills compared: Day Trader Skill vs trader-skill v1 and other packs — workflow fit, broker reach, update risk. Not a Claude agent skills / Superpowers homepage. NFA; no smear.',
+    'Claude trading skills compared: Day Trader Skill vs trader-skill v1 and other packs — workflow fit, broker reach, update risk. Not a Claude agent skills / Superpowers homepage. Not financial advice; no smear.',
   alternates: { canonical: '/vs/' },
 };
 
@@ -28,8 +28,12 @@ export default function VsPage() {
       <div className="callout danger">
         <p>
           <strong>Not financial advice.</strong> Comparisons here are about software shape and
-          operational risk. They are not performance rankings. Most day traders lose money
-          regardless of which skill pack they install.
+          operational risk. They are not performance rankings. The SEC’s{' '}
+          <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html" rel="noopener noreferrer" target="_blank">
+            2005 day-trading bulletin
+          </a>{' '}
+          warns that many traders suffer severe losses in their first months, regardless of which
+          skill pack they install.
         </p>
       </div>
 

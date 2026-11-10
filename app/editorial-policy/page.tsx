@@ -120,12 +120,78 @@ export default function EditorialPolicyPage() {
         live results.
       </p>
 
+      <h3>How we cite risk claims</h3>
+      <p>
+        Risk claims are tied to a primary source, a date, and the scope the source actually covers.
+        Where a page is no longer maintained, we say so in the same sentence. The sources used for
+        the risk statements on this site are:
+      </p>
+      <ul>
+        <li>
+          <a
+            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            SEC, Day Trading: Your Dollars at Risk
+          </a>{' '}
+          — published April 19, 2005; last reviewed or updated April 20, 2005. We do not attribute
+          any blanket loss statistic to this page; we paraphrase only the claims the page actually
+          makes.
+        </li>
+        <li>
+          <a
+            href="https://www.investor.gov/additional-resources/spotlight/formerdirectorlorischock-directors-take/thinking-day-trading-know-risks"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Investor.gov, Thinking of Day Trading? Know the Risks.
+          </a>{' '}
+          — by Lori Schock, former Director of the SEC’s Office of Investor Education and Advocacy.
+          The page states that it is no longer being updated and may include information that is
+          out-of-date; we repeat that caveat whenever we cite it. Checked 10 November 2026.
+        </li>
+        <li>
+          <a
+            href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/fraudadv_tradingsystem.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            CFTC, Fraud Advisory: Commodity Trading Systems Sold on the Internet
+          </a>{' '}
+          — no last-reviewed date is shown on the page; checked 10 November 2026. We use it for the
+          limits of hypothetical and simulated results, not as a claim about live returns.
+        </li>
+        <li>
+          <a
+            href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CustomerAdvisory_MustKnowForex.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            CFTC, Customer Advisory: Eight Things You Should Know Before Trading Forex
+          </a>{' '}
+          — no last-reviewed date is shown on the page; checked 10 November 2026. Its customer-loss
+          figure applies only to OTC forex customer accounts in Q2 2021–Q1 2022, and we do not apply
+          it to stock day trading.
+        </li>
+      </ul>
+
       <h2>Paper-first and risk</h2>
       <p>
         Paper trading is the default we teach. A day trading simulator is a practice environment,
         not a promise that a strategy works with real capital. We do not publish profit promises,
-        win-rate guarantees, “signals,” or claims that a tool can remove risk. Most people who day
-        trade lose money, and leverage can make losses arrive faster.
+        win-rate guarantees, “signals,” or claims that a tool can remove risk. The SEC’s{' '}
+        <a
+          href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Day Trading: Your Dollars at Risk
+        </a>{' '}
+        (April 19, 2005; last reviewed April 20, 2005) warns that day trading is risky, that most
+        individual investors do not have the wealth, time, or temperament to profit from it and
+        withstand its severe losses, and that many traders never become profitable. Leverage can
+        make losses arrive faster.
       </p>
       <p>
         Our calculators are arithmetic aids only. They run in the browser, use no market data, and

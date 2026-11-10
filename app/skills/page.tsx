@@ -7,7 +7,7 @@ import { SKILLS } from '@/lib/skills';
 export const metadata: Metadata = {
   title: 'Day Trader Skill: 11 Modules Index',
   description:
-    'Day trader skill modules index: trader-scanner, news, entry, exit, timemachine, budget, risk, broker, alerts, analyst, pelosi. Inputs/outputs — not trade ideas. NFA.',
+    'Day trader skill modules index: trader-scanner, news, entry, exit, timemachine, budget, risk, broker, alerts, analyst, pelosi. Inputs/outputs — not trade ideas. Not financial advice.',
   alternates: { canonical: '/skills/' },
 };
 

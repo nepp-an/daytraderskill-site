@@ -240,7 +240,11 @@ export function PaperJournal() {
       <p className="journal-note">
         <strong>Paper only.</strong> A simulator can flatter a process: fills may be optimistic and
         costs may be simplified. Do not treat a good journal week as proof that live trading would
-        work. Most people who day trade lose money.
+        work. The SEC’s{' '}
+        <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html" rel="noopener noreferrer" target="_blank">
+          2005 day-trading bulletin
+        </a>{' '}
+        warns that many traders suffer severe losses in their first months.
       </p>
     </section>
   );

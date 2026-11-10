@@ -11,7 +11,7 @@ import { articleJsonLd } from '@/lib/seo';
 export const metadata: Metadata = {
   title: { absolute: 'Position Size Calculator: Risk-Based Share Count' },
   description:
-    'Free position size calculator: enter account size, risk percentage, entry price, and stop distance to estimate shares and position value. No login, no broker connection. NFA.',
+    'Free position size calculator: enter account size, risk percentage, entry price, and stop distance to estimate shares and position value. No login, no broker connection. Not financial advice.',
   alternates: { canonical: '/tools/position-size-calculator/' },
   openGraph: {
     title: 'Position Size Calculator: Risk-Based Share Count',
@@ -110,8 +110,12 @@ export default function PositionSizeCalculatorPage() {
       <div className="callout danger">
         <p>
           <strong>Not financial advice.</strong> This tool does not recommend a stock, a position
-          size, or a trade. It has no broker connection, no market data feed, and no order path. Most
-          people who day trade lose money.
+          size, or a trade. It has no broker connection, no market data feed, and no order path. The
+          SEC’s{' '}
+          <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html" rel="noopener noreferrer" target="_blank">
+            2005 day-trading bulletin
+          </a>{' '}
+          warns that many traders suffer severe losses in their first months.
         </p>
       </div>
 

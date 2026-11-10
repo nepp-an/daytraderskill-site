@@ -10,7 +10,7 @@ import { articleJsonLd } from '@/lib/seo';
 export const metadata: Metadata = {
   title: { absolute: 'Day Trading for Beginners: Paper-First Starter Guide' },
   description:
-    'Learn day trading for beginners the paper-first way: concepts, a practice sequence, real costs, common mistakes, and what to study first. NFA.',
+    'Learn day trading for beginners the paper-first way: concepts, a practice sequence, real costs, common mistakes, and what to study first. Not financial advice.',
   alternates: { canonical: '/learn/day-trading-for-beginners/' },
   openGraph: {
     title: 'Day Trading for Beginners: Paper-First Starter Guide',
@@ -93,8 +93,16 @@ export default function DayTradingForBeginnersPage() {
       <div className="tldr">
         <strong>TL;DR.</strong> Day trading is the practice of opening and closing positions within
         the same trading session. Beginners should learn market mechanics, write a simple process,
-        and rehearse it on paper before risking real capital. Most people who day trade lose money.
-        A simulator is a rehearsal space, not a promise that live results will match.
+        and rehearse it on paper before risking real capital. The SEC’s{' '}
+        <a
+          href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          2005 day-trading bulletin
+        </a>{' '}
+        warns that many traders suffer severe losses in their first months. A simulator is a
+        rehearsal space, not a promise that live results will match.
       </div>
 
       <div className="callout danger">
@@ -158,6 +166,53 @@ export default function DayTradingForBeginnersPage() {
         Day trading is also not one activity. Scalping, momentum trading, mean reversion, and
         news-based trading are different approaches with different holding times and failure modes.
         Jumping between them before you understand one is a common way to learn very little.
+      </p>
+
+      <h2>What official sources say about the risk</h2>
+      <p>
+        The SEC’s{' '}
+        <a
+          href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Day Trading: Your Dollars at Risk
+        </a>{' '}
+        (April 19, 2005; last reviewed April 20, 2005) warns that most individual investors do not
+        have the wealth, time, or temperament to profit from day trading and withstand its severe
+        losses. It says traders often suffer severe losses in their first months and many never
+        become profitable, and it warns against using living expenses, retirement savings, a second
+        mortgage, or student loans. Margin magnifies losses, and easy-profit claims should not be
+        trusted.
+      </p>
+      <p>
+        Investor.gov’s{' '}
+        <a
+          href="https://www.investor.gov/additional-resources/spotlight/formerdirectorlorischock-directors-take/thinking-day-trading-know-risks"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Thinking of Day Trading? Know the Risks.
+        </a>{' '}
+        by Lori Schock, former Director of the SEC’s Office of Investor Education and Advocacy, warns
+        that leverage — including margin and some options — can lead to losses larger than the amount
+        invested, that day trading is not something to do casually, and that you should not put money
+        into products you do not understand. The page states: “This document is no longer being
+        updated and may include information that is out-of-date.”
+      </p>
+      <p>
+        The CFTC’s{' '}
+        <a
+          href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/fraudadv_tradingsystem.html"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Fraud Advisory: Commodity Trading Systems Sold on the Internet
+        </a>{' '}
+        (the page shows no last-reviewed date; checked 10 November 2026) warns that simulated
+        results may not reflect consecutive losses, margin calls, slippage, bid-ask spreads, or the
+        effect of actual fills on prices. A simulated result is not a live result, and no system can
+        guarantee a profit. That is the standard this guide applies to every simulator exercise.
       </p>
 
       <h2>What beginners need to learn first</h2>
@@ -338,8 +393,16 @@ export default function DayTradingForBeginnersPage() {
       <div className="callout compliance">
         <p>
           <strong>Compliance note.</strong> DayTraderSkill.com does not provide investment advice,
-          stock picks, signals, or trade execution. Most people who day trade lose money. If you need
-          personal advice, speak to a licensed professional in your jurisdiction.
+          stock picks, signals, or trade execution. The{' '}
+          <a
+            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            SEC’s 2005 investor bulletin
+          </a>{' '}
+          warns that many traders suffer severe losses in their first months. If you need personal
+          advice, speak to a licensed professional in your jurisdiction.
         </p>
       </div>
 
