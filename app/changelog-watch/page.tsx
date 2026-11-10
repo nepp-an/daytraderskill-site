@@ -16,7 +16,7 @@ export default function ChangelogWatchPage() {
       <h1>Day Trader Skill GitHub update watch</h1>
       <div className="tldr">
         <strong>TL;DR.</strong> Star counts can rise while <em>code pushes</em> stay frozen. As of
-        2026-11-05 Asia/Shanghai research for this site, upstream{' '}
+        2026-11-10 Asia/Shanghai research for this site, upstream{' '}
         <a href={UPSTREAM_REPO} rel="noopener noreferrer" target="_blank">
           Jakeschincariol/day-trader-skill
         </a>{' '}
