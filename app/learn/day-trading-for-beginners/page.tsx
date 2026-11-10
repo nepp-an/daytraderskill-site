@@ -194,7 +194,7 @@ export default function DayTradingForBeginnersPage() {
         >
           Thinking of Day Trading? Know the Risks.
         </a>{' '}
-        by Lori Schock, former Director of the SEC’s Office of Investor Education and Advocacy, warns
+        by Lori Schock, former Director of the SEC’s Office of Investor Education and Assistance, warns
         that leverage — including margin and some options — can lead to losses larger than the amount
         invested, that day trading is not something to do casually, and that you should not put money
         into products you do not understand. The page states: “This document is no longer being

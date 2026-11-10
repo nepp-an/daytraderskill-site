@@ -147,7 +147,7 @@ export default function EditorialPolicyPage() {
           >
             Investor.gov, Thinking of Day Trading? Know the Risks.
           </a>{' '}
-          — by Lori Schock, former Director of the SEC’s Office of Investor Education and Advocacy.
+          — by Lori Schock, former Director of the SEC’s Office of Investor Education and Assistance.
           The page states that it is no longer being updated and may include information that is
           out-of-date; we repeat that caveat whenever we cite it. Checked 10 November 2026.
         </li>

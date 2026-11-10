@@ -2108,6 +2108,18 @@ code.inline {
   letter-spacing: 0.06em;
 }
 
+.sim-ticket-note {
+  margin: 0 0 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #7a6332;
+  border-left: 4px solid var(--warn);
+  border-radius: 8px;
+  background: rgba(229, 189, 107, 0.09);
+  color: #f4dda8;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
 .sim-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);

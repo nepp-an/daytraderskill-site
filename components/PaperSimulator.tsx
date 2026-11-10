@@ -97,15 +97,16 @@ export function PaperSimulator() {
       </p>
 
       <div className="sim-banner" role="note">
-        <strong>SYNTHETIC scenario.</strong> Not live or delayed market data. The mark price is a
-        scenario variable moved only by the buttons below; it is not a quote from any market, and
-        this is not a pretend live feed. No broker, API key, account, or real order is involved.
+        <strong>SYNTHETIC scenario.</strong> Educational synthetic scenario. Not real-time market
+        data and not a prediction of live trading results. The mark price is a scenario variable
+        moved only by the buttons below; it is not a quote from any market, and this is not a
+        pretend live feed. No broker, API key, account, or real order is involved.
       </div>
 
       <div className="sim-grid">
         <div className="sim-panel">
           <h3>Order ticket</h3>
-          <p className="calc-hint">
+          <p className="sim-ticket-note" role="note">
             Educational synthetic scenario. Not real-time market data and not a prediction of live
             trading results.
           </p>

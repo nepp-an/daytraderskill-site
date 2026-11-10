@@ -276,6 +276,115 @@ export default function PaperTradingPage() {
         spreads, and fill assumptions the platform applied.
       </p>
 
+      <h2 id="platform-limits">Official paper-account limits, not a ranking</h2>
+      <p>
+        The table below restates published limits from each provider’s own help or product pages,
+        checked 10 November 2026. It is not a recommendation, not a ranking, and not a forecast of
+        results. None of the links is an affiliate relationship. Always re-read the current page
+        before you rely on a limit, because vendors can change terms.
+      </p>
+      <table className="data">
+        <caption>
+          Official paper-trading feature and data limits, checked 10 November 2026. No ranking and no
+          return claim.
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Platform</th>
+            <th scope="col">Official source</th>
+            <th scope="col">Stated limits and data scope</th>
+            <th scope="col">Date note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Schwab thinkorswim paperMoney</th>
+            <td>
+              <a
+                href="https://www.schwab.com/trading/thinkorswim/paper-trading"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                schwab.com/trading/thinkorswim/paper-trading
+              </a>
+              ;{' '}
+              <a
+                href="https://www.schwab.com/learn/story/4-reasons-to-try-paper-trading"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                schwab.com/learn/story/4-reasons-to-try-paper-trading
+              </a>
+            </td>
+            <td>
+              Virtual buying power $100,000. The product page says paperMoney uses real-time quotes
+              for virtual trades, is free, and requires a Schwab account to log into thinkorswim; a
+              Guest Pass is described as a way to look around, not a full equivalent. The page also
+              says you cannot make money from paper trading. The learning article says paperMoney is
+              for educational purposes only; quote activity, fills, and trading costs are simulated;
+              “Simulated performance does not ensure success in a live environment”; balances and
+              positions can be reset.
+            </td>
+            <td>
+              Checked 10 November 2026. The product page footer shows material codes (0726-3HXA,
+              0926-38AH), not a complete last-reviewed date.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Interactive Brokers paper trading</th>
+            <td>
+              <a
+                href="https://www.interactivebrokers.com/campus/glossary-terms/paper-trading-account/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                interactivebrokers.com/campus/glossary-terms/paper-trading-account/
+              </a>
+              ;{' '}
+              <a
+                href="https://www.interactivebrokers.com/en/trading/papertrader-delayed-data.php"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                interactivebrokers.com/en/trading/papertrader-delayed-data.php
+              </a>
+            </td>
+            <td>
+              New customers automatically receive a paper account with a paper ELV of 1,000,000 USD.
+              There is no real execution or clearing. Some order types are not supported, including
+              VWAP, Auction, RFQ, and Pegged to Market. Fills are simulated at the best bid or offer,
+              without a deep book. U.S. options penny fills are not supported, and mutual funds are
+              not supported. Complex stops and similar orders are simulated and may behave differently
+              than live. Real-time market data can be subscribed only from an approved and funded
+              account; without that subscription, U.S. stocks and options are delayed 15 minutes and
+              U.S. futures 10 minutes. The delayed-data page lists metals, forex, and U.S. bonds as
+              “No Delay.”
+            </td>
+            <td>Checked 10 November 2026. No last-reviewed date was taken from these pages.</td>
+          </tr>
+          <tr>
+            <th scope="row">TradingView paper trading</th>
+            <td>
+              <a
+                href="https://www.tradingview.com/support/solutions/43000516466-paper-trading-main-functionality/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                tradingview.com/support/solutions/43000516466-paper-trading-main-functionality/
+              </a>
+            </td>
+            <td>
+              Official help describes a global demo with no deposit and no real money, and says it
+              supports placing orders and tracking positions. The same help text includes marketing
+              language such as an “execution experience is identical to real trading.” That wording
+              is the platform’s own description of its simulated environment; it is not an independent
+              test that simulated fills match live executions.
+            </td>
+            <td>Checked 10 November 2026 from the official help article.</td>
+          </tr>
+        </tbody>
+      </table>
+
       <h2>How to start paper trading</h2>
       <ol className="steps">
         <li>
@@ -375,7 +484,7 @@ export default function PaperTradingPage() {
         >
           Thinking of Day Trading? Know the Risks.
         </a>{' '}
-        by Lori Schock, former Director of the SEC’s Office of Investor Education and Advocacy, warns
+        by Lori Schock, former Director of the SEC’s Office of Investor Education and Assistance, warns
         that leverage — including margin and some options — can lead to losses larger than the
         amount invested, that day trading is not something to do casually, and that you should not
         put money into products you do not understand. The page states: “This document is no longer
@@ -453,6 +562,53 @@ export default function PaperTradingPage() {
             CFTC, Fraud Advisory: Commodity Trading Systems Sold on the Internet
           </a>{' '}
           — no last-reviewed date shown on the page; checked 10 November 2026.
+        </li>
+        <li>
+          <a
+            href="https://www.schwab.com/trading/thinkorswim/paper-trading"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Schwab, thinkorswim paperMoney
+          </a>{' '}
+          and{' '}
+          <a
+            href="https://www.schwab.com/learn/story/4-reasons-to-try-paper-trading"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            4 Reasons to Try Paper Trading
+          </a>{' '}
+          — checked 10 November 2026; product-page footer material codes (0726-3HXA, 0926-38AH) are
+          not a complete last-reviewed date.
+        </li>
+        <li>
+          <a
+            href="https://www.interactivebrokers.com/campus/glossary-terms/paper-trading-account/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Interactive Brokers, Paper Trading Account
+          </a>{' '}
+          and{' '}
+          <a
+            href="https://www.interactivebrokers.com/en/trading/papertrader-delayed-data.php"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Paper Trader Delayed Market Data
+          </a>{' '}
+          — checked 10 November 2026.
+        </li>
+        <li>
+          <a
+            href="https://www.tradingview.com/support/solutions/43000516466-paper-trading-main-functionality/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            TradingView, Paper trading — main functionality
+          </a>{' '}
+          — checked 10 November 2026.
         </li>
       </ul>
 
