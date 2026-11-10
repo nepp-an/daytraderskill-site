@@ -189,12 +189,21 @@ export default function SafetyPage() {
         </li>
       </ul>
 
+      <div className="callout compliance">
+        <p>
+          <strong>Practice entry.</strong> Rehearse this checklist on paper before any live switch.
+          The site’s <Link href="/paper-trading/">day trading simulator guide</Link> covers the
+          first-session flow and journal; that page has no broker connection and shows no live
+          quotes.
+        </p>
+      </div>
+
       <h2>Short FAQ</h2>
       <FaqList items={faqs} />
 
       <Related
         links={[
-          { href: '/paper-trading/', label: 'Day trader skill paper trading' },
+          { href: '/paper-trading/', label: 'Day trading simulator' },
           { href: '/install/', label: 'Day trader skill install' },
           { href: '/vs/', label: 'Claude trading skills comparison' },
           { href: '/faq/', label: 'Is day trader skill financial advice?' },

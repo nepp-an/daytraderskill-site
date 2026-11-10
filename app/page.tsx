@@ -19,7 +19,7 @@ import { BRAND, SITE_ORIGIN, UPSTREAM_REPO } from '@/lib/site';
 export const metadata: Metadata = {
   title: { absolute: 'Day Trader Skill — Paper-First Day Trading Guide & Practice Hub' },
   description:
-    'A paper-first day trading guide for beginners: learn the basics, practice in a simulator, study risk, and use free position-size and risk-reward calculators. Not financial advice.',
+    'An independent, paper-first day trading guide and practice hub: learn the mechanics, rehearse in a day trading simulator, study risk, and use free position-size and risk-reward calculators. Not financial advice.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Day Trader Skill — Paper-First Day Trading Guide & Practice Hub',
@@ -81,7 +81,7 @@ export default function HomePage() {
             name: BRAND,
             url: SITE_ORIGIN,
             description:
-              'An independent, paper-first day trading guide and tools hub for beginners. Not financial advice.',
+              'An independent, paper-first day trading guide and practice hub. Learn the mechanics, rehearse on paper, put risk before tools, and verify software before installing it. Not financial advice.',
             inLanguage: 'en',
             publisher: {
               '@type': 'Organization',
@@ -109,10 +109,10 @@ export default function HomePage() {
 
             <div className="cta-row">
               <Link className="btn primary" href="/learn/day-trading-for-beginners/">
-                Start with the basics
+                Start with the beginner guide
               </Link>
               <Link className="btn" href="/paper-trading/">
-                What is paper trading?
+                Day trading simulator
               </Link>
               <Link className="btn ghost" href="/tools/position-size-calculator/">
                 Size a practice trade
@@ -244,7 +244,7 @@ export default function HomePage() {
             </p>
             <ul className="card-links">
               <li>
-                <Link href="/paper-trading/">What is paper trading?</Link>
+                <Link href="/paper-trading/">Day trading simulator</Link>
               </li>
               <li>
                 <Link href="/paper-trading/#paper-journal">First-session checklist and journal</Link>
@@ -364,7 +364,7 @@ export default function HomePage() {
               journal. Repeat until the workflow is boring.
             </p>
             <p>
-              <Link href="/paper-trading/">Open the paper trading guide →</Link>
+              <Link href="/paper-trading/">Open the day trading simulator guide →</Link>
             </p>
           </article>
           <article className="journey-card">
@@ -464,8 +464,9 @@ export default function HomePage() {
           </tbody>
         </table>
         <p>
-          The <Link href="/learn/how-to-start-day-trading/">how to start day trading roadmap</Link>{' '}
-          expands these steps, and the{' '}
+          Keep this page as the four-week view. The{' '}
+          <Link href="/learn/how-to-start-day-trading/">how to start day trading roadmap</Link>{' '}
+          gives the step-by-step version, and the{' '}
           <Link href="/learn/day-trading-for-beginners/">beginner pillar</Link> explains the costs
           that are easy to miss.
         </p>
@@ -577,13 +578,16 @@ export default function HomePage() {
         <FaqList items={faqs} />
       </section>
 
-      <section className="compliance-strip" aria-label="Editorial policy">
+      <section className="compliance-strip" aria-label="Editorial standards">
         <p>
           <strong>What this hub will not do:</strong> sell signals, promise returns, rank stocks, or
           trade on your behalf. Day trading is risky; most people who try it lose money.
         </p>
         <Link className="btn small ghost" href="/safety/">
           Read the safety policy
+        </Link>
+        <Link className="btn small ghost" href="/editorial-policy/">
+          Editorial policy
         </Link>
       </section>
 
@@ -601,8 +605,8 @@ export default function HomePage() {
           },
           {
             href: '/paper-trading/',
-            label: 'What is paper trading?',
-            description: 'Simulated orders, a first-session checklist, and a journal template.',
+            label: 'Day trading simulator',
+            description: 'The practice entry: simulated orders, a first-session checklist, and a journal template.',
           },
           {
             href: '/safety/',

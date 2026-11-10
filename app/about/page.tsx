@@ -35,6 +35,18 @@ export default function AboutPage() {
         <li>Prefer differentiation via troubleshoot matrices, safety checklists, and honest VS tables.</li>
         <li>Call out upstream freshness risk when pushes look stalled.</li>
       </ul>
+      <p className="article-meta">
+        <span>DayTraderSkill editorial team</span>
+        <span>AI-assisted, human-reviewed</span>
+        <span>Reviewed 10 November 2026</span>
+      </p>
+      <p>
+        Pages are drafted with AI assistance and reviewed by the site editorial team against primary
+        sources before publication. We do not publish invented author names, personal biographies, or
+        financial credentials. Read the full{' '}
+        <Link href="/editorial-policy/">editorial policy</Link> for our independence, sourcing,
+        dating, advertising, and affiliate rules.
+      </p>
       <h2>Contact / privacy</h2>
       <p>
         See <Link href="/contact/">Contact</Link> for corrections and site feedback, and{' '}
@@ -44,6 +56,7 @@ export default function AboutPage() {
       <Related
         links={[
           { href: '/', label: 'Home' },
+          { href: '/editorial-policy/', label: 'Editorial policy' },
           { href: '/contact/', label: 'Contact' },
           { href: '/privacy/', label: 'Privacy' },
           { href: '/changelog-watch/', label: 'Changelog watch' },

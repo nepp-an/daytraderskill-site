@@ -48,7 +48,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
   {
     title: 'Practice & risk',
     links: [
-      { href: '/paper-trading/', label: 'What is paper trading?' },
+      { href: '/paper-trading/', label: 'Day trading simulator' },
       { href: '/safety/', label: 'Safety checklist' },
       { href: '/safety/#risk', label: 'Risk basics' },
       { href: '/faq/', label: 'FAQ' },
@@ -70,6 +70,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     title: 'Site',
     links: [
       { href: '/about/', label: 'About' },
+      { href: '/editorial-policy/', label: 'Editorial policy' },
       { href: '/contact/', label: 'Contact' },
       { href: '/changelog-watch/', label: 'Update watch' },
       { href: '/privacy/', label: 'Privacy' },

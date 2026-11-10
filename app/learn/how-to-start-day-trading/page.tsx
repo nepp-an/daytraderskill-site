@@ -71,6 +71,7 @@ export default function HowToStartDayTradingPage() {
             description:
               'A step-by-step, paper-first roadmap for beginning day traders, from mechanics and rules to journaling and review.',
             path: '/learn/how-to-start-day-trading/',
+            dateModified: '2026-11-10',
           }),
           faqJsonLd(faqs),
         ]}
@@ -84,7 +85,7 @@ export default function HowToStartDayTradingPage() {
         <p className="eyebrow">Step-by-step roadmap</p>
         <h1>How to start day trading without rushing into live risk</h1>
         <p className="article-meta">
-          <span>Reviewed 5 November 2026</span>
+          <span>Reviewed 10 November 2026</span>
           <span>9 min read</span>
           <span>Not financial advice</span>
         </p>
@@ -239,7 +240,7 @@ export default function HowToStartDayTradingPage() {
         </li>
       </ol>
 
-      <h2>A two-week starter plan</h2>
+      <h2>A two-week starter schedule</h2>
       <p>
         This is a study schedule, not a profit target. The aim is to make the workflow familiar and
         to produce a journal you can review.
@@ -280,6 +281,12 @@ export default function HowToStartDayTradingPage() {
           </tr>
         </tbody>
       </table>
+      <p>
+        The hub also keeps a four-week version of this sequence:{' '}
+        <Link href="/#plan-heading">Your first four weeks on paper</Link>. Use this two-week schedule
+        for a quick start, or the four-week view when you want more time between review cycles. Both
+        produce the same kind of evidence — notes, checklists, and a journal.
+      </p>
 
       <h2>What starting does not require</h2>
       <ul>
