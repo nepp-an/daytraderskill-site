@@ -21,6 +21,11 @@ export default function SkillsIndexPage() {
         as a checklist, not as autopilot. Typical chain: scanner → news → entry → exit →
         timemachine → budget → risk → broker; alerts in parallel.
       </div>
+      <p>
+        Each module page carries its own prerequisites, command-level steps, a labelled historical
+        example and its own failure limits. The related links at the bottom are skill-specific, so
+        the scanner page does not send you to the same four places as the Pelosi page.
+      </p>
       <div className="callout danger">
         <p>
           <strong>Not financial advice.</strong> Skill pages explain inputs/outputs and cautions —

@@ -29,6 +29,10 @@ const faqs = [
     q: 'Skills appear but market data is empty',
     a: 'Public Yahoo/Nasdaq endpoints can lag, change, or rate-limit. Check outbound network from the environment Claude Code runs in. Sandboxed CI-like environments often have no market access.',
   },
+  {
+    q: 'Do I need a brokerage account just to install?',
+    a: 'No. All four install paths and the read-only Python checks work without a broker. A connector such as Alpaca’s MCP server or IBKR is a separate optional setup, and paper is the default when you do configure one.',
+  },
 ];
 
 export default function TroubleshootPage() {
@@ -51,6 +55,50 @@ export default function TroubleshootPage() {
           outcomes. Keep paper trading default while you debug.
         </p>
       </div>
+
+      <h2>Five-minute verification ladder</h2>
+      <p>
+        Before changing permissions or reinstalling, separate “the files are there” from “the
+        helper can run” and from “the market is open”. Run these from the repository root and stop
+        at the first failure.
+      </p>
+      <ol className="steps">
+        <li>
+          <strong>Interpreter and tests</strong>
+          <pre>{`python3 --version
+python3 -m unittest discover -s tests -v`}</pre>
+          <p>
+            The suite is offline and fixture-based. If it fails, the problem is the clone, the
+            Python version or an edited fixture — not the broker or the market.
+          </p>
+        </li>
+        <li>
+          <strong>Read-only local tools</strong>
+          <pre>{`python3 trader-broker/ticket.py show
+python3 trader-alerts/alerts.py clock`}</pre>
+          <p>
+            These need no broker. An empty ticket list is normal before a budget proposal exists.
+            The clock proves the NYSE calendar code can run.
+          </p>
+        </li>
+        <li>
+          <strong>One network call</strong>
+          <pre>python3 trader-scanner/scan.py universe</pre>
+          <p>
+            If this fails, fix outbound network or the Nasdaq Trader endpoint before blaming the
+            skill. An SEC-only failure is usually a missing identity string instead.
+          </p>
+        </li>
+        <li>
+          <strong>One command that can legitimately say “nothing”</strong>
+          <pre>python3 trader-scanner/scan.py orb --at 10:15</pre>
+          <p>
+            Before 9:50 AM New York, on a weekend or holiday, after the entry window, or without
+            complete 5-minute bars, this writes nothing and prints one line. That is a market-clock
+            result, not an install failure.
+          </p>
+        </li>
+      </ol>
 
       <h2>Failure matrix</h2>
       <table className="data">
@@ -132,6 +180,51 @@ export default function TroubleshootPage() {
             <td>
               Re-clone upstream; run <code>python3 -m unittest discover -s tests -v</code> from repo
               root
+            </td>
+          </tr>
+          <tr>
+            <td>Opening-range scan writes no file</td>
+            <td>Market clock or incomplete bars</td>
+            <td>
+              Run after 9:50 AM New York on a trading day, before the entry window. Missing 5-minute
+              bars (halt, thin stock) make a chart unusable; the tool prints one line instead of
+              guessing. See <Link href="/skills/scanner/">Chart Scanner</Link>.
+            </td>
+          </tr>
+          <tr>
+            <td>Scan output says PARTIAL</td>
+            <td>The stage-2 confirmation cap skipped charts</td>
+            <td>
+              The default <code>--max-confirm 200</code> checks the most traded candidates first.
+              Raise it or use <code>--max-confirm 0</code> for all, and expect a slower scan. Do not
+              call a partial scan “the whole market”.
+            </td>
+          </tr>
+          <tr>
+            <td>Daily scan volume looks too low</td>
+            <td>Run during the session</td>
+            <td>
+              The daily scan is designed for before the open or after the close. During the session
+              its volume is the day so far and today’s bar is incomplete. Re-run later instead of
+              treating the partial number as a full session.
+            </td>
+          </tr>
+          <tr>
+            <td><code>ticket.py show</code> lists nothing</td>
+            <td>No proposal or no risk PASS yet</td>
+            <td>
+              Run <Link href="/skills/budget/">Budget Manager</Link> to write an order proposal, then{' '}
+              <Link href="/skills/risk/">Risk Manager</Link>. A ticket is READY only after a PASS
+              from today. <code>ticket.py</code> never contacts the broker.
+            </td>
+          </tr>
+          <tr>
+            <td>Entry timer keeps saying waiting</td>
+            <td>Price has not closed above the level</td>
+            <td>
+              Check the opening range, the level and the bar interval. A wick above the level is not
+              a trigger; only a completed bar closing above it counts. If the setup expired, that is
+              a valid result — do not move the level after the fact.
             </td>
           </tr>
           <tr>

@@ -24,6 +24,14 @@ const faqs = [
     q: 'Can I set brokerage tools to Always allow?',
     a: 'You can technically misconfigure many tools that way. Do not. Needs approval keeps a human gate. Always allow removes the second check this pack expects.',
   },
+  {
+    q: 'Where exactly is the permission set in Claude?',
+    a: 'Upstream documents Customize > Connectors > tool permissions (Settings > Connectors in older versions). Open the broker connector and set each tool individually. The order tool and every place/cancel/close tool should be Needs approval; destructive all-position, option and crypto tools should be Blocked unless you have a specific reason.',
+  },
+  {
+    q: 'Does installing the pack connect my broker?',
+    a: 'No. The four install paths copy skills and Python helpers. A broker connector is a separate setup you perform yourself, with your own keys. The install itself cannot place an order and does not require a brokerage account.',
+  },
 ];
 
 export default function SafetyPage() {
@@ -131,6 +139,110 @@ export default function SafetyPage() {
           </tr>
         </tbody>
       </table>
+
+      <h2 id="permissions">Where the permission actually lives</h2>
+      <p>
+        In Claude, open <strong>Customize &gt; Connectors &gt; tool permissions</strong> (older
+        versions: <strong>Settings &gt; Connectors</strong>), choose the brokerage connector, and set
+        each tool individually. The default is not the safety control; the per-tool setting is.
+        “Needs approval” is the only acceptable setting for anything that can reach an order,
+        cancel or close a position.
+      </p>
+      <table className="data">
+        <thead>
+          <tr>
+            <th>Tool class</th>
+            <th>Examples from the upstream Alpaca setup</th>
+            <th>Setting</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Places or changes an order</td>
+            <td>
+              <code>place_stock_order</code>, <code>cancel_order_by_id</code>,{' '}
+              <code>replace_order_by_id</code>, <code>close_position</code>
+            </td>
+            <td>
+              <strong>Needs approval</strong> — never Always allow
+            </td>
+          </tr>
+          <tr>
+            <td>Destructive or outside the pack’s scope</td>
+            <td>
+              <code>close_all_positions</code>, <code>cancel_all_orders</code>,{' '}
+              <code>place_option_order</code>, <code>place_crypto_order</code>
+            </td>
+            <td>
+              <strong>Blocked</strong> unless you have a specific, understood reason
+            </td>
+          </tr>
+          <tr>
+            <td>Read-only</td>
+            <td>
+              <code>get_account_info</code>, <code>get_all_positions</code>,{' '}
+              <code>get_orders</code>, <code>get_clock</code>, <code>get_stock_latest_quote</code>
+            </td>
+            <td>Always allow is acceptable; it still cannot place an order</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        In Claude Code the equivalent is a permissions list: keep{' '}
+        <code className="inline">mcp__alpaca__place_stock_order</code> under{' '}
+        <code className="inline">ask</code>, never under <code className="inline">allow</code>. The
+        IBKR connector has its own drafting tools; set those to Needs approval too. Upstream’s IBKR
+        listing says the order is sent to the user’s IBKR account for review and approval, so the
+        final yes can happen inside IBKR as well.
+      </p>
+      <div className="callout warn">
+        <p>
+          <strong>If you cannot say why the card appeared, click Deny.</strong> In a paper rehearsal,
+          Deny is a successful test of the gate. Do not “fix” a card that keeps appearing by changing
+          the tool to Always allow; fix the workflow that is calling the tool.
+        </p>
+      </div>
+
+      <h2 id="credentials">Credentials, local data and what not to paste</h2>
+      <ul className="checklist">
+        <li>
+          <strong>Broker keys live in environment variables or the Claude Desktop config file</strong>{' '}
+          — never in chat, screenshots, a public repo or a support message. Alpaca paper keys are
+          separate from live keys; use paper keys while you rehearse.
+        </li>
+        <li>
+          <strong>If a key is exposed, rotate it.</strong> Deleting the chat message is not enough.
+          Make new keys in the broker dashboard and remove the old ones.
+        </li>
+        <li>
+          <strong>SEC_USER_AGENT is an identity, not a secret.</strong> Use a real name and contact
+          email so SEC can reach you, but do not use a broker password or API key as the string.
+        </li>
+        <li>
+          <strong>The trader/ folder is local working data.</strong> It can contain plans, proposed
+          orders, fills, cash, holdings, PTR PDFs and alert state. Treat it like account data: do not
+          commit it to a public repo or paste it into a public issue.
+        </li>
+        <li>
+          <strong>Chat context is data exposure.</strong> Claude sees what you paste. Do not paste
+          account numbers, full API keys, session cookies or one-time codes. Redact a screenshot
+          before sharing it, and prefer a dedicated paper account for experiments.
+        </li>
+        <li>
+          <strong>Public data is still third-party data.</strong> Yahoo, Nasdaq Trader, SEC EDGAR and
+          the House Clerk can lag, change or rate-limit. A public endpoint is not a licensed real-time
+          feed and is not a promise of accuracy.
+        </li>
+      </ul>
+
+      <h2>Paper is a setting and a habit</h2>
+      <p>
+        Upstream defaults to <code className="inline">&quot;paper&quot;: true</code> in the example
+        config, and Alpaca’s MCP server defaults to its paper account. The IBKR route uses a separate
+        paper account. Check the account in the broker’s own dashboard, not only in a chat reply. A
+        connector that looks like paper in one screen and live in another is a reason to stop, not a
+        reason to place a small test order.
+      </p>
 
       <h2>Dual approval mental model</h2>
       <ol className="steps">

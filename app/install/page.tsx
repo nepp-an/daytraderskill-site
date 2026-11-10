@@ -49,6 +49,16 @@ export default function InstallPage() {
         </p>
       </div>
 
+      <div className="callout">
+        <p>
+          <strong>What install does not do.</strong> None of the four paths connects a broker,
+          places an order, or requires a brokerage account. The helper scripts read public data and
+          write local files. A broker connector is a separate, optional setup covered in{' '}
+          <Link href="/skills/broker/">the Order Executor page</Link>; only that path can lead to an
+          order, and only after a risk PASS, your typed yes and a Needs approval card.
+        </p>
+      </div>
+
       <h2>Before you start</h2>
       <ul className="checklist">
         <li>Claude account and/or Claude Code installed, depending on the path.</li>
@@ -207,26 +217,96 @@ cp -r trader-* .claude/skills/`}</pre>
         Be polite; do not hammer endpoints.
       </p>
 
-      <h2>Smoke-test without placing anything</h2>
-      <ol className="steps">
-        <li>
-          From a clone, try a read-only style command documented upstream (for example listing a
-          universe or checking entry status on a ticker) — not broker submit.
-        </li>
-        <li>
-          Optional: run upstream unit tests offline if present:{' '}
-          <code className="inline">python3 -m unittest discover -s tests -v</code>
-        </li>
-        <li>
-          Walk the paper path on <Link href="/paper-trading/">Paper trading</Link> before you ever
-          consider a live connector.
-        </li>
-      </ol>
+      <h2 id="verify">Verify the install without placing anything</h2>
+      <p>
+        Run these from the repository root. They use the upstream Python tools, which are
+        standard-library only; there is no <code className="inline">pip install</code> step for the
+        core flow. The commands
+        below are read-only or local-file checks, not order instructions.
+      </p>
+      <table className="data">
+        <thead>
+          <tr>
+            <th>Check</th>
+            <th>Command</th>
+            <th>What a clean result looks like</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Python version</td>
+            <td>
+              <code className="inline">python3 --version</code>
+            </td>
+            <td>3.8 or newer. If the command is missing, the skill text can load but the helpers cannot run.</td>
+          </tr>
+          <tr>
+            <td>Offline test suite</td>
+            <td>
+              <code className="inline">python3 -m unittest discover -s tests -v</code>
+            </td>
+            <td>
+              The upstream fixtures exercise every skill; the suite is designed to run offline and
+              needs no broker keys. Run it from the repo root so <code className="inline">tests/</code>{' '}
+              is discovered.
+            </td>
+          </tr>
+          <tr>
+            <td>Build a universe (network)</td>
+            <td>
+              <code className="inline">python3 trader-scanner/scan.py universe</code>
+            </td>
+            <td>
+              Writes <code className="inline">trader/universe.txt</code> with a list in the
+              thousands. The exact count changes with Nasdaq Trader’s files.
+            </td>
+          </tr>
+          <tr>
+            <td>Daily scan, narrow list</td>
+            <td>
+              <code className="inline">python3 trader-scanner/scan.py daily --symbols TSLA,NVDA,AMD</code>
+            </td>
+            <td>
+              Writes <code className="inline">trader/watchlist.json</code>. Run before the open or
+              after the close; during the session the volume field is partial.
+            </td>
+          </tr>
+          <tr>
+            <td>Read-only ticket render</td>
+            <td>
+              <code className="inline">python3 trader-broker/ticket.py show</code>
+            </td>
+            <td>
+              Prints the current tickets or says there are none. It never contacts a broker and
+              never places anything.
+            </td>
+          </tr>
+          <tr>
+            <td>NYSE clock</td>
+            <td>
+              <code className="inline">python3 trader-alerts/alerts.py clock</code>
+            </td>
+            <td>Open or closed, with the next open. No key, no broker and no order path.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        A one-line message and exit code 1 from a market command usually means “no hit” or “could
+        not run”, not a broken install: read the reason. For example, the opening-range scan writes
+        nothing before 9:50 AM New York, on a weekend or holiday, or after the entry window.
+      </p>
+      <p>
+        The open-source pack is MIT-licensed. The upstream README and each{' '}
+        <code className="inline">trader-*/SKILL.md</code> are the official instructions; this page
+        is an independent setup summary. Upstream’s latest code push at the time of this check was
+        20 October 2026 (commit <code className="inline">3d0f4ef698</code>), with plugin version
+        2.0.0; this page was checked 10 November 2026.
+      </p>
 
       <h2>Next: when install “works” but feels broken</h2>
       <p>
-        Namespaced commands, missing Python, SEC 403s, sandboxes without network, and Always-allow
-        mistakes are covered on the dedicated page:{' '}
+        Namespaced commands, missing Python, SEC 403s, sandboxes without network, partial scans and
+        Always-allow mistakes are covered on the dedicated page:{' '}
         <Link href="/install/troubleshoot/">Install troubleshooting</Link>.
       </p>
 
