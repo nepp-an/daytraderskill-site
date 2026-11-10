@@ -105,6 +105,10 @@ export function PaperSimulator() {
       <div className="sim-grid">
         <div className="sim-panel">
           <h3>Order ticket</h3>
+          <p className="calc-hint">
+            Educational synthetic scenario. Not real-time market data and not a prediction of live
+            trading results.
+          </p>
 
           <dl className="sim-specs">
             <div>
@@ -334,8 +338,7 @@ export function PaperSimulator() {
 
       <p className="journal-note">
         <strong>Paper only.</strong> Nothing here is saved, connected, or executed. The scenario is
-        not evidence that a strategy works, and a simulated profit is not real money. Most people
-        who day trade lose money.
+        not evidence that a strategy works, and a simulated profit is not real money.
       </p>
     </section>
   );
