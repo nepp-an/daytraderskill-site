@@ -4,6 +4,7 @@ import { FaqList, faqJsonLd } from '@/components/Faq';
 import { JsonLd } from '@/components/JsonLd';
 import { NextPath } from '@/components/NextPath';
 import { PaperJournal } from '@/components/PaperJournal';
+import { PaperSimulator } from '@/components/PaperSimulator';
 import { Related } from '@/components/Related';
 import { ChecklistIcon, ClockIcon, ShieldIcon } from '@/components/icons';
 import { articleJsonLd } from '@/lib/seo';
@@ -11,12 +12,12 @@ import { articleJsonLd } from '@/lib/seo';
 export const metadata: Metadata = {
   title: { absolute: 'Paper-first day trading simulator: practice before real money' },
   description:
-    'A day trading simulator guide for this site’s practice entry: how simulated orders work, what a simulator cannot teach, and how to run a first paper session. Includes a checklist and printable journal. Not financial advice.',
+    'A day trading simulator guide for this site’s practice entry: how simulated orders work, what a simulator cannot teach, and how to run a first paper session. Includes a browser-only synthetic single-asset practice ledger (not live data), a checklist, and a printable journal. Not financial advice.',
   alternates: { canonical: '/paper-trading/' },
   openGraph: {
     title: 'Paper-first day trading simulator: practice before real money',
     description:
-      'The practice entry for this site: simulated orders, the limits of a day trading simulator, and a first-session checklist. No live quotes or broker connection.',
+      'The practice entry for this site: a synthetic single-asset ledger, the limits of a day trading simulator, and a first-session checklist. No live quotes or broker connection.',
     url: '/paper-trading/',
     images: [
       {
@@ -30,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Paper-first day trading simulator: practice before real money',
-    description: 'Simulated orders, a first-session checklist, and a journal template.',
+    description:
+      'Simulated orders, a synthetic single-asset ledger, a first-session checklist, and a journal template.',
     images: ['/og/paper-trading.svg'],
   },
 };
@@ -66,7 +68,7 @@ const faqs = [
   },
   {
     q: 'Is the day trading simulator on this site connected to live markets?',
-    a: 'No. This page is the site’s practice entry and guide. It does not host a live trading screen, show live quotes, or connect to a broker. A synthetic practice workspace is planned for a later update; when it ships, its scenarios will be constructed examples rather than a real-time market feed.',
+    a: 'No. This page hosts a browser-only synthetic single-asset practice ledger, not a live or delayed market feed. Its mark price is a made-up scenario variable moved by buttons, its fills are modelled from that mark plus configured slippage and fees, and it has no broker connection, account, API key, or order path. Nothing on this page is a quote from a real market.',
   },
 ];
 
@@ -78,7 +80,7 @@ export default function PaperTradingPage() {
           articleJsonLd({
             headline: 'Paper-first day trading simulator: practice before real money',
             description:
-              'The practice entry for this site: how simulated orders work, what a day trading simulator cannot teach, and how to run a first paper session.',
+              'The practice entry for this site: a synthetic single-asset ledger, how simulated orders work, what a day trading simulator cannot teach, and how to run a first paper session.',
             path: '/paper-trading/',
             dateModified: '2026-11-10',
           }),
@@ -100,8 +102,9 @@ export default function PaperTradingPage() {
         </p>
         <p className="lead">
           This is the site’s practice entry for day trading: what a simulator is, where simulated
-          orders stop being useful, and how to run a first paper session. No live quotes, no broker
-          connection, and no profit promise.
+          orders stop being useful, and how to run a first paper session. The embedded synthetic
+          ledger uses made-up prices and modelled fills — no live quotes, no broker connection, and
+          no profit promise.
         </p>
       </header>
 
@@ -109,8 +112,9 @@ export default function PaperTradingPage() {
         <strong>TL;DR.</strong> A day trading simulator lets you place orders against simulated
         capital. It is the default way to learn a platform and rehearse a process without risking
         real money. It is useful for mechanics and discipline, but it cannot fully reproduce live
-        fills, liquidity, or the pressure of losing actual capital. This page is the site’s practice
-        entry, not a live trading screen.
+        fills, liquidity, or the pressure of losing actual capital. This page embeds a synthetic
+        single-asset ledger for that practice: the mark is a made-up number, the fills are modelled,
+        and there is no market feed.
       </div>
 
       <div className="callout danger">
@@ -121,15 +125,7 @@ export default function PaperTradingPage() {
         </p>
       </div>
 
-      <div className="callout warn">
-        <p>
-          <strong>Practice workspace status.</strong> A synthetic practice workspace for this site is
-          planned for a later update and is <strong>not yet available on this page</strong>. When it
-          ships, its scenarios will be constructed examples, not live market quotes. This page shows
-          no live prices and does not connect to a broker, so there is nothing here to mistake for a
-          live order ticket.
-        </p>
-      </div>
+      <PaperSimulator />
 
       <figure className="page-visual">
         <img
@@ -171,9 +167,10 @@ export default function PaperTradingPage() {
       <h2 id="what-is-a-simulator">What is a day trading simulator?</h2>
       <p>
         A day trading simulator is a practice environment where you can enter, manage, and exit
-        simulated trades without sending an order to a broker. On this site, the term also names
-        this practice entry: the page you start from before using any simulator, checklist, or
-        journal. The simulation itself might be a broker demo account, a third-party paper platform,
+        simulated trades without sending an order to a broker. This page includes one deliberately
+        narrow example: the browser-only synthetic single-asset ledger above. The wider practice
+        entry is the page itself — the guide, checklist, and journal you can use before or after a
+        session. The simulation might also be a broker demo account, a third-party paper platform,
         or a guided scenario. It is not live trading, and it is not a signal service.
       </p>
       <p>

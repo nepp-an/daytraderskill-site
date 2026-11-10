@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "npx serve out",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:paper": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test lib/paper-simulator/ledger.test.mjs"
   },
   "dependencies": {
     "next": "^14.2.18",
