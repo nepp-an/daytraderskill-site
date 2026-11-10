@@ -1,0 +1,24 @@
+DTS beginner-path.svg footer correction — evidence
+generated_utc: 2026-11-10T11:27:02Z
+repo: /workspace/cf-migrate/daytraderskill-site
+branch: main
+baseline_commit: 7238105f71bb21bdf7a4cbb4e56d1fa77d38bf49
+file: public/illustrations/beginner-path.svg
+changed_line: 51
+
+before_sha256: a713ab8c7eba98acd9ba97c27e1f96d0dd72d6127736172b5ccb0edfe367c6e2
+before_bytes: 3061
+after_sha256: 57f39150d6bb66a9a6d278cbe5d76f02a2d2589b50816bd5bc2961f4e118d0d1
+after_bytes: 3068
+
+before_line:   <text x="32" y="294" fill="#6f8398" font-size="11">Illustration only · no market data · most people who day trade lose money</text>
+after_line:    <text x="32" y="294" fill="#6f8398" font-size="11">Illustration only · no market data · a study sequence, not a performance promise</text>
+
+out_file: out/illustrations/beginner-path.svg
+out_sha256: 57f39150d6bb66a9a6d278cbe5d76f02a2d2589b50816bd5bc2961f4e118d0d1
+out_bytes: 3068
+out_matches_public: yes (cmp identical)
+
+audit_copies:
+  original: audit/beginner-path-original.svg (sha256 a713ab8c7eba98acd9ba97c27e1f96d0dd72d6127736172b5ccb0edfe367c6e2, 3061 B)
+  fixed:    audit/beginner-path-fixed.svg (sha256 57f39150d6bb66a9a6d278cbe5d76f02a2d2589b50816bd5bc2961f4e118d0d1, 3068 B)
