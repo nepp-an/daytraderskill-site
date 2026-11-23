@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Related } from '@/components/Related';
 import { BRAND, SITE_ORIGIN } from '@/lib/site';
+import { withPageOg } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageOg({
   title: 'Privacy Policy',
   description:
     'Privacy policy for DayTraderSkill.com: no accounts on this static guide; outbound links to GitHub and third parties; Google AdSense Auto ads disclosure. Not financial advice.',
   alternates: { canonical: '/privacy/' },
-};
+});
 
 export default function PrivacyPage() {
   return (

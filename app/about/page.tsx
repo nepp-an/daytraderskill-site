@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Related } from '@/components/Related';
 import { BRAND, UPSTREAM_REPO, UPSTREAM_LICENSE } from '@/lib/site';
+import { withPageOg } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageOg({
   title: { absolute: 'About This Independent Day Trader Guide' },
   description:
     'DayTraderSkill.com is an independent English tutorial site about the open-source Claude Day Trader Skill pack. Not official. Not financial advice. MIT upstream on GitHub.',
   alternates: { canonical: '/about/' },
-};
+});
 
 export default function AboutPage() {
   return (

@@ -3,13 +3,14 @@ import Link from 'next/link';
 import { FaqList, faqJsonLd, type FaqItem } from '@/components/Faq';
 import { Related } from '@/components/Related';
 import { BRAND, CONTACT_EMAIL, SITE_ORIGIN, UPSTREAM_REPO } from '@/lib/site';
+import { withPageOg } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageOg({
   title: 'Contact & Corrections',
   description:
     'Contact DayTraderSkill.com for corrections, privacy questions, or site feedback. Independent paper-first education guide — not a broker, not financial advice, not the official Day Trader Skill project.',
   alternates: { canonical: '/contact/' },
-};
+});
 
 const FAQ: FaqItem[] = [
   {

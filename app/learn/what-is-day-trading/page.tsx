@@ -57,7 +57,7 @@ const faqs = [
   },
   {
     q: 'Is day trading legal?',
-    a: 'It is permitted in many jurisdictions, but rules vary and can change. Brokers impose their own account, margin, and pattern-day-trader requirements. This is not legal advice; verify the current rules where you live and with your broker.',
+    a: 'It is permitted in many jurisdictions, but rules vary and can change. For U.S. margin accounts, FINRA Regulatory Notice 26-10 (effective 4 June 2026, with member phase-in until 20 October 2027) replaced the pattern-day-trader designation and the $25,000 minimum-equity requirement with new intraday margin standards. Brokers may still be phasing in, and cash-account or house rules can differ. This is not legal advice; verify the current rules where you live and with your broker.',
   },
   {
     q: 'Does day trading require special software?',
@@ -345,14 +345,32 @@ export default function WhatIsDayTradingPage() {
       <h2>Rules and account requirements</h2>
       <p>
         Day trading is regulated differently across jurisdictions, and brokers add their own
-        requirements. Pattern-day-trader rules, margin requirements, settlement, short-selling
-        restrictions, and tax treatment can all change. Some brokers require specific account types
-        or minimum balances for certain activity.
+        requirements. Settlement, short-selling restrictions, tax treatment, and house margin or
+        account-type rules can all change. Some brokers require specific account types or minimum
+        balances for certain activity.
+      </p>
+      <p>
+        For U.S. margin accounts, FINRA{' '}
+        <a
+          href="https://www.finra.org/rules-guidance/notices/26-10"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Regulatory Notice 26-10
+        </a>{' '}
+        (published 20 April 2026) adopted new intraday margin standards that replace the previous
+        day-trading margin requirements in their entirety, including the day-trade count rules for
+        designating a “pattern day trader” and the $25,000 pattern-day-trader minimum equity
+        requirement (amendments to Rule 4210). The amendments took effect on 4 June 2026. Member
+        firms that need more time may phase in implementation until 20 October 2027, so the policy
+        at your firm may still be in transition. The new standards concern margin calculations in a
+        margin account; they do not make day trading safe and they do not automatically change
+        cash-account or firm-specific rules.
       </p>
       <p>
         Do not rely on an old blog post or a social media screenshot for the current rule. Check the
-        broker’s current disclosure documents and the relevant regulator. This site is not a legal,
-        tax, or compliance adviser.
+        broker’s current disclosure documents and the official notice above. This site is not a
+        legal, tax, or compliance adviser.
       </p>
 
       <h2>Is day trading gambling?</h2>

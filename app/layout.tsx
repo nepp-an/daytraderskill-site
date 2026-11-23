@@ -20,9 +20,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: BRAND,
     locale: 'en_US',
-    title: 'Day Trading Guide & Paper-First Practice Hub',
     description: DISCLAIMER_SHORT,
-    url: SITE_ORIGIN,
     images: [
       {
         url: '/og/home.svg',
@@ -34,7 +32,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Day Trading Guide & Paper-First Practice Hub',
     description: DISCLAIMER_SHORT,
     images: ['/og/home.svg'],
   },

@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Related } from '@/components/Related';
+import { withPageOg } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageOg({
   title: { absolute: 'Day Trading Learning Guides for Beginners' },
   description:
     'Paper-first day trading lessons: what day trading is, how to start, and a beginner roadmap. Plain-English explanations without signals or profit promises. Not financial advice.',
   alternates: { canonical: '/learn/' },
-};
+});
 
 export default function LearnHubPage() {
   return (

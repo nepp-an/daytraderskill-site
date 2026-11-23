@@ -3,13 +3,14 @@ import Link from 'next/link';
 import { Related } from '@/components/Related';
 import { ToolsNav } from '@/components/ToolsNav';
 import { UPSTREAM_REPO, UPSTREAM_V1 } from '@/lib/site';
+import { withPageOg } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageOg({
   title: 'Claude Trading Skills Comparison',
   description:
     'Claude trading skills compared: Day Trader Skill v2 vs trader-skill v1, with the real 11-command lists, workflow differences and verified dates. Not a performance ranking, not financial advice.',
   alternates: { canonical: '/vs/' },
-};
+});
 
 const V1_COMMANDS = [
   { command: '/trader-copycat', job: 'Reverse Engineer', detail: 'Reads an investor’s 13F-HR on SEC EDGAR and rebuilds the portfolio as weights, with what changed since last quarter.' },

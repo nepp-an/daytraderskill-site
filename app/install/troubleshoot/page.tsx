@@ -4,13 +4,14 @@ import { Related } from '@/components/Related';
 import { ToolsNav } from '@/components/ToolsNav';
 import { FaqList, faqJsonLd } from '@/components/Faq';
 import { JsonLd } from '@/components/JsonLd';
+import { withPageOg } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageOg({
   title: 'Day Trader Skill Not Working — Fixes',
   description:
     'Day trader skill not working? Fix namespace mismatches, sandbox/network blocks, permissions, Python, SEC_USER_AGENT, and Needs approval confusion. Intent guide — no fabricated search volume. Not financial advice.',
   alternates: { canonical: '/install/troubleshoot/' },
-};
+});
 
 const faqs = [
   {

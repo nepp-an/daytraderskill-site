@@ -3,13 +3,14 @@ import Link from 'next/link';
 import { Related } from '@/components/Related';
 import { ToolsNav } from '@/components/ToolsNav';
 import { UPSTREAM_REPO } from '@/lib/site';
+import { withPageOg } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageOg({
   title: 'Day Trader Skill Install (Claude Code)',
   description:
     'Day trader skill install: set up the open-source Claude Code trading skill through four paths — paste the repo URL, add the plugin, copy trader-* folders, or paste SKILL.md. Keep paper trading as the default. Not financial advice.',
   alternates: { canonical: '/install/' },
-};
+});
 
 export default function InstallPage() {
   return (

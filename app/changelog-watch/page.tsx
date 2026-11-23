@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Related } from '@/components/Related';
 import { UPSTREAM_REPO } from '@/lib/site';
+import { withPageOg } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageOg({
   title: 'Day Trader Skill GitHub Update Watch',
   description:
     'Day trader skill GitHub update watch: check Jakeschincariol/day-trader-skill commits, forks, and staleness yourself. Not a live feed; not the official site. Not financial advice.',
   alternates: { canonical: '/changelog-watch/' },
-};
+});
 
 export default function ChangelogWatchPage() {
   return (
@@ -16,12 +17,13 @@ export default function ChangelogWatchPage() {
       <h1>Day Trader Skill GitHub update watch</h1>
       <div className="tldr">
         <strong>TL;DR.</strong> Star counts can rise while <em>code pushes</em> stay frozen. As of
-        2026-11-10 Asia/Shanghai research for this site, upstream{' '}
+        a 23 November 2026 Asia/Shanghai check of the GitHub API for this site, upstream{' '}
         <a href={UPSTREAM_REPO} rel="noopener noreferrer" target="_blank">
           Jakeschincariol/day-trader-skill
         </a>{' '}
-        showed create + push on 2026-10-20 with rapid stars/forks afterward. Treat maintenance as
-        uncertain; verify commits yourself before trusting new forks.
+        still showed its latest code push on 20 October 2026 (commit 3d0f4ef). The repository
+        “Updated” timestamp can move without a new push. Treat maintenance as uncertain; verify
+        the Commits tab yourself before trusting new forks.
       </div>
       <div className="callout warn">
         <p>

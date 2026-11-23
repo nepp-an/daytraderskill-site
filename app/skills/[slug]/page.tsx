@@ -7,6 +7,7 @@ import { Related } from '@/components/Related';
 import { SKILLS, getSkill } from '@/lib/skills';
 import { getSkillGuide } from '@/lib/skillGuides';
 import { UPSTREAM_REPO } from '@/lib/site';
+import { withPageOg } from '@/lib/seo';
 
 export function generateStaticParams() {
   return SKILLS.map((s) => ({ slug: s.slug }));
@@ -16,13 +17,13 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const skill = getSkill(params.slug);
   const guide = getSkillGuide(params.slug);
   if (!skill) return { title: 'Skill' };
-  return {
+  return withPageOg({
     title: { absolute: `Day Trader Skill: ${skill.name} (${skill.command})` },
     description:
       guide?.metaDescription ??
       `${skill.summary} When to use, inputs/outputs, cautions. Not financial advice.`,
     alternates: { canonical: `/skills/${skill.slug}/` },
-  };
+  });
 }
 
 export default function SkillPage({ params }: { params: { slug: string } }) {

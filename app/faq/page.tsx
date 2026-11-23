@@ -3,13 +3,14 @@ import Link from 'next/link';
 import { FaqList, faqJsonLd } from '@/components/Faq';
 import { JsonLd } from '@/components/JsonLd';
 import { Related } from '@/components/Related';
+import { withPageOg } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageOg({
   title: { absolute: 'Day Trader Skill FAQ: Advice & Auto-Trade' },
   description:
     'FAQ intents: is day trader skill financial advice? Does it auto trade? Free? Claude day trader skill worth it? Paper default — no signals or profit promises. Not financial advice.',
   alternates: { canonical: '/faq/' },
-};
+});
 
 const faqs = [
   {
@@ -46,7 +47,7 @@ const faqs = [
   },
   {
     q: 'Did FINRA remove the PDT $25k rule?',
-    a: 'Upstream notes regulatory changes and phased broker adoption windows. Your broker’s current policy is what matters — verify with them, and consider pdt_guard if they still count day trades strictly.',
+    a: 'FINRA Regulatory Notice 26-10 says new intraday margin standards replace the day-trading margin requirements in their entirety, including the day-trade count rules for designating a “pattern day trader” and the $25,000 pattern-day-trader minimum equity requirement (amendments to Rule 4210). The amendments took effect on 4 June 2026. Member firms that need more time may phase in implementation until 20 October 2027, so a broker may still apply older limits during that window. The new standards concern margin in a margin account; they do not make day trading safe or cancel cash-account, house, or other rules. Verify the policy that applies to your account with your broker, and consider pdt_guard only if your firm still counts day trades strictly. This is not legal, tax, or investment advice. Official notice: https://www.finra.org/rules-guidance/notices/26-10',
   },
   {
     q: 'Is the Pelosi skill insider trading?',

@@ -4,14 +4,14 @@ import { FaqList, faqJsonLd } from '@/components/Faq';
 import { JsonLd } from '@/components/JsonLd';
 import { Related } from '@/components/Related';
 import { ToolsNav } from '@/components/ToolsNav';
-import { articleJsonLd } from '@/lib/seo';
+import { articleJsonLd, withPageOg } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageOg({
   title: { absolute: 'How to Install Claude Skills: Safe Setup Guide' },
   description:
     'How to install Claude skills from a repository, plugin marketplace, or manual folder — plus permissions, testing, updates, and safe removal. Not financial advice.',
   alternates: { canonical: '/tools/install-claude-skills/' },
-};
+});
 
 const faqs = [
   {

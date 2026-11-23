@@ -19,12 +19,12 @@ import { BRAND, SITE_ORIGIN, UPSTREAM_REPO } from '@/lib/site';
 export const metadata: Metadata = {
   title: { absolute: 'Day Trader Skill — Paper-First Day Trading Guide & Practice Hub' },
   description:
-    'An independent, paper-first day trading guide and practice hub: learn the mechanics, rehearse in a day trading simulator, study risk, and use free position-size and risk-reward calculators. Not financial advice.',
+    'Independent guide to the open-source Day Trader Skill pack for Claude: install paths, 11 trader-* modules, troubleshooting, and a paper-first practice hub. Not the official project. Not financial advice.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Day Trader Skill — Paper-First Day Trading Guide & Practice Hub',
     description:
-      'Learn day trading, practice on paper, understand risk, and choose tools carefully. An independent, paper-first education hub. Not financial advice.',
+      'Install the open-source Day Trader Skill Claude pack, review the 11 modules, and practice on paper. Independent guide — not the official project. Not financial advice.',
     url: '/',
     images: [
       {
@@ -38,12 +38,20 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Day Trader Skill — Paper-First Day Trading Guide & Practice Hub',
-    description: 'Learn day trading, practise on paper, and put risk before tools.',
+    description: 'Independent Day Trader Skill install and module guide, plus paper-first practice. Not financial advice.',
     images: ['/og/home.svg'],
   },
 };
 
 const faqs = [
+  {
+    q: 'What is Day Trader Skill?',
+    a: 'Day Trader Skill is an open-source pack of eleven Claude skills and Python helpers (the MIT-licensed GitHub project by Jake Schincariol). This website is an independent guide to installing that pack, using the modules on paper, and troubleshooting common setup problems. It is not the official project, not a broker, and not financial advice.',
+  },
+  {
+    q: 'How do I install Day Trader Skill?',
+    a: 'Use the install guide. There are four paths: paste the repository URL in Claude, add the Claude Code plugin, copy the trader-* folders, or paste a single SKILL.md. Installing the pack does not connect a broker or place an order. Keep paper trading as the default, then open the module index. If a command does not appear, use the troubleshoot page.',
+  },
   {
     q: 'What is a day trading guide?',
     a: 'A useful day trading guide explains the mechanics of intraday trading, the costs involved, and the risk controls a beginner needs. It should help you understand order types, spreads, position sizing, and record-keeping — not tell you which stock to buy. This guide treats paper trading as the default place to learn the workflow.',
@@ -81,7 +89,7 @@ export default function HomePage() {
             name: BRAND,
             url: SITE_ORIGIN,
             description:
-              'An independent, paper-first day trading guide and practice hub. Learn the mechanics, rehearse on paper, put risk before tools, and verify software before installing it. Not financial advice.',
+              'An independent guide to the open-source Day Trader Skill pack for Claude, plus a paper-first practice hub. Not the official project. Not financial advice.',
             inLanguage: 'en',
             publisher: {
               '@type': 'Organization',
@@ -96,26 +104,27 @@ export default function HomePage() {
       <section className="hero" aria-labelledby="hero-heading">
         <div className="hero-grid">
           <div>
-            <p className="eyebrow">Independent · Paper-first · Not financial advice</p>
+            <p className="eyebrow">Independent guide · Not the official project · Not financial advice</p>
             <h1 id="hero-heading">
-              Day trading guide: <span className="accent">build skill on paper before real risk.</span>
+              Day Trader Skill: <span className="accent">install the Claude pack, then practice on paper.</span>
             </h1>
             <p className="hero-lead">
-              DayTraderSkill is a plain-English learning and tools hub for retail day traders. Start
-              with market mechanics, rehearse a repeatable process in a simulator, and treat AI
-              trading tools as software that still needs a human decision — never as a signal
-              service.
+              This is an independent guide to the open-source <strong>Day Trader Skill</strong> pack
+              for Claude — how to install it, what the eleven <code className="inline">trader-*</code>{' '}
+              modules do, and what to check when a command does not appear — plus a paper-first
+              practice hub. We are not the official project, and we do not place trades or sell
+              signals.
             </p>
 
             <div className="cta-row">
-              <Link className="btn primary" href="/learn/day-trading-for-beginners/">
-                Start with the beginner guide
+              <Link className="btn primary" href="/install/">
+                Install Day Trader Skill
               </Link>
-              <Link className="btn" href="/paper-trading/">
-                Day trading simulator
+              <Link className="btn" href="/skills/">
+                11 skill modules
               </Link>
-              <Link className="btn ghost" href="/tools/position-size-calculator/">
-                Size a practice trade
+              <Link className="btn ghost" href="/paper-trading/">
+                Paper trading simulator
               </Link>
             </div>
 
@@ -152,6 +161,84 @@ export default function HomePage() {
               decisions. No market connection.
             </figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section className="hub-section" id="skill-pack" aria-labelledby="skill-pack-heading">
+        <div className="section-head">
+          <p className="eyebrow">If you came here for the skill pack</p>
+          <h2 id="skill-pack-heading">Start with install, modules, or a stuck command</h2>
+          <p>
+            Most people searching for Day Trader Skill want the open-source Claude pack, not a
+            generic trading course. Use these four doors first. The learning paths below stay
+            available if you want the market-mechanics guide.
+          </p>
+        </div>
+        <div className="hub-grid">
+          <article className="hub-card tools">
+            <p className="card-kicker">01 · Install</p>
+            <h3>Install the pack</h3>
+            <p>
+              Four paths: paste the repo URL, add the Claude Code plugin, copy trader-* folders, or
+              paste SKILL.md. Install does not connect a broker.
+            </p>
+            <ul className="card-links">
+              <li>
+                <Link href="/install/">Day Trader Skill install</Link>
+              </li>
+              <li>
+                <Link href="/tools/install-claude-skills/">General Claude skills setup</Link>
+              </li>
+            </ul>
+          </article>
+          <article className="hub-card learn">
+            <p className="card-kicker">02 · Modules</p>
+            <h3>See the 11 commands</h3>
+            <p>
+              Each module page covers inputs, outputs, and limits — including Time Machine — not
+              trade ideas.
+            </p>
+            <ul className="card-links">
+              <li>
+                <Link href="/skills/">Modules index</Link>
+              </li>
+              <li>
+                <Link href="/skills/timemachine/">Time Machine</Link>
+              </li>
+            </ul>
+          </article>
+          <article className="hub-card risk">
+            <p className="card-kicker">03 · Stuck</p>
+            <h3>Fix a missing command</h3>
+            <p>
+              Namespace mismatches, sandbox or network blocks, permissions, and Python setup are
+              covered on the troubleshoot page.
+            </p>
+            <ul className="card-links">
+              <li>
+                <Link href="/install/troubleshoot/">Day Trader Skill not working</Link>
+              </li>
+              <li>
+                <Link href="/safety/">Safety and Needs approval</Link>
+              </li>
+            </ul>
+          </article>
+          <article className="hub-card practice">
+            <p className="card-kicker">04 · Freshness</p>
+            <h3>Check the upstream repo</h3>
+            <p>
+              This site does not auto-mirror GitHub. Confirm the latest code push yourself before
+              you trust a fork.
+            </p>
+            <ul className="card-links">
+              <li>
+                <Link href="/changelog-watch/">GitHub update watch</Link>
+              </li>
+              <li>
+                <Link href="/vs/">Compare skill packs</Link>
+              </li>
+            </ul>
+          </article>
         </div>
       </section>
 
@@ -504,12 +591,13 @@ export default function HomePage() {
             <SparkIcon size={26} />
           </span>
           <span className="featured-badge">Featured tool · Third party</span>
-          <h2 id="featured-heading">A third-party tool, not the definition of this site</h2>
+          <h2 id="featured-heading">The upstream pack, in more detail</h2>
           <p>
             The Day Trader Skill pack is an open-source collection of Claude skills and Python
             helpers for scanning, planning, simulating, sizing, and risk-checking a trade workflow.
-            It is one option in the Tools section. This guide remains about the learning process, not
-            about one product.
+            The install and module doors at the top of this page are the practical entry. This
+            section only adds the independence and safety limits: we are not the official site, and
+            the pack is not a signal service.
           </p>
           <ul className="featured-points">
             <li>
@@ -560,10 +648,10 @@ export default function HomePage() {
       <section className="hub-section" id="faq" aria-labelledby="faq-heading">
         <div className="section-head">
           <p className="eyebrow">Common questions</p>
-          <h2 id="faq-heading">Day trading guide FAQ</h2>
+          <h2 id="faq-heading">Day Trader Skill and study FAQ</h2>
           <p>
-            Short answers to the questions beginners ask before they open a simulator. None of this
-            is personal financial advice.
+            Short answers about the skill pack, this independent guide, and paper-first practice.
+            None of this is personal financial advice.
           </p>
         </div>
         <FaqList items={faqs} />

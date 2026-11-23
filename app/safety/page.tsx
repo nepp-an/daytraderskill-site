@@ -3,13 +3,14 @@ import Link from 'next/link';
 import { Related } from '@/components/Related';
 import { FaqList, faqJsonLd } from '@/components/Faq';
 import { JsonLd } from '@/components/JsonLd';
+import { withPageOg } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageOg({
   title: 'Claude Day Trader Skill Safety: Permissions, Paper Defaults, Needs Approval',
   description:
     'Claude day trader skill safety: paper trading default, Needs approval (never Always allow), typed yes before orders, keys in env. A skill-permission checklist with SEC, Investor.gov, and CFTC sources. Not financial advice.',
   alternates: { canonical: '/safety/' },
-};
+});
 
 const faqs = [
   {
@@ -134,7 +135,17 @@ export default function SafetyPage() {
             </td>
             <td>On if your broker still counts day trades strictly</td>
             <td>
-              Regulatory and broker policies change; verify with your broker, not a blog
+              FINRA Notice 26-10 (effective 4 June 2026; member phase-in until 20 October 2027)
+              replaced the PDT designation and $25,000 minimum-equity requirement with intraday
+              margin standards. Some firms may still be phasing in. Verify with your broker; this
+              is not legal advice.{' '}
+              <a
+                href="https://www.finra.org/rules-guidance/notices/26-10"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Official notice
+              </a>
             </td>
           </tr>
         </tbody>
