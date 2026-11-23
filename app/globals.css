@@ -105,12 +105,9 @@ h3 {
   margin: 1.6rem 0 0.45rem;
 }
 
-/* Hash targets can sit on a section (e.g. #skill-pack) or on a heading. */
-h2[id],
-section[id],
-.hub-section[id] {
-  scroll-margin-top: var(--sticky-header-offset);
-}
+/* Offset for in-page hashes, including section ids such as #skill-pack, comes from
+   html { scroll-padding-top }. Do not repeat the same value as scroll-margin here —
+   some browsers add both, which leaves a large gap above the target. */
 
 p {
   margin: 0.75rem 0;
@@ -1852,7 +1849,6 @@ code.inline {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: linear-gradient(160deg, #111f1b, #0c1517 70%);
-  scroll-margin-top: var(--sticky-header-offset);
 }
 
 .paper-journal h2 {
@@ -2089,7 +2085,6 @@ code.inline {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: linear-gradient(160deg, #101d29, #0c151d 72%);
-  scroll-margin-top: var(--sticky-header-offset);
 }
 
 .paper-simulator h2 {
