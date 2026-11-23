@@ -147,12 +147,48 @@ export default function InstallPage() {
       </ol>
 
       <h2 id="path-b">Path B — Claude Code plugin marketplace</h2>
+      <p>
+        Day Trader Skill ships in the author’s own marketplace, not Anthropic’s official catalog.
+        Anthropic does not review third-party marketplaces, so read the plugin details before you
+        choose a scope. The session commands below follow Anthropic’s{' '}
+        <a href="https://code.claude.com/docs/en/plugins/install" rel="noopener noreferrer" target="_blank">
+          official install steps
+        </a>{' '}
+        and{' '}
+        <a href="https://code.claude.com/docs/en/plugins/troubleshooting" rel="noopener noreferrer" target="_blank">
+          official plugin troubleshooting
+        </a>
+        .
+      </p>
       <ol className="steps">
-        <li>Open Claude Code in a terminal.</li>
         <li>
-          Add the marketplace, then install the plugin:
+          Start a Claude Code <strong>session</strong> in a terminal with{' '}
+          <code className="inline">claude</code>. Slash commands such as{' '}
+          <code className="inline">/plugin</code> only work at that prompt, not in Bash, Zsh, or
+          PowerShell. From a shell, the equivalent is <code className="inline">claude plugin …</code>.
+        </li>
+        <li>
+          Add the upstream marketplace, then confirm it is listed:
           <pre>{`/plugin marketplace add Jakeschincariol/day-trader-skill
-/plugin install day-trader-skill@day-trader-skill`}</pre>
+/plugin marketplace list`}</pre>
+          You can also open <code className="inline">/plugin</code> and check the Marketplaces tab.
+          The accepted source form is GitHub <code className="inline">owner/repo</code>, not a bare
+          name.
+        </li>
+        <li>
+          Install the plugin. In a session this opens the details pane so you can review what it
+          adds and choose a scope (for you, for this repository, or local-only):
+          <pre>/plugin install day-trader-skill@day-trader-skill</pre>
+        </li>
+        <li>
+          Read the install summary. Official wording is either{' '}
+          <code className="inline">Plugin is now active.</code> (no reload needed) or{' '}
+          <code className="inline">Run /reload-plugins to apply.</code> To confirm, open the
+          Installed tab in <code className="inline">/plugin</code>, or run{' '}
+          <code className="inline">claude plugin list</code> in your shell and look for{' '}
+          <code className="inline">Status: ✔ enabled</code>. If skills still do not appear after an
+          in-session install, run <code className="inline">/reload-plugins</code> and read the
+          Errors tab.
         </li>
         <li>
           Expect namespaced commands such as{' '}
@@ -165,6 +201,10 @@ export default function InstallPage() {
           <Link href="/install/troubleshoot/">troubleshoot matrix</Link>.
         </li>
       </ol>
+      <p>To do the same from a shell, without starting a session:</p>
+      <pre>{`claude plugin marketplace add Jakeschincariol/day-trader-skill
+claude plugin install day-trader-skill@day-trader-skill
+claude plugin list`}</pre>
 
       <h2 id="path-c">Path C — Copy <code className="inline">trader-*</code> folders</h2>
       <ol className="steps">
@@ -174,13 +214,21 @@ export default function InstallPage() {
 cd day-trader-skill`}</pre>
         </li>
         <li>
-          Global Claude skills directory:
+          On macOS or Linux, copy into the global Claude skills directory:
           <pre>{`cp -r trader-* ~/.claude/skills/`}</pre>
         </li>
         <li>
           Or project-local (keeps skills with one repo):
           <pre>{`mkdir -p .claude/skills
 cp -r trader-* .claude/skills/`}</pre>
+        </li>
+        <li>
+          On Windows PowerShell, from the same repository root:
+          <pre>{`New-Item -ItemType Directory -Force -Path "$HOME\.claude\skills" | Out-Null
+Copy-Item -Path trader-* -Destination "$HOME\.claude\skills\" -Recurse -Force`}</pre>
+          Project-local:
+          <pre>{`New-Item -ItemType Directory -Force -Path ".claude\skills" | Out-Null
+Copy-Item -Path trader-* -Destination ".claude\skills\" -Recurse -Force`}</pre>
         </li>
         <li>
           Restart / reload Claude Code if commands do not appear. You should get plain{' '}
@@ -209,6 +257,9 @@ cp -r trader-* .claude/skills/`}</pre>
       <p>
         Helper scripts expect <strong>Python 3.8 or newer</strong>. Upstream emphasizes
         standard-library code — no mandatory pip stack for the core tools described in the README.
+        If <code className="inline">python3</code> is missing, especially on Windows, try{' '}
+        <code className="inline">py -3 --version</code> or <code className="inline">python --version</code>{' '}
+        and use whichever interpreter reports 3.8 or newer for the checks below.
       </p>
       <p>Identify yourself for SEC endpoints, for example:</p>
       <pre>{`export SEC_USER_AGENT="Your Name you@example.com"`}</pre>
@@ -239,7 +290,12 @@ cp -r trader-* .claude/skills/`}</pre>
             <td>
               <code className="inline">python3 --version</code>
             </td>
-            <td>3.8 or newer. If the command is missing, the skill text can load but the helpers cannot run.</td>
+            <td>
+              3.8 or newer. If <code className="inline">python3</code> is missing, try{' '}
+              <code className="inline">py -3 --version</code> or <code className="inline">python --version</code>{' '}
+              and run the later checks with that same interpreter. The skill text can load without
+              Python; the helpers cannot run.
+            </td>
           </tr>
           <tr>
             <td>Offline test suite</td>

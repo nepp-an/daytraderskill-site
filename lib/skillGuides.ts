@@ -420,6 +420,18 @@ export const SKILL_GUIDES: Record<string, SkillGuide> = {
           'If the verdict is a coin flip or close to break-even, do not dress it up. If the history and the replays disagree, say that too. Then say once that the pool is the last 60 days and that earnings, news and halts can do things those 60 days never did.',
       },
       {
+        do: 'Compare the target-first share with the break-even rate 1/(1+R).',
+        detail:
+          'The verdict is not a win rate and not a forecast. The tool compares the target-first share with 1/(1+R). At 1R that rate is 50% of the replays that hit one side first. In the historical TSLA fixture below, the target came first in about 53.6% of those, and the 59-session history was slightly worse than even — that is a coin flip, stated as one. Do not treat simulated average R as a fill or a profit.',
+      },
+      {
+        do: 'If you ask Claude to report a run, require this order.',
+        command:
+          'Read trader/timemachine.json and report, in this order, with the seed: the four odds (target first, stop first, neither, green); the median and 5–95 range of the price at the close; average R; the history line exactly as printed; the verdict line. Then compare the target-first share, among replays that hit one side, with the break-even rate 1/(1+R). If it is close to that rate, say it is a coin flip. Do not invent a P&L, a win rate, or a recommendation.',
+        detail:
+          'This only asks Claude to read a file the Time Machine already wrote. It is not a signal and not an order.',
+      },
+      {
         do: 'Only then hand off to budget.',
         detail:
           'A replay is context, not permission. The remaining steps are still sizing, the risk check and the human yes, in that order.',
@@ -469,6 +481,10 @@ export const SKILL_GUIDES: Record<string, SkillGuide> = {
       {
         q: 'Can I use it on a 1-minute plan?',
         a: 'No. The Time Machine is 5-minute-only because that is the history Yahoo exposes for enough sessions. Use the entry timer for 1-minute triggers, but do not expect a 1-minute replay pool here.',
+      },
+      {
+        q: 'What does the 1/(1+R) break-even rate mean?',
+        a: 'It is the share of one-sided outcomes at which the target and the stop are even, given the plan’s reward-to-risk R. At 1R that rate is 50%. The Time Machine verdict compares the target-first share with that rate; it is not a live win rate, not a prediction, and not an order. The tool never prints a P&L.',
       },
     ],
     related: [

@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: 'python3: command not found',
-    a: 'Install Python 3.8+ and ensure python3 is on PATH. The helpers are plain Python; without an interpreter the scripts will not run even if the skill text loads.',
+    a: 'Install Python 3.8+ and put it on the PATH of the terminal that launches Claude Code. On Windows, try py -3 --version or python --version and run the helper scripts with that same interpreter. The skill text can load without Python; the helpers cannot run.',
   },
   {
     q: 'Skills appear but market data is empty',
@@ -101,6 +101,97 @@ python3 trader-alerts/alerts.py clock`}</pre>
         </li>
       </ol>
 
+      <h2>Official Claude Code plugin errors</h2>
+      <p>
+        These are messages from Anthropic’s{' '}
+        <a href="https://code.claude.com/docs/en/plugins/troubleshooting" rel="noopener noreferrer" target="_blank">
+          Troubleshoot plugins
+        </a>{' '}
+        guide, not from the Day Trader Skill scripts. Match the exact line you saw, then come back
+        to the matrix below if the plugin is installed but a <code className="inline">/trader-*</code>{' '}
+        command still fails.
+      </p>
+      <table className="data">
+        <thead>
+          <tr>
+            <th>Message or symptom</th>
+            <th>What it usually means</th>
+            <th>What to try</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>zsh: no such file or directory: /plugin</code>, Bash{' '}
+              <code>/plugin: No such file or directory</code>, or PowerShell{' '}
+              <code>The term &apos;/plugin&apos; is not recognized as the name of a cmdlet</code>
+            </td>
+            <td>
+              You typed a Claude Code session command at a shell prompt.
+            </td>
+            <td>
+              Run <code>claude</code>, then type <code>/plugin …</code> at that prompt. Or, from the
+              shell, use <code>claude plugin marketplace add …</code> and{' '}
+              <code>claude plugin install …</code> — see <Link href="/install/#path-b">Path B</Link>.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>/plugin isn&apos;t available in this environment</code>
+            </td>
+            <td>
+              Official docs: the <code>/plugin</code> panel needs a Claude Code terminal session. It
+              does not run in <code>claude -p</code>, the Agent SDK, or several chat / browser
+              surfaces.
+            </td>
+            <td>
+              Install from a terminal session, or use the surface-specific steps in the{' '}
+              <a href="https://code.claude.com/docs/en/plugins/install" rel="noopener noreferrer" target="_blank">
+                official install guide
+              </a>
+              .
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>Invalid marketplace source format</code> or{' '}
+              <code>That isn&apos;t a marketplace source</code>
+            </td>
+            <td>The source was not an accepted GitHub owner/repo, URL, SSH URL, or local path.</td>
+            <td>
+              Use <code>/plugin marketplace add Jakeschincariol/day-trader-skill</code>, then{' '}
+              <code>/plugin marketplace list</code>.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>Marketplace &quot;…&quot; not found</code> or{' '}
+              <code>Plugin &quot;…&quot; not found in marketplace &quot;…&quot;</code>
+            </td>
+            <td>The marketplace has not been added, or the plugin/marketplace name does not match.</td>
+            <td>
+              Add the marketplace first, confirm the name Claude Code printed, then install as{' '}
+              <code>day-trader-skill@day-trader-skill</code>.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Plugin listed, but skills do not appear when you type <code>/</code>
+            </td>
+            <td>
+              Official check order: not enabled, load error, or the session still needs a reload.
+            </td>
+            <td>
+              Open Installed in <code>/plugin</code> (or <code>claude plugin list</code> and{' '}
+              <code>Status: ✔ enabled</code>), read the Errors tab, then run{' '}
+              <code>/reload-plugins</code> if the install summary said{' '}
+              <code>Run /reload-plugins to apply.</code> Namespaced commands are still{' '}
+              <code>/day-trader-skill:trader-scanner</code>.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
       <h2>Failure matrix</h2>
       <table className="data">
         <thead>
@@ -133,7 +224,8 @@ python3 trader-alerts/alerts.py clock`}</pre>
             <td>Skill text runs, scripts crash</td>
             <td>No Python 3.8+ on PATH</td>
             <td>
-              <code>python3 --version</code>; install 3.8+; re-open the terminal Claude Code uses
+              <code>python3 --version</code>, or on Windows <code>py -3 --version</code> /{' '}
+              <code>python --version</code>; install 3.8+; re-open the terminal Claude Code uses
             </td>
           </tr>
           <tr>
