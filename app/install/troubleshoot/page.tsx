@@ -111,7 +111,7 @@ python3 trader-alerts/alerts.py clock`}</pre>
         to the matrix below if the plugin is installed but a <code className="inline">/trader-*</code>{' '}
         command still fails.
       </p>
-      <table className="data">
+      <table className="data plugin-errors">
         <thead>
           <tr>
             <th>Message or symptom</th>
@@ -121,30 +121,30 @@ python3 trader-alerts/alerts.py clock`}</pre>
         </thead>
         <tbody>
           <tr>
-            <td>
+            <td data-label="Message or symptom">
               <code>zsh: no such file or directory: /plugin</code>, Bash{' '}
               <code>/plugin: No such file or directory</code>, or PowerShell{' '}
               <code>The term &apos;/plugin&apos; is not recognized as the name of a cmdlet</code>
             </td>
-            <td>
+            <td data-label="What it usually means">
               You typed a Claude Code session command at a shell prompt.
             </td>
-            <td>
+            <td data-label="What to try">
               Run <code>claude</code>, then type <code>/plugin …</code> at that prompt. Or, from the
               shell, use <code>claude plugin marketplace add …</code> and{' '}
               <code>claude plugin install …</code> — see <Link href="/install/#path-b">Path B</Link>.
             </td>
           </tr>
           <tr>
-            <td>
+            <td data-label="Message or symptom">
               <code>/plugin isn&apos;t available in this environment</code>
             </td>
-            <td>
+            <td data-label="What it usually means">
               Official docs: the <code>/plugin</code> panel needs a Claude Code terminal session. It
               does not run in <code>claude -p</code>, the Agent SDK, or several chat / browser
               surfaces.
             </td>
-            <td>
+            <td data-label="What to try">
               Install from a terminal session, or use the surface-specific steps in the{' '}
               <a href="https://code.claude.com/docs/en/plugins/install" rel="noopener noreferrer" target="_blank">
                 official install guide
@@ -153,35 +153,35 @@ python3 trader-alerts/alerts.py clock`}</pre>
             </td>
           </tr>
           <tr>
-            <td>
+            <td data-label="Message or symptom">
               <code>Invalid marketplace source format</code> or{' '}
               <code>That isn&apos;t a marketplace source</code>
             </td>
-            <td>The source was not an accepted GitHub owner/repo, URL, SSH URL, or local path.</td>
-            <td>
+            <td data-label="What it usually means">The source was not an accepted GitHub owner/repo, URL, SSH URL, or local path.</td>
+            <td data-label="What to try">
               Use <code>/plugin marketplace add Jakeschincariol/day-trader-skill</code>, then{' '}
               <code>/plugin marketplace list</code>.
             </td>
           </tr>
           <tr>
-            <td>
+            <td data-label="Message or symptom">
               <code>Marketplace &quot;…&quot; not found</code> or{' '}
               <code>Plugin &quot;…&quot; not found in marketplace &quot;…&quot;</code>
             </td>
-            <td>The marketplace has not been added, or the plugin/marketplace name does not match.</td>
-            <td>
+            <td data-label="What it usually means">The marketplace has not been added, or the plugin/marketplace name does not match.</td>
+            <td data-label="What to try">
               Add the marketplace first, confirm the name Claude Code printed, then install as{' '}
               <code>day-trader-skill@day-trader-skill</code>.
             </td>
           </tr>
           <tr>
-            <td>
+            <td data-label="Message or symptom">
               Plugin listed, but skills do not appear when you type <code>/</code>
             </td>
-            <td>
+            <td data-label="What it usually means">
               Official check order: not enabled, load error, or the session still needs a reload.
             </td>
-            <td>
+            <td data-label="What to try">
               Open Installed in <code>/plugin</code> (or <code>claude plugin list</code> and{' '}
               <code>Status: ✔ enabled</code>), read the Errors tab, then run{' '}
               <code>/reload-plugins</code> if the install summary said{' '}
