@@ -1186,6 +1186,13 @@ code.inline {
   font-size: 0.9rem;
 }
 
+/* Adsterra native/banner slot: above the site footer, hub width. */
+.adsterra-native {
+  max-width: var(--max-hub);
+  margin: 0 auto;
+  padding: 0 1rem 0.5rem;
+}
+
 /* Footer */
 .site-footer {
   margin-top: 3rem;

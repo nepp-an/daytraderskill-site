@@ -55,6 +55,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3175943774981621"
           crossOrigin="anonymous"
         />
+        {/* Adsterra popunder — DTS unit only; one per page, in <head>. */}
+        <script
+          data-cfasync="false"
+          src="https://abscloud.org/1/a208e4544d83a35202b91d2ed10326a9"
+        />
       </head>
       <body>
         {/* GA4: Day Trader Skill property only (G-CFQ8JV652G). Not OCA/E7. */}
@@ -71,7 +76,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <DisclaimerBar />
         <SiteHeader />
         <main>{children}</main>
+        {/* Adsterra native/banner — DTS unit only; once, above the footer. */}
+        <div className="adsterra-native">
+          <script
+            async
+            fetchPriority="high"
+            data-cfasync="false"
+            src="https://bauval.org/21/c71ffef6cae1bbba7021402cdd6d53fa"
+          />
+          <div id="container-c71ffef6cae1bbba7021402cdd6d53fa" />
+        </div>
         <SiteFooter />
+        {/* Adsterra Social Bar — DTS unit only; one per page, end of <body>. */}
+        <script
+          data-cfasync="false"
+          src="https://bauval.org/14/ef25d88f8a3fe9c5b1d0893dbdd6cc56"
+        />
       </body>
     </html>
   );
