@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="skillsTitle skillsDesc" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <title id="skillsTitle">Typical module chain for the eleven trader-* commands</title>
+  <desc id="skillsDesc">A usual single-trade sequence is scanner, news, entry, exit, time machine, budget, risk, then broker, with alerts in parallel. Analyst and disclosure tools run on a schedule.</desc>
+  <defs>
+    <linearGradient id="skillsBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101d28"/>
+      <stop offset="1" stop-color="#0a1219"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="340" rx="20" fill="url(#skillsBg)"/>
+  <rect x=".5" y=".5" width="719" height="339" rx="19.5" fill="none" stroke="#263648"/>
+
+  <text x="32" y="42" fill="#5ec8c8" font-size="11" font-weight="700" letter-spacing="2.2">MODULE FLOW</text>
+  <text x="32" y="73" fill="#eef5fb" font-size="23" font-weight="750" letter-spacing="-.4">Checklist order, not autopilot</text>
+  <g>
+    <rect x="32" y="100" width="76" height="78" rx="10" fill="#10231c" stroke="#2f5c4a"/>
+    <text x="42" y="124" fill="#5ec8c8" font-size="10" font-weight="800">01</text>
+    <text x="42" y="150" fill="#e9f0f7" font-size="11" font-weight="700">Scanner</text>
+  </g>
+  <g>
+    <rect x="116" y="100" width="76" height="78" rx="10" fill="#10231c" stroke="#2f5c4a"/>
+    <text x="126" y="124" fill="#5ec8c8" font-size="10" font-weight="800">02</text>
+    <text x="126" y="150" fill="#e9f0f7" font-size="11" font-weight="700">News</text>
+  </g>
+  <g>
+    <rect x="200" y="100" width="76" height="78" rx="10" fill="#10231c" stroke="#2f5c4a"/>
+    <text x="210" y="124" fill="#5ec8c8" font-size="10" font-weight="800">03</text>
+    <text x="210" y="150" fill="#e9f0f7" font-size="11" font-weight="700">Entry</text>
+  </g>
+  <g>
+    <rect x="284" y="100" width="76" height="78" rx="10" fill="#10231c" stroke="#2f5c4a"/>
+    <text x="294" y="124" fill="#5ec8c8" font-size="10" font-weight="800">04</text>
+    <text x="294" y="150" fill="#e9f0f7" font-size="11" font-weight="700">Exit</text>
+  </g>
+  <g>
+    <rect x="368" y="100" width="76" height="78" rx="10" fill="#10231c" stroke="#2f5c4a"/>
+    <text x="378" y="124" fill="#5ec8c8" font-size="10" font-weight="800">05</text>
+    <text x="378" y="150" fill="#e9f0f7" font-size="11" font-weight="700">Time Mach.</text>
+  </g>
+  <g>
+    <rect x="452" y="100" width="76" height="78" rx="10" fill="#10231c" stroke="#2f5c4a"/>
+    <text x="462" y="124" fill="#5ec8c8" font-size="10" font-weight="800">06</text>
+    <text x="462" y="150" fill="#e9f0f7" font-size="11" font-weight="700">Budget</text>
+  </g>
+  <g>
+    <rect x="536" y="100" width="76" height="78" rx="10" fill="#10231c" stroke="#2f5c4a"/>
+    <text x="546" y="124" fill="#5ec8c8" font-size="10" font-weight="800">07</text>
+    <text x="546" y="150" fill="#e9f0f7" font-size="11" font-weight="700">Risk</text>
+  </g>
+  <g>
+    <rect x="620" y="100" width="76" height="78" rx="10" fill="#10231c" stroke="#2f5c4a"/>
+    <text x="630" y="124" fill="#5ec8c8" font-size="10" font-weight="800">08</text>
+    <text x="630" y="150" fill="#e9f0f7" font-size="11" font-weight="700">Broker</text>
+  </g>
+  <path d="M108 139H116" stroke="#5ec8c8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M192 139H200" stroke="#5ec8c8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M276 139H284" stroke="#5ec8c8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M360 139H368" stroke="#5ec8c8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M444 139H452" stroke="#5ec8c8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M528 139H536" stroke="#5ec8c8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M612 139H620" stroke="#5ec8c8" stroke-width="2" stroke-linecap="round"/>
+  <g>
+    <rect x="32" y="202" width="204" height="86" rx="12" fill="#101c27" stroke="#2b4357"/>
+    <text x="48" y="228" fill="#6fa8ee" font-size="11" font-weight="800" letter-spacing=".8">IN PARALLEL</text>
+    <text x="48" y="254" fill="#e9f0f7" font-size="14" font-weight="700">Alerts</text>
+    <text x="48" y="274" fill="#93a8bc" font-size="12">Stop, target, flatten-by-close.</text>
+  </g>
+  <g>
+    <rect x="258" y="202" width="204" height="86" rx="12" fill="#101c27" stroke="#2b4357"/>
+    <text x="274" y="228" fill="#6fa8ee" font-size="11" font-weight="800" letter-spacing=".8">ON A SCHEDULE</text>
+    <text x="274" y="254" fill="#e9f0f7" font-size="14" font-weight="700">Analyst</text>
+    <text x="274" y="274" fill="#93a8bc" font-size="12">Public earnings facts only.</text>
+  </g>
+  <g>
+    <rect x="484" y="202" width="204" height="86" rx="12" fill="#191a2b" stroke="#473f6d"/>
+    <text x="500" y="228" fill="#b39af2" font-size="11" font-weight="800" letter-spacing=".8">ON A SCHEDULE</text>
+    <text x="500" y="254" fill="#e9f0f7" font-size="14" font-weight="700">Disclosures</text>
+    <text x="500" y="274" fill="#93a8bc" font-size="12">Delayed public filings, not tips.</text>
+  </g>
+
+  <text x="32" y="316" fill="#6f8398" font-size="11">Illustration only · paper default · a PASS is not a recommendation · not financial advice</text>
+</svg>

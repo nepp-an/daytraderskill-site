@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-labelledby="watchTitle watchDesc" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <title id="watchTitle">How to check the official GitHub repository yourself</title>
+  <desc id="watchDesc">Use the Commits tab for the latest code push, do not treat the Updated stamp as a push, inspect forks before cloning, and remember this page is not a live feed.</desc>
+  <defs>
+    <linearGradient id="watchBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111d29"/>
+      <stop offset="1" stop-color="#0a1219"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="320" rx="20" fill="url(#watchBg)"/>
+  <rect x=".5" y=".5" width="719" height="319" rx="19.5" fill="none" stroke="#263648"/>
+
+  <text x="32" y="42" fill="#e5bd6b" font-size="11" font-weight="700" letter-spacing="2.2">WATCHER CHECKLIST</text>
+  <text x="32" y="73" fill="#eef5fb" font-size="23" font-weight="750" letter-spacing="-.4">Verify on GitHub. This page is not a feed.</text>
+
+  <g>
+    <rect x="32" y="100" width="204" height="168" rx="13" fill="#1a1810" stroke="#5c5230"/>
+    <text x="52" y="128" fill="#e5bd6b" font-size="11" font-weight="800" letter-spacing=".8">COMMITS</text>
+    <text x="52" y="164" fill="#e9f0f7" font-size="16" font-weight="700">Latest code push</text>
+    <text x="52" y="200" fill="#93a8bc" font-size="12">Open the Commits tab.</text>
+    <text x="52" y="218" fill="#93a8bc" font-size="12">“Updated” can move from</text>
+    <text x="52" y="236" fill="#93a8bc" font-size="12">stars or issues alone.</text>
+  </g>
+
+  <g>
+    <rect x="258" y="100" width="204" height="168" rx="13" fill="#101c27" stroke="#2b4357"/>
+    <text x="278" y="128" fill="#6fa8ee" font-size="11" font-weight="800" letter-spacing=".8">FORKS</text>
+    <text x="278" y="164" fill="#e9f0f7" font-size="16" font-weight="700">Diff before clone</text>
+    <text x="278" y="200" fill="#93a8bc" font-size="12">Match the org and name</text>
+    <text x="278" y="218" fill="#93a8bc" font-size="12">you intend. Many forks</text>
+    <text x="278" y="236" fill="#93a8bc" font-size="12">only rename marketing.</text>
+  </g>
+
+  <g>
+    <rect x="484" y="100" width="204" height="168" rx="13" fill="#191a2b" stroke="#473f6d"/>
+    <text x="504" y="128" fill="#b39af2" font-size="11" font-weight="800" letter-spacing=".8">STALENESS</text>
+    <text x="504" y="164" fill="#e9f0f7" font-size="16" font-weight="700">Judge for yourself</text>
+    <text x="504" y="200" fill="#93a8bc" font-size="12">Quiet weeks are possible.</text>
+    <text x="504" y="218" fill="#93a8bc" font-size="12">This site does not auto-</text>
+    <text x="504" y="236" fill="#93a8bc" font-size="12">mirror new commits.</text>
+  </g>
+
+  <text x="32" y="300" fill="#6f8398" font-size="11">Illustration only · not the official project site · not financial advice</text>
+</svg>

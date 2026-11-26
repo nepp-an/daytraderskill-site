@@ -1,15 +1,31 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { JsonLd } from '@/components/JsonLd';
 import { Related } from '@/components/Related';
 import { ToolsNav } from '@/components/ToolsNav';
 import { UPSTREAM_REPO, UPSTREAM_V1 } from '@/lib/site';
-import { withPageOg } from '@/lib/seo';
+import { articleJsonLd, withPageOg } from '@/lib/seo';
+
+const DESCRIPTION =
+  'Claude trading skills compared: Day Trader Skill v2 vs trader-skill v1 and their command lists. Not a performance ranking or financial advice.';
 
 export const metadata: Metadata = withPageOg({
   title: 'Claude Trading Skills Comparison',
-  description:
-    'Claude trading skills compared: Day Trader Skill v2 vs trader-skill v1, with the real 11-command lists, workflow differences and verified dates. Not a performance ranking, not financial advice.',
+  description: DESCRIPTION,
   alternates: { canonical: '/vs/' },
+  openGraph: {
+    images: [
+      {
+        url: '/og/vs.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Claude trading skills compared — Day Trader Skill v2 vs trader-skill v1 command lists',
+      },
+    ],
+  },
+  twitter: {
+    images: ['/og/vs.svg'],
+  },
 });
 
 const V1_COMMANDS = [
@@ -43,6 +59,15 @@ const V2_COMMANDS = [
 export default function VsPage() {
   return (
     <>
+      <JsonLd
+        data={articleJsonLd({
+          headline: 'Claude Trading Skills Comparison',
+          description: DESCRIPTION,
+          path: '/vs/',
+          datePublished: '2026-11-05',
+          dateModified: '2026-11-26',
+        })}
+      />
       <ToolsNav current="/vs/" />
       <h1>Claude trading skills compared: Day Trader Skill vs other packs</h1>
       <div className="tldr">
@@ -66,7 +91,7 @@ export default function VsPage() {
         </p>
       </div>
 
-      <h2>What is actually being compared</h2>
+      <h2>What Claude trading skills are actually being compared</h2>
       <p>
         The comparison is between two public MIT repositories, not between two sets of marketing
         claims. Both are linked below. The v1 command list comes from the{' '}

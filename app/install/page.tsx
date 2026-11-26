@@ -1,20 +1,45 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { JsonLd } from '@/components/JsonLd';
 import { Related } from '@/components/Related';
 import { ToolsNav } from '@/components/ToolsNav';
 import { UPSTREAM_REPO } from '@/lib/site';
-import { withPageOg } from '@/lib/seo';
+import { articleJsonLd, withPageOg } from '@/lib/seo';
+
+const DESCRIPTION =
+  'Day trader skill install: add the open-source Claude Code skill via repo URL, plugin, trader-* folders, or SKILL.md. Paper-first. Not financial advice.';
 
 export const metadata: Metadata = withPageOg({
   title: 'Day Trader Skill Install (Claude Code)',
-  description:
-    'Day trader skill install: set up the open-source Claude Code trading skill through four paths — paste the repo URL, add the plugin, copy trader-* folders, or paste SKILL.md. Keep paper trading as the default. Not financial advice.',
+  description: DESCRIPTION,
   alternates: { canonical: '/install/' },
+  openGraph: {
+    images: [
+      {
+        url: '/og/install.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Day trader skill install — four paths to add the open-source Claude Code skill',
+      },
+    ],
+  },
+  twitter: {
+    images: ['/og/install.svg'],
+  },
 });
 
 export default function InstallPage() {
   return (
     <>
+      <JsonLd
+        data={articleJsonLd({
+          headline: 'Day Trader Skill Install (Claude Code)',
+          description: DESCRIPTION,
+          path: '/install/',
+          datePublished: '2026-11-05',
+          dateModified: '2026-11-26',
+        })}
+      />
       <ToolsNav current="/install/" />
       <h1>Day Trader Skill install: Claude Code trading skill &amp; four paths</h1>
       <p className="hero-lead">
@@ -81,7 +106,7 @@ export default function InstallPage() {
         </li>
       </ul>
 
-      <h2>Which path should I use?</h2>
+      <h2>Day trader skill install: which path should I use?</h2>
       <table className="data">
         <thead>
           <tr>
