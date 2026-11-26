@@ -80,9 +80,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="adsterra-native">
           <script
             async
-            fetchPriority="high"
             data-cfasync="false"
             src="https://bauval.org/21/c71ffef6cae1bbba7021402cdd6d53fa"
+            // React 18 types omit fetchPriority on <script>; still emit fetchpriority="high".
+            {...({ fetchPriority: 'high' } as object)}
           />
           <div id="container-c71ffef6cae1bbba7021402cdd6d53fa" />
         </div>
