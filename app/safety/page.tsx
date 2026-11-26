@@ -322,7 +322,7 @@ export default function SafetyPage() {
         >
           Fraud Advisory: Commodity Trading Systems Sold on the Internet
         </a>{' '}
-        (the page shows no last-reviewed date; checked 10 November 2026) explains that hypothetical
+        (the page shows no last-reviewed date; checked 26 November 2026) explains that hypothetical
         or simulated results — including “real time” computer trading — have inherent limitations.
         They may not reflect consecutive losses, margin calls, slippage, bid-ask spreads, or the
         effect of actual fills on market prices. The advisory warns that simulated performance must
@@ -396,7 +396,7 @@ export default function SafetyPage() {
             Investor.gov, Thinking of Day Trading? Know the Risks.
           </a>{' '}
           — Lori Schock; the page states it is no longer being updated and may be out-of-date; checked
-          10 November 2026.
+          26 November 2026.
         </li>
         <li>
           <a
@@ -406,7 +406,7 @@ export default function SafetyPage() {
           >
             CFTC, Fraud Advisory: Commodity Trading Systems Sold on the Internet
           </a>{' '}
-          — no last-reviewed date shown on the page; checked 10 November 2026.
+          — no last-reviewed date shown on the page; checked 26 November 2026.
         </li>
       </ul>
 

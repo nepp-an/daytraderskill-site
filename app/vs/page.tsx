@@ -302,7 +302,7 @@ export default function VsPage() {
           <tr>
             <td>This page</td>
             <td>
-              Checked 10 November 2026 against the two public repos and their SKILL.md files. The
+              v2 latest push re-checked 26 November 2026 against the public day-trader-skill repo (still 3d0f4ef698). v1 command list was last read from its public README on 10 November 2026. The
               site’s <Link href="/changelog-watch/">update watch</Link> records the same upstream
               snapshot; it is a watcher’s checklist, not a live commit feed.
             </td>

@@ -71,7 +71,7 @@ export default function HowToStartDayTradingPage() {
             description:
               'A step-by-step, paper-first roadmap for beginning day traders, from mechanics and rules to journaling and review.',
             path: '/learn/how-to-start-day-trading/',
-            dateModified: '2026-11-10',
+            dateModified: '2026-11-26',
           }),
           faqJsonLd(faqs),
         ]}
@@ -239,7 +239,7 @@ export default function HowToStartDayTradingPage() {
             >
               fraud advisory on trading systems sold online
             </a>{' '}
-            (the page shows no last-reviewed date; checked 10 November 2026) notes that simulated
+            (the page shows no last-reviewed date; checked 26 November 2026) notes that simulated
             results have inherent limits: they may omit consecutive losses, margin calls, slippage,
             bid-ask spreads, and the effect of actual fills on prices. A simulated result is not a
             live result, and no system can guarantee a profit.

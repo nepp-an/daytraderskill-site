@@ -8,7 +8,7 @@ import { BRAND, UPSTREAM_REPO, UPSTREAM_LICENSE } from '@/lib/site';
 export const metadata: Metadata = {
   title: { absolute: 'Editorial Policy: Independent, Paper-First, AI-Assisted' },
   description:
-    'DayTraderSkill.com editorial policy: independent and unofficial, not a broker or adviser; paper-first; AI-assisted drafting with human review; no affiliate links this cycle. As of 10 November 2026.',
+    'DayTraderSkill.com editorial policy: independent and unofficial, not a broker or adviser; paper-first; AI-assisted drafting with human review; no affiliate links this cycle. As of 26 November 2026.',
   alternates: { canonical: '/editorial-policy/' },
   openGraph: {
     title: 'Editorial Policy: Independent, Paper-First, AI-Assisted',
@@ -36,7 +36,7 @@ export default function EditorialPolicyPage() {
           description: policyDescription,
           path: '/editorial-policy/',
           datePublished: '2026-11-10',
-          dateModified: '2026-11-10',
+          dateModified: '2026-11-26',
         })}
       />
 
@@ -50,7 +50,7 @@ export default function EditorialPolicyPage() {
         <p className="article-meta">
           <span>DayTraderSkill editorial team</span>
           <span>AI-assisted · human-reviewed</span>
-          <span>As of 10 November 2026 (Asia/Shanghai)</span>
+          <span>Official sources re-checked 26 November 2026 (Asia/Shanghai)</span>
         </p>
       </header>
 
@@ -105,7 +105,7 @@ export default function EditorialPolicyPage() {
         </a>{' '}
         ({UPSTREAM_LICENSE}). The site’s{' '}
         <Link href="/changelog-watch/">update watch</Link> records the latest code push it observed,
-        2026-10-20, as of 2026-11-10. That is a dated observation, not a live feed or a claim about
+        2026-10-20, as of 2026-11-26. That is a dated observation, not a live feed or a claim about
         the project’s current state.
       </p>
       <p>
@@ -149,7 +149,7 @@ export default function EditorialPolicyPage() {
           </a>{' '}
           — by Lori Schock, former Director of the SEC’s Office of Investor Education and Assistance.
           The page states that it is no longer being updated and may include information that is
-          out-of-date; we repeat that caveat whenever we cite it. Checked 10 November 2026.
+          out-of-date; we repeat that caveat whenever we cite it. Checked 26 November 2026.
         </li>
         <li>
           <a
@@ -159,7 +159,7 @@ export default function EditorialPolicyPage() {
           >
             CFTC, Fraud Advisory: Commodity Trading Systems Sold on the Internet
           </a>{' '}
-          — no last-reviewed date is shown on the page; checked 10 November 2026. We use it for the
+          — no last-reviewed date is shown on the page; checked 26 November 2026. We use it for the
           limits of hypothetical and simulated results, not as a claim about live returns.
         </li>
         <li>
@@ -170,7 +170,7 @@ export default function EditorialPolicyPage() {
           >
             CFTC, Customer Advisory: Eight Things You Should Know Before Trading Forex
           </a>{' '}
-          — no last-reviewed date is shown on the page; checked 10 November 2026. Its customer-loss
+          — no last-reviewed date is shown on the page; checked 26 November 2026. Its customer-loss
           figure applies only to OTC forex customer accounts in Q2 2021–Q1 2022, and we do not apply
           it to stock day trading.
         </li>

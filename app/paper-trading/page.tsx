@@ -82,7 +82,7 @@ export default function PaperTradingPage() {
             description:
               'The practice entry for this site: a synthetic single-asset ledger, how simulated orders work, what a day trading simulator cannot teach, and how to run a first paper session.',
             path: '/paper-trading/',
-            dateModified: '2026-11-10',
+            dateModified: '2026-11-26',
           }),
           faqJsonLd(faqs),
         ]}
@@ -96,7 +96,7 @@ export default function PaperTradingPage() {
         <p className="eyebrow">Practice entry</p>
         <h1>A day trading simulator for practice, not live trading</h1>
         <p className="article-meta">
-          <span>Reviewed 10 November 2026</span>
+          <span>Reviewed 26 November 2026</span>
           <span>8 min read</span>
           <span>Not financial advice</span>
         </p>
@@ -146,7 +146,7 @@ export default function PaperTradingPage() {
           >
             Fraud Advisory: Commodity Trading Systems Sold on the Internet
           </a>{' '}
-          (the page shows no last-reviewed date; checked 10 November 2026) warns that simulated
+          (the page shows no last-reviewed date; checked 26 November 2026) warns that simulated
           results have inherent limits: they may not reflect consecutive losses, margin calls,
           slippage, bid-ask spreads, or the effect of actual fills on market prices. It also warns
           that simulated performance must not be presented as live performance, and that no system
@@ -279,13 +279,13 @@ export default function PaperTradingPage() {
       <h2 id="platform-limits">Official paper-account limits, not a ranking</h2>
       <p>
         The table below restates published limits from each provider’s own help or product pages,
-        checked 10 November 2026. It is not a recommendation, not a ranking, and not a forecast of
+        checked 26 November 2026. It is not a recommendation, not a ranking, and not a forecast of
         results. None of the links is an affiliate relationship. Always re-read the current page
         before you rely on a limit, because vendors can change terms.
       </p>
       <table className="data">
         <caption>
-          Official paper-trading feature and data limits, checked 10 November 2026. No ranking and no
+          Official paper-trading feature and data limits, checked 26 November 2026. No ranking and no
           return claim.
         </caption>
         <thead>
@@ -320,14 +320,16 @@ export default function PaperTradingPage() {
               Virtual buying power $100,000. The product page says paperMoney uses real-time quotes
               for virtual trades, is free, and requires a Schwab account to log into thinkorswim; a
               Guest Pass is described as a way to look around, not a full equivalent. The page also
-              says you cannot make money from paper trading. The learning article says paperMoney is
-              for educational purposes only; quote activity, fills, and trading costs are simulated;
-              “Simulated performance does not ensure success in a live environment”; balances and
-              positions can be reset.
+              says you cannot make money from paper trading. The learning article (dated June 1,
+              2026) says the paperMoney application is provided for educational purposes only, and
+              that “Market activity, trade executions, transaction costs, and other elements
+              presented in paperMoney are simulations only. Simulated performance does not ensure
+              success in a live environment.” Balances and positions can be reset.
             </td>
             <td>
-              Checked 10 November 2026. The product page footer shows material codes (0726-3HXA,
-              0926-38AH), not a complete last-reviewed date.
+              Checked 26 November 2026. The product page footer shows material codes (0726-3HXA,
+              0926-38AH), not a complete last-reviewed date. The learning article footer shows
+              0626-F1FV.
             </td>
           </tr>
           <tr>
@@ -352,15 +354,15 @@ export default function PaperTradingPage() {
             <td>
               New customers automatically receive a paper account with a paper ELV of 1,000,000 USD.
               There is no real execution or clearing. Some order types are not supported, including
-              VWAP, Auction, RFQ, and Pegged to Market. Fills are simulated at the best bid or offer,
-              without a deep book. U.S. options penny fills are not supported, and mutual funds are
+              VWAP, Auction, RFQ, and Pegged to Market. Fills are simulated from the top of the book,
+              with no deep book access. U.S. options penny fills are not supported, and mutual funds are
               not supported. Complex stops and similar orders are simulated and may behave differently
               than live. Real-time market data can be subscribed only from an approved and funded
               account; without that subscription, U.S. stocks and options are delayed 15 minutes and
               U.S. futures 10 minutes. The delayed-data page lists metals, forex, and U.S. bonds as
               “No Delay.”
             </td>
-            <td>Checked 10 November 2026. No last-reviewed date was taken from these pages.</td>
+            <td>Checked 26 November 2026. No last-reviewed date was taken from these pages.</td>
           </tr>
           <tr>
             <th scope="row">TradingView paper trading</th>
@@ -380,7 +382,7 @@ export default function PaperTradingPage() {
               is the platform’s own description of its simulated environment; it is not an independent
               test that simulated fills match live executions.
             </td>
-            <td>Checked 10 November 2026 from the official help article.</td>
+            <td>Checked 26 November 2026 from the official help article.</td>
           </tr>
         </tbody>
       </table>
@@ -551,7 +553,7 @@ export default function PaperTradingPage() {
             Investor.gov, Thinking of Day Trading? Know the Risks.
           </a>{' '}
           — Lori Schock; the page states it is no longer being updated and may be out-of-date; checked
-          10 November 2026.
+          26 November 2026.
         </li>
         <li>
           <a
@@ -561,7 +563,7 @@ export default function PaperTradingPage() {
           >
             CFTC, Fraud Advisory: Commodity Trading Systems Sold on the Internet
           </a>{' '}
-          — no last-reviewed date shown on the page; checked 10 November 2026.
+          — no last-reviewed date shown on the page; checked 26 November 2026.
         </li>
         <li>
           <a
@@ -579,7 +581,7 @@ export default function PaperTradingPage() {
           >
             4 Reasons to Try Paper Trading
           </a>{' '}
-          — checked 10 November 2026; product-page footer material codes (0726-3HXA, 0926-38AH) are
+          — checked 26 November 2026; product-page footer material codes (0726-3HXA, 0926-38AH) are
           not a complete last-reviewed date.
         </li>
         <li>
@@ -598,7 +600,7 @@ export default function PaperTradingPage() {
           >
             Paper Trader Delayed Market Data
           </a>{' '}
-          — checked 10 November 2026.
+          — checked 26 November 2026.
         </li>
         <li>
           <a
@@ -608,7 +610,7 @@ export default function PaperTradingPage() {
           >
             TradingView, Paper trading — main functionality
           </a>{' '}
-          — checked 10 November 2026.
+          — checked 26 November 2026.
         </li>
       </ul>
 

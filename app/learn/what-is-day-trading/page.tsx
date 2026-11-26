@@ -335,7 +335,7 @@ export default function WhatIsDayTradingPage() {
         >
           Fraud Advisory: Commodity Trading Systems Sold on the Internet
         </a>{' '}
-        (the page shows no last-reviewed date; checked 10 November 2026) warns that simulated or
+        (the page shows no last-reviewed date; checked 26 November 2026) warns that simulated or
         hypothetical results have inherent limitations: they may not reflect consecutive losses,
         margin calls, slippage, bid-ask spreads, or the effect of actual fills on prices. Simulated
         performance should not be presented as live performance, and no system can guarantee a

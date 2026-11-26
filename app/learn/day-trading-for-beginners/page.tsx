@@ -209,7 +209,7 @@ export default function DayTradingForBeginnersPage() {
         >
           Fraud Advisory: Commodity Trading Systems Sold on the Internet
         </a>{' '}
-        (the page shows no last-reviewed date; checked 10 November 2026) warns that simulated
+        (the page shows no last-reviewed date; checked 26 November 2026) warns that simulated
         results may not reflect consecutive losses, margin calls, slippage, bid-ask spreads, or the
         effect of actual fills on prices. A simulated result is not a live result, and no system can
         guarantee a profit. That is the standard this guide applies to every simulator exercise.

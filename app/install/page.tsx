@@ -357,7 +357,7 @@ Copy-Item -Path trader-* -Destination ".claude\skills\" -Recurse -Force`}</pre>
         <code className="inline">trader-*/SKILL.md</code> are the official instructions; this page
         is an independent setup summary. Upstream’s latest code push at the time of this check was
         20 October 2026 (commit <code className="inline">3d0f4ef698</code>), with plugin version
-        2.0.0; this page was checked 10 November 2026.
+        2.0.0; this page was checked 26 November 2026.
       </p>
 
       <h2>Next: when install “works” but feels broken</h2>
