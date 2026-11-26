@@ -106,7 +106,8 @@ export default function HomePage() {
           <div>
             <p className="eyebrow">Independent guide · Not the official project · Not financial advice</p>
             <h1 id="hero-heading">
-              Day Trader Skill: <span className="accent">install the Claude pack, then practice on paper.</span>
+              Day Trader Skill: a paper-first day trading guide.{' '}
+              <span className="accent">Install the Claude pack, then practice on paper.</span>
             </h1>
             <p className="hero-lead">
               This is an independent guide to the open-source <strong>Day Trader Skill</strong> pack
