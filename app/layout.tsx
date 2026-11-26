@@ -76,17 +76,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <DisclaimerBar />
         <SiteHeader />
         <main>{children}</main>
-        {/* Adsterra native/banner — DTS unit only; once, above the footer. */}
-        <div className="adsterra-native">
-          <script
-            async
-            data-cfasync="false"
-            src="https://bauval.org/21/c71ffef6cae1bbba7021402cdd6d53fa"
-            // React 18 types omit fetchPriority on <script>; still emit fetchpriority="high".
-            {...({ fetchPriority: 'high' } as object)}
-          />
-          <div id="container-c71ffef6cae1bbba7021402cdd6d53fa" />
-        </div>
+        {/* Adsterra native/banner — DTS unit only; once, above the footer.
+            Use a raw HTML string so Next does not hoist the script into <head>
+            (an async head script can run before the container exists). */}
+        <div
+          className="adsterra-native"
+          dangerouslySetInnerHTML={{
+            __html:
+              '<script async fetchpriority="high" data-cfasync="false" src="https://bauval.org/21/c71ffef6cae1bbba7021402cdd6d53fa"></script><div id="container-c71ffef6cae1bbba7021402cdd6d53fa"></div>',
+          }}
+        />
         <SiteFooter />
         {/* Adsterra Social Bar — DTS unit only; one per page, end of <body>. */}
         <script
