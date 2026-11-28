@@ -10,8 +10,8 @@ export function SiteFooter() {
           <div className="footer-brand">
             <p className="footer-wordmark">{BRAND}</p>
             <p>
-              Independent, paper-first education for retail day traders. We explain the workflow,
-              the tools, and the risk — without signals or profit promises.
+              Guides to the Day Trader Skill pack and to practising the workflow on paper.
+              No signals or profit promises.
             </p>
             <p className="footer-compliance">
               <strong>Not financial advice.</strong> Paper trading is the default. AI order tools

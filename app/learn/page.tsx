@@ -102,11 +102,9 @@ export default function LearnHubPage() {
         <p className="eyebrow">Learn</p>
         <h1>Day trading guides that start before the first trade</h1>
         <p className="lead">
-          These day trading guides start on paper: first the definition, then a beginner pillar, then
-          a step-by-step roadmap. This hub is the directory — it tells you what each lesson is for,
-          a sensible reading order, and what the guides will not do. The full explanations live on
-          the child pages, so this page does not repeat them. No signals, no stock picks, and no
-          profit promises.
+          Start with the definition, then the beginner guide, then the how-to-start roadmap — or
+          skip to the one you need. The full lessons are on the cards below; this page is just
+          the map. No signals or stock picks.
         </p>
         <p className="compliance-note">
           <strong>Not financial advice.</strong> The SEC’s{' '}

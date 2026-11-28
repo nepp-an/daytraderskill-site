@@ -15,14 +15,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'What Is Day Trading? Definition, Rules & Examples',
     description:
-      'A plain-English definition of day trading, with an illustrative example and the key differences from swing trading and investing.',
+      'What day trading is, with an example and the key differences from swing trading and investing.',
     url: '/learn/what-is-day-trading/',
     images: [
       {
         url: '/og/what-is.svg',
         width: 1200,
         height: 630,
-        alt: 'What is day trading? A plain-English definition from DayTraderSkill.com',
+        alt: 'What is day trading? Definition and comparison from DayTraderSkill.com',
       },
     ],
   },
@@ -73,7 +73,7 @@ export default function WhatIsDayTradingPage() {
           articleJsonLd({
             headline: 'What Is Day Trading? Definition, Rules & Examples',
             description:
-              'A plain-English definition of day trading, with an illustrative example and the key differences from swing trading and investing.',
+              'What day trading is, with an example and the key differences from swing trading and investing.',
             path: '/learn/what-is-day-trading/',
           }),
           faqJsonLd(faqs),
@@ -86,16 +86,15 @@ export default function WhatIsDayTradingPage() {
 
       <header className="article-head">
         <p className="eyebrow">Definition</p>
-        <h1>What is day trading? A plain-English definition</h1>
+        <h1>What is day trading?</h1>
         <p className="article-meta">
           <span>Reviewed 5 November 2026</span>
           <span>7 min read</span>
-          <span>Not financial advice</span>
         </p>
       </header>
 
       <div className="tldr">
-        <strong>TL;DR.</strong> Day trading is the practice of opening and closing a position within
+        <strong>In short.</strong> Day trading is the practice of opening and closing a position within
         the same trading day. The trader is trying to capture intraday price movement and normally
         avoids overnight exposure. It is different from swing trading and long-term investing, and it
         is risky: the SEC’s{' '}

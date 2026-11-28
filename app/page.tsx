@@ -104,16 +104,15 @@ export default function HomePage() {
       <section className="hero" aria-labelledby="hero-heading">
         <div className="hero-grid">
           <div>
-            <p className="eyebrow">Independent guide · Not the official project · Not financial advice</p>
+            <p className="eyebrow">Unofficial guide to the open-source Claude pack</p>
             <h1 id="hero-heading">
-              Day Trader Skill: a paper-first day trading guide.{' '}
-              <span className="accent">Install the Claude pack, then practice on paper.</span>
+              Install Day Trader Skill, then practice on paper.
             </h1>
             <p className="hero-lead">
-              This is an independent guide to the open-source <strong>Day Trader Skill</strong> pack
-              for Claude — how to install it, what the eleven <code className="inline">trader-*</code>{' '}
-              modules do, and what to check when a command does not appear — plus a paper-first
-              practice hub. We are not the official project, and we do not place trades or sell
+              This site shows how to install the open-source <strong>Day Trader Skill</strong> pack
+              for Claude, what the eleven <code className="inline">trader-*</code> modules do, and
+              what to check when a command does not appear. You can also practise the workflow here
+              on paper. It is not the official project, and it does not place trades or sell
               signals.
             </p>
 

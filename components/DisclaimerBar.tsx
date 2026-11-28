@@ -4,7 +4,7 @@ export function DisclaimerBar() {
   return (
     <aside className="disclaimer-bar" role="note" aria-label="Compliance disclaimer">
       <span className="disclaimer-inner">
-        <strong>Not financial advice.</strong> Independent, paper-first education.{' '}
+        <strong>Not financial advice.</strong> Practice on paper.{' '}
         <Link href="/safety/">Safety</Link>{' '}
         <span className="disclaimer-sep" aria-hidden="true">
           ·
