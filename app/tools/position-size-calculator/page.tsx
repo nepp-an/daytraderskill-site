@@ -96,12 +96,11 @@ export default function PositionSizeCalculatorPage() {
         <p className="article-meta">
           <span>Reviewed 5 November 2026</span>
           <span>Browser-only</span>
-          <span>Not financial advice</span>
         </p>
       </header>
 
       <div className="tldr">
-        <strong>TL;DR.</strong> Enter a paper account size, the percentage you are willing to risk on
+        <strong>In short.</strong> Enter a paper account size, the percentage you are willing to risk on
         one trade, the planned entry price, and the stop distance. The calculator estimates a share
         count that keeps the loss at the stop inside that risk budget. It is arithmetic, not a trade
         recommendation.
@@ -109,9 +108,8 @@ export default function PositionSizeCalculatorPage() {
 
       <div className="callout danger">
         <p>
-          <strong>Not financial advice.</strong> This tool does not recommend a stock, a position
-          size, or a trade. It has no broker connection, no market data feed, and no order path. The
-          SEC’s{' '}
+          This tool does not recommend a stock, a position size, or a trade. It has no broker
+          connection, no market data feed, and no order path. The SEC’s{' '}
           <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html" rel="noopener noreferrer" target="_blank">
             2005 day-trading bulletin
           </a>{' '}
@@ -210,13 +208,6 @@ export default function PositionSizeCalculatorPage() {
         the planned loss with the planned target.
       </p>
 
-      <div className="callout compliance">
-        <p>
-          <strong>Compliance note.</strong> DayTraderSkill.com is not a broker, investment adviser, or
-          signal service. This calculator does not execute trades and does not provide personalised
-          advice. Paper trading remains the default.
-        </p>
-      </div>
 
       <h2>Frequently asked questions</h2>
       <FaqList items={faqs} />

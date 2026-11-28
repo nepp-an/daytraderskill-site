@@ -98,7 +98,6 @@ export default function PaperTradingPage() {
         <p className="article-meta">
           <span>Reviewed 26 November 2026</span>
           <span>8 min read</span>
-          <span>Not financial advice</span>
         </p>
         <p className="lead">
           This is the site’s practice entry for day trading: what a simulator is, where simulated
@@ -109,7 +108,7 @@ export default function PaperTradingPage() {
       </header>
 
       <div className="tldr">
-        <strong>TL;DR.</strong> A day trading simulator lets you place orders against simulated
+        <strong>In short.</strong> A day trading simulator lets you place orders against simulated
         capital. It is the default way to learn a platform and rehearse a process without risking
         real money. It is useful for mechanics and discipline, but it cannot fully reproduce live
         fills, liquidity, or the pressure of losing actual capital. This page embeds a synthetic
@@ -119,8 +118,7 @@ export default function PaperTradingPage() {
 
       <div className="callout danger">
         <p>
-          <strong>Not financial advice.</strong> A paper profit is not evidence that a strategy will
-          work live. The SEC’s{' '}
+          A paper profit is not evidence that a strategy will work live. The SEC’s{' '}
           <a
             href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
             rel="noopener noreferrer"
@@ -208,7 +206,7 @@ export default function PaperTradingPage() {
         ignores fees can teach the wrong lesson.
       </p>
 
-      <h2 id="what-is-paper-trading">Paper trading: a plain-English definition</h2>
+      <h2 id="what-is-paper-trading">What paper trading means</h2>
       <p>
         Paper trading is the practice of placing buy and sell orders in a simulated account. The
         platform records the orders and calculates a hypothetical profit or loss, but no real

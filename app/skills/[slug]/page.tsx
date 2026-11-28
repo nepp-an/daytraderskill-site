@@ -43,15 +43,12 @@ export default function SkillPage({ params }: { params: { slug: string } }) {
         {skill.name}: <code>{skill.command}</code>
       </h1>
       <div className="tldr">
-        <strong>TL;DR.</strong> {skill.summary}
+        <strong>In short.</strong> {skill.summary}
       </div>
-      <div className="callout danger">
-        <p>
-          <strong>Not financial advice.</strong> This skill does not predict prices or guarantee
-          outcomes. Paper trading remains the default for the pack. Examples below are historical
-          or fixture data, clearly labelled, and are never live recommendations.
-        </p>
-      </div>
+      <p>
+        This skill does not predict prices or guarantee outcomes. Examples below are historical or
+        fixture data, clearly labelled, and are never live recommendations.
+      </p>
 
       <h2>What it actually does</h2>
       <p>{guide.overview}</p>

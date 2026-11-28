@@ -87,12 +87,11 @@ export default function HowToStartDayTradingPage() {
         <p className="article-meta">
           <span>Reviewed 10 November 2026</span>
           <span>9 min read</span>
-          <span>Not financial advice</span>
         </p>
       </header>
 
       <div className="tldr">
-        <strong>TL;DR.</strong> Start with mechanics, then a written process, then paper practice,
+        <strong>In short.</strong> Start with mechanics, then a written process, then paper practice,
         then review. Choose one market and one session. Keep a journal. Do not treat a live account
         as the finish line — it is a separate decision with real financial consequences. The SEC’s{' '}
         <a
@@ -102,15 +101,9 @@ export default function HowToStartDayTradingPage() {
         >
           2005 day-trading bulletin
         </a>{' '}
-        warns that traders often suffer severe losses in their first months.
-      </div>
-
-      <div className="callout danger">
-        <p>
-          <strong>Not financial advice.</strong> This roadmap is educational. It does not recommend a
-          market, strategy, broker, or position size. Trading can lose money quickly, especially with
-          leverage.
-        </p>
+        warns that traders often suffer severe losses in their first months. This roadmap is
+        educational: it does not recommend a market, strategy, broker, or position size. Trading
+        can lose money quickly, especially with leverage.
       </div>
 
       <figure className="page-visual">
@@ -189,7 +182,7 @@ export default function HowToStartDayTradingPage() {
         <li>
           <strong>Step 1 — Learn what a day trade is.</strong>
           <p>
-            Read the <Link href="/learn/what-is-day-trading/">plain-English definition</Link> and
+            Read the <Link href="/learn/what-is-day-trading/">definition of a day trade</Link> and
             learn how it differs from swing trading and investing. Understand that a day trade is
             normally closed within the same session, and that the holding period changes the costs
             and the risks.
@@ -367,20 +360,6 @@ export default function HowToStartDayTradingPage() {
         read the <Link href="/safety/">safety checklist</Link>.
       </p>
 
-      <div className="callout compliance">
-        <p>
-          <strong>Compliance note.</strong> No stock picks, signals, profit promises, or
-          trade-on-your-behalf service. Day trading is risky; the{' '}
-          <a
-            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            SEC’s 2005 investor bulletin
-          </a>{' '}
-          warns that many traders suffer severe losses in their first months.
-        </p>
-      </div>
 
       <h2>Frequently asked questions</h2>
       <FaqList items={faqs} />

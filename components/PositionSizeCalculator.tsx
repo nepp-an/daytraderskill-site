@@ -250,9 +250,9 @@ export function PositionSizeCalculator() {
       </div>
 
       <p className="journal-note">
-        <strong>Not financial advice.</strong> This calculator is arithmetic for an educational plan.
-        It has no broker connection, no market data, and no order path. It does not recommend a
-        security, a position size, or a trade.
+        This calculator is arithmetic for an educational plan. It has no broker connection, no
+        market data, and no order path. It does not recommend a security, a position size, or a
+        trade.
       </p>
     </div>
   );

@@ -41,17 +41,16 @@ export default function SafetyPage() {
       <JsonLd data={faqJsonLd(faqs)} />
       <h1>Claude skill safety checklist: paper-trading defaults and the Needs approval gate</h1>
       <div className="tldr">
-        <strong>TL;DR.</strong> <strong>Claude day trader skill safety</strong> means treating the
+        <strong>In short.</strong> <strong>Claude day trader skill safety</strong> means treating the
         pack as <strong>assisted workflow software</strong>, not a profit engine. Keep{' '}
         <strong>paper trading</strong> on, require a typed <strong>yes</strong> per ticket, set
         connectors to <strong>Needs approval</strong> (never Always allow), keep API keys out of
-        chat, and remember: simulations and stops are not guarantees. Compliance-first on purpose.
-        Not financial advice.
+        chat, and remember: simulations and stops are not guarantees.
       </div>
 
       <div className="callout danger">
         <p>
-          <strong>Not financial advice.</strong> The SEC’s{' '}
+          The SEC’s{' '}
           <a
             href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
             rel="noopener noreferrer"
@@ -70,8 +69,8 @@ export default function SafetyPage() {
       <h2 id="risk">Risk rules we will not soften</h2>
       <ul className="checklist">
         <li>
-          <strong>Not financial advice</strong> — arithmetic and public data ≠ a plan for your life
-          or portfolio.
+          <strong>Arithmetic is not a plan</strong> — public data and a calculator are not a plan
+          for your life or portfolio.
         </li>
         <li>
           <strong>Paper trading is the default</strong> — rehearse the full chain before any live

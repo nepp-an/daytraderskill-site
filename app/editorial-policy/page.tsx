@@ -55,7 +55,7 @@ export default function EditorialPolicyPage() {
       </header>
 
       <div className="tldr">
-        <strong>TL;DR.</strong> {BRAND} is an independent education site. We are not the official Day
+        <strong>In short.</strong> {BRAND} is an independent education site. We are not the official Day
         Trader Skill project, not a broker, and not an investment adviser. Pages are drafted with AI
         assistance and reviewed by the site editorial team, with paper trading as the default. This
         policy is dated 10 November 2026 and applies to the pages published on this site.

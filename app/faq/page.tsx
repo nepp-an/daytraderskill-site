@@ -69,7 +69,7 @@ export default function FaqPage() {
       <JsonLd data={faqJsonLd(faqs)} />
       <h1>Day Trader Skill FAQ: advice, auto-trade &amp; paper defaults</h1>
       <div className="tldr">
-        <strong>TL;DR.</strong> Short answers for the questions install guides skip: bot myths,
+        <strong>In short.</strong> Short answers for the questions install guides skip: bot myths,
         paper defaults, approvals, data limits, and “is this official?”
       </div>
       <FaqList items={faqs} />

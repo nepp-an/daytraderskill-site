@@ -242,9 +242,9 @@ export function RiskRewardCalculator() {
       </div>
 
       <p className="journal-note">
-        <strong>Not financial advice.</strong> This calculator is arithmetic for an educational plan.
-        It has no broker connection, no market data, and no order path. A higher R:R does not mean a
-        setup is more likely to win, and it does not promise a profit.
+        This calculator is arithmetic for an educational plan. It has no broker connection, no
+        market data, and no order path. A higher R:R does not mean a setup is more likely to win,
+        and it does not promise a profit.
       </p>
     </div>
   );

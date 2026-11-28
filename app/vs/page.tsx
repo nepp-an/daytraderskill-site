@@ -71,18 +71,18 @@ export default function VsPage() {
       <ToolsNav current="/vs/" />
       <h1>Claude trading skills compared: Day Trader Skill vs other packs</h1>
       <div className="tldr">
-        <strong>TL;DR.</strong> Day Trader Skill is the day-trading sequel to trader-skill v1:
+        <strong>In short.</strong> Day Trader Skill is the day-trading sequel to trader-skill v1:
         eleven commands, public-data Python helpers, paper default, human yes before orders. The two
         packs share seven commands but are built for different horizons. v2 adds scanner, entry,
         exit and Time Machine; v1 keeps copycat, screener, tax and rebalance. This page shows the
         real command lists and the verified dates, not a performance ranking or a competitor feature
-        guess. Not financial advice.
+        guess.
       </div>
 
       <div className="callout danger">
         <p>
-          <strong>Not financial advice.</strong> Comparisons here are about software shape and
-          operational risk. They are not performance rankings. The SEC’s{' '}
+          Comparisons here are about software shape and operational risk. They are not performance
+          rankings. The SEC’s{' '}
           <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html" rel="noopener noreferrer" target="_blank">
             2005 day-trading bulletin
           </a>{' '}

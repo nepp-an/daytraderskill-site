@@ -107,7 +107,7 @@ export default function LearnHubPage() {
           the map. No signals or stock picks.
         </p>
         <p className="compliance-note">
-          <strong>Not financial advice.</strong> The SEC’s{' '}
+          The SEC’s{' '}
           <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html" rel="noopener noreferrer" target="_blank">
             2005 day-trading bulletin
           </a>{' '}
@@ -143,9 +143,9 @@ export default function LearnHubPage() {
               <Link href="/learn/what-is-day-trading/">What is day trading?</Link>
             </h2>
             <p>
-              The definition page. Open it when you need a plain-English meaning of an intraday
-              trade, and a clear boundary between day trading, swing trading, and investing. It is
-              the vocabulary lesson, not the full beginner curriculum and not a how-to sequence.
+              The definition page. Open it when you want a clear meaning of an intraday trade, and
+              the line between day trading, swing trading, and investing. It is the vocabulary
+              lesson, not the full beginner curriculum and not a how-to sequence.
             </p>
             <ul className="card-links">
               <li>

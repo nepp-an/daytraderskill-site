@@ -50,7 +50,7 @@ export default function InstallPage() {
         <Link href="/safety/">safety checklist</Link> before enabling any order-capable tool.
       </p>
       <div className="tldr">
-        <strong>TL;DR.</strong> This is the <strong>day trader skill install</strong> guide —
+        <strong>In short.</strong> This is the <strong>day trader skill install</strong> guide —
         including the <strong>Claude Code trading skill</strong> plugin path. Path A (paste URL) is
         fastest for Claude chat. Path B is for Claude Code plugins. Path C copies folders for plain{' '}
         <code className="inline">/trader-*</code> commands. Path D pastes a single{' '}
@@ -60,13 +60,12 @@ export default function InstallPage() {
         <a href={UPSTREAM_REPO} rel="noopener noreferrer" target="_blank">
           upstream GitHub
         </a>{' '}
-        — this page is not the official site. Not financial advice.
+        — this page is not the official site.
       </div>
 
       <div className="callout danger">
         <p>
-          <strong>Not financial advice.</strong> Installing skills does not make day trading safe.
-          The SEC’s{' '}
+          Installing skills does not make day trading safe. The SEC’s{' '}
           <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html" rel="noopener noreferrer" target="_blank">
             2005 day-trading bulletin
           </a>{' '}

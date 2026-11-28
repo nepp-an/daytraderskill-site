@@ -96,21 +96,19 @@ export default function RiskRewardCalculatorPage() {
         <p className="article-meta">
           <span>Reviewed 5 November 2026</span>
           <span>Browser-only</span>
-          <span>Not financial advice</span>
         </p>
       </header>
 
       <div className="tldr">
-        <strong>TL;DR.</strong> Enter a planned entry, stop, and target to see the reward-to-risk
+        <strong>In short.</strong> Enter a planned entry, stop, and target to see the reward-to-risk
         ratio and the potential profit or loss per share. Add an optional share count for the full
         position. A ratio is arithmetic, not a probability, and a high ratio does not promise a win.
       </div>
 
       <div className="callout danger">
         <p>
-          <strong>Not financial advice.</strong> This tool does not recommend a trade, a target, or a
-          position size. It has no broker connection, no market data feed, and no order path. The
-          SEC’s{' '}
+          This tool does not recommend a trade, a target, or a position size. It has no broker
+          connection, no market data feed, and no order path. The SEC’s{' '}
           <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html" rel="noopener noreferrer" target="_blank">
             2005 day-trading bulletin
           </a>{' '}
@@ -204,13 +202,6 @@ export default function RiskRewardCalculatorPage() {
         and paper-default rules around trading software.
       </p>
 
-      <div className="callout compliance">
-        <p>
-          <strong>Compliance note.</strong> DayTraderSkill.com is not a broker, investment adviser, or
-          signal service. This calculator does not execute trades and does not provide personalised
-          advice. No profit is promised.
-        </p>
-      </div>
 
       <h2>Frequently asked questions</h2>
       <FaqList items={faqs} />

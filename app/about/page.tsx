@@ -16,7 +16,7 @@ export default function AboutPage() {
     <>
       <h1>About {BRAND}</h1>
       <div className="tldr">
-        <strong>TL;DR.</strong> We publish install, safety, troubleshooting, and comparison pages for
+        <strong>In short.</strong> We publish install, safety, troubleshooting, and comparison pages for
         the open-source Claude Day Trader Skill pack. We are <strong>not</strong> the official
         project, not a broker, and not an advisory firm.
       </div>
@@ -31,7 +31,7 @@ export default function AboutPage() {
       </p>
       <h2>Editorial standards</h2>
       <ul>
-        <li>Fixed Not financial advice framing sitewide.</li>
+        <li>Education and software guides, not investment advice.</li>
         <li>Paper trading default; no profit promises; no trade-on-your-behalf offers.</li>
         <li>Prefer differentiation via troubleshoot matrices, safety checklists, and honest VS tables.</li>
         <li>Call out upstream freshness risk when pushes look stalled.</li>

@@ -16,7 +16,7 @@ export default function PrivacyPage() {
     <>
       <h1>Privacy policy</h1>
       <div className="tldr">
-        <strong>TL;DR.</strong> {BRAND} ({SITE_ORIGIN}) is a static information site. We do not
+        <strong>In short.</strong> {BRAND} ({SITE_ORIGIN}) is a static information site. We do not
         operate user accounts or ask you to paste brokerage secrets here. Third-party destinations
         (GitHub, Claude, brokers you choose) have their own policies.
       </div>

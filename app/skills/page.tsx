@@ -74,7 +74,7 @@ export default function SkillsIndexPage() {
       <ToolsNav current="/skills/" />
       <h1>Day Trader Skill modules: 11 trader-* commands</h1>
       <div className="tldr">
-        <strong>TL;DR.</strong> This is the module index for an open-source Claude command pack —
+        <strong>In short.</strong> This is the module index for an open-source Claude command pack —
         eleven <code className="inline">trader-*</code> commands plus optional Python helpers. If
         you have not installed the pack yet, start with the <Link href="/install/">install guide</Link>.
         Use the modules as a checklist, not as autopilot. Typical chain: scanner → news → entry →
@@ -97,12 +97,6 @@ export default function SkillsIndexPage() {
         accepts, what it writes, and what it will not do, so you can decide whether you need that
         command at all.
       </p>
-      <div className="callout danger">
-        <p>
-          <strong>Not financial advice.</strong> Module pages explain inputs, outputs, and cautions —
-          not trade ideas.
-        </p>
-      </div>
 
       <figure className="page-visual">
         <img

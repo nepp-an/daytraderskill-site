@@ -86,12 +86,11 @@ export default function DayTradingForBeginnersPage() {
         <p className="article-meta">
           <span>Reviewed 5 November 2026</span>
           <span>9 min read</span>
-          <span>Not financial advice</span>
         </p>
       </header>
 
       <div className="tldr">
-        <strong>TL;DR.</strong> Day trading is the practice of opening and closing positions within
+        <strong>In short.</strong> Day trading is the practice of opening and closing positions within
         the same trading session. Beginners should learn market mechanics, write a simple process,
         and rehearse it on paper before risking real capital. The SEC’s{' '}
         <a
@@ -102,15 +101,9 @@ export default function DayTradingForBeginnersPage() {
           2005 day-trading bulletin
         </a>{' '}
         warns that many traders suffer severe losses in their first months. A simulator is a
-        rehearsal space, not a promise that live results will match.
-      </div>
-
-      <div className="callout danger">
-        <p>
-          <strong>Not financial advice.</strong> This guide does not recommend a stock, strategy, or
-          position size. It explains what to learn and how to practise. Day trading can lose money
-          quickly, especially with leverage.
-        </p>
+        rehearsal space, not a promise that live results will match. This guide does not recommend
+        a stock, strategy, or position size. Day trading can lose money quickly, especially with
+        leverage.
       </div>
 
       <figure className="page-visual">
@@ -390,21 +383,6 @@ export default function DayTradingForBeginnersPage() {
         <li>I will review the session before changing the plan.</li>
       </ul>
 
-      <div className="callout compliance">
-        <p>
-          <strong>Compliance note.</strong> DayTraderSkill.com does not provide investment advice,
-          stock picks, signals, or trade execution. The{' '}
-          <a
-            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            SEC’s 2005 investor bulletin
-          </a>{' '}
-          warns that many traders suffer severe losses in their first months. If you need personal
-          advice, speak to a licensed professional in your jurisdiction.
-        </p>
-      </div>
 
       <h2>Frequently asked questions</h2>
       <FaqList items={faqs} />

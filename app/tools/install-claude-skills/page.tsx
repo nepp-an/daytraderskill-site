@@ -75,12 +75,11 @@ export default function InstallClaudeSkillsPage() {
         <p className="article-meta">
           <span>Reviewed 5 November 2026</span>
           <span>9 min read</span>
-          <span>Not financial advice</span>
         </p>
       </header>
 
       <div className="tldr">
-        <strong>TL;DR.</strong> A Claude skill is a folder of instructions, usually with a{' '}
+        <strong>In short.</strong> A Claude skill is a folder of instructions, usually with a{' '}
         <code className="inline">SKILL.md</code> file, that Claude can load for a repeatable task.
         You can install one through a supported repository or plugin flow, or by placing the folder
         in a skills directory. The exact UI changes, so verify current Anthropic documentation. Read
@@ -304,11 +303,10 @@ cp -R ./my-skill ~/.claude/skills/`}</pre>
         trusted just because it is popular.
       </p>
 
-      <div className="callout compliance">
+      <div className="callout">
         <p>
-          <strong>Compliance note.</strong> Not financial advice. DayTraderSkill.com is independent
-          and is not affiliated with Anthropic or the authors of any third-party skill pack. Verify
-          current product behaviour in the official documentation.
+          DayTraderSkill.com is not affiliated with Anthropic or the authors of any third-party
+          skill pack. Verify current product behaviour in the official documentation.
         </p>
       </div>
 

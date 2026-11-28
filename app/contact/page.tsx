@@ -36,7 +36,7 @@ export default function ContactPage() {
       />
       <h1>Contact</h1>
       <div className="tldr">
-        <strong>TL;DR.</strong> Reach {BRAND} by email for corrections, privacy questions, and site
+        <strong>In short.</strong> Reach {BRAND} by email for corrections, privacy questions, and site
         feedback. We are an independent publisher — <strong>not</strong> a broker, not an advisory
         firm, and not the official Day Trader Skill project.
       </div>

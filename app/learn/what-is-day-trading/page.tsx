@@ -105,15 +105,9 @@ export default function WhatIsDayTradingPage() {
         >
           2005 day-trading bulletin
         </a>{' '}
-        warns that many traders suffer severe losses in their first months.
-      </div>
-
-      <div className="callout danger">
-        <p>
-          <strong>Not financial advice.</strong> This is a definition and risk explainer, not a
-          recommendation to trade. Day trading can lose money quickly, especially when leverage is
-          involved.
-        </p>
+        warns that many traders suffer severe losses in their first months. Day trading can lose
+        money quickly, especially when leverage is involved. This page explains the term; it is not
+        a recommendation to trade.
       </div>
 
       <figure className="page-visual">
@@ -393,21 +387,6 @@ export default function WhatIsDayTradingPage() {
         distance from entry to invalidation visible in dollars.
       </p>
 
-      <div className="callout compliance">
-        <p>
-          <strong>Compliance note.</strong> No stock picks, signals, profit promises, or
-          trade-on-your-behalf service. The{' '}
-          <a
-            href="https://www.sec.gov/reportspubs/investor-publications/investorpubsdaytipshtm.html"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            SEC’s 2005 investor bulletin
-          </a>{' '}
-          warns that many traders suffer severe losses in their first months. Nothing here is
-          financial, legal, or tax advice.
-        </p>
-      </div>
 
       <h2>Frequently asked questions</h2>
       <FaqList items={faqs} />

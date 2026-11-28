@@ -43,17 +43,16 @@ export default function TroubleshootPage() {
       <ToolsNav current="/install/troubleshoot/" />
       <h1>Day Trader Skill not working: namespace, sandbox &amp; permissions</h1>
       <div className="tldr">
-        <strong>TL;DR.</strong> When <strong>day trader skill</strong> looks installed but{' '}
+        <strong>In short.</strong> When <strong>day trader skill</strong> looks installed but{' '}
         <strong>not working</strong>, it is usually a namespace mismatch, sandbox without network,
         missing permissions/Python, blocked SEC calls, or approval-card confusion — not a broken
         clone. Use the matrix below, then re-check the <Link href="/install/">install paths</Link>.
-        Not financial advice.
       </div>
 
       <div className="callout danger">
         <p>
-          <strong>Not financial advice.</strong> Fixing tooling does not improve expected trading
-          outcomes. Keep paper trading default while you debug.
+          Fixing tooling does not improve expected trading outcomes. Keep paper trading as the
+          default while you debug.
         </p>
       </div>
 
